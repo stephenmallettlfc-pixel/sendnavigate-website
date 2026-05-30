@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When Your Child Can't Go to School — by Stephen Mallett | SEND Navigate</title>
+  <meta name="description" content="The UK parent's manual for school distress, EBSA, and the statutory routes to real help. By Stephen Mallett — former Headteacher, SENCo, and founder of SEND Navigate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --peach:       #F5D6B9;
+      --cream:       #F4E4CD;
+      --cream-base:  #EDDFC8;
+      --sandstone:   #ECDCC0;
+      --ink:         #2A2117;
+      --forest:      #3A4A38;
+      --terracotta:  #C8553D;
+      --terracotta-d: #A8442D;
+      --door-glow:   #F2C49B;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: var(--cream);
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      background: var(--ink);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--cream);
+    }
+    .logo-text {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+    }
+    .logo-text span { color: var(--terracotta); }
+    .nav-links { display: flex; gap: 14px; list-style: none; }
+    .nav-links a {
+      color: rgba(244, 228, 205, 0.85);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+    .nav-links a:hover { color: var(--cream); background: rgba(244, 228, 205, 0.08); }
+    .nav-cta {
+      background: var(--terracotta) !important;
+      color: var(--cream) !important;
+      font-weight: 700 !important;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(to bottom, var(--peach) 0%, var(--cream) 60%);
+      padding: 70px 24px 60px;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-text .endorse {
+      font-style: italic;
+      color: var(--forest);
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+    .hero-text .endorse-attr {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      color: var(--terracotta);
+      margin-bottom: 22px;
+    }
+    .hero-text .whisper {
+      font-style: italic;
+      color: rgba(58, 74, 56, 0.7);
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    .hero-text h1 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .hero-text .subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--forest);
+      margin-bottom: 24px;
+      max-width: 480px;
+    }
+    .hero-text .author {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.85rem;
+      color: var(--forest);
+      margin-bottom: 28px;
+    }
+    .hero-text .author strong {
+      color: var(--ink);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--cream);
+      border: none;
+      padding: 14px 30px;
+      border-radius: 6px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.18s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--terracotta-d); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: var(--ink); color: var(--cream); }
+
+    /* Book cover preview */
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .cover-wrap img {
+      max-width: 320px;
+      width: 100%;
+      box-shadow: 0 24px 60px rgba(42, 33, 23, 0.18), 0 8px 20px rgba(42, 33, 23, 0.1);
+      border-radius: 3px;
+    }
+
+    /* ─── SECTIONS ─── */
+    section.section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 24px;
+    }
+    section.section.light { background: var(--cream-base); max-width: none; }
+    section.section.light .inner { max-width: 1100px; margin: 0 auto; padding: 70px 24px; }
+
+    .section-title {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+      position: relative;
+      padding-top: 18px;
+    }
+    .section-title::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--terracotta);
+    }
+    .section-lead {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      color: var(--forest);
+      max-width: 720px;
+      margin-bottom: 36px;
+    }
+
+    /* INSIDE THE BOOK */
+    .inside-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .inside-card {
+      background: var(--sandstone);
+      padding: 22px 24px;
+      border-radius: 4px;
+      border-left: 3px solid var(--terracotta);
+    }
+    .inside-card h3 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .inside-card p {
+      font-size: 0.95rem;
+      color: var(--forest);
+      line-height: 1.5;
+    }
+
+    /* PULL QUOTES */
+    .voices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 36px 0;
+    }
+    .voice-card {
+      background: var(--sandstone);
+      padding: 28px 30px 24px 32px;
+      border-left: 3px solid var(--terracotta);
+      border-radius: 0 3px 3px 0;
+    }
+    .voice-card .label {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: var(--terracotta);
+      margin-bottom: 8px;
+    }
+    .voice-card blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .voice-card .attrib {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--ink);
+      letter-spacing: 1px;
+    }
+    .voice-card .attrib-role {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--forest);
+      margin-top: 3px;
+    }
+
+    /* THREE PATHS */
+    .paths {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+    .path-card {
+      background: var(--cream);
+      padding: 30px 26px;
+      border-radius: 4px;
+      border: 1px solid var(--cream-base);
+      display: flex;
+      flex-direction: column;
+    }
+    .path-card h3 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+    .path-card .pathl {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      color: var(--terracotta);
+      margin-bottom: 12px;
+    }
+    .path-card p {
+      color: var(--forest);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      flex-grow: 1;
+      line-height: 1.55;
+    }
+    .path-card .price {
+      font-family: 'Lato', sans-serif;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+    .path-card .cta-link {
+      color: var(--terracotta);
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+    .path-card .cta-link:hover { color: var(--terracotta-d); }
+
+    /* WORKBOOK BAND */
+    .workbook-band {
+      background: linear-gradient(to bottom, var(--peach) 0%, var(--cream) 100%);
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .workbook-band .inner { max-width: 700px; margin: 0 auto; }
+    .workbook-band h2 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .workbook-band p {
+      color: var(--forest);
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    /* ABOUT AUTHOR */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .author-avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--ink), var(--forest));
+      color: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .about-grid p { color: var(--ink); margin-bottom: 14px; font-size: 0.98rem; line-height: 1.6; }
+
+    /* SCHOOL BRIDGE */
+    .school-bridge {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 60px 24px;
+    }
+    .school-bridge .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .school-bridge h2 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--cream);
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+    .school-bridge p { color: rgba(244, 228, 205, 0.85); margin-bottom: 14px; font-size: 0.98rem; }
+    .school-bridge .btn-outline { border-color: var(--terracotta); color: var(--terracotta); }
+    .school-bridge .btn-outline:hover { background: var(--terracotta); color: var(--cream); border-color: var(--terracotta); }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(244, 228, 205, 0.7);
+      padding: 36px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(244, 228, 205, 0.1);
+    }
+    footer a { color: var(--terracotta); text-decoration: none; }
+    footer p { font-size: 0.88rem; }
+    footer .disclaimer {
+      font-size: 0.76rem;
+      color: rgba(244, 228, 205, 0.45);
+      max-width: 760px;
+      margin: 18px auto 0;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; padding-top: 20px; }
+      .voices { grid-template-columns: 1fr; }
+      .school-bridge .inner { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .author-avatar { margin: 0 auto; }
+      .nav-links { gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="/">
+      <div class="logo-text">SEND<span>NAVIGATE</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/ehcp-advisory">For Families</a></li>
+      <li><a href="/">For Schools</a></li>
+      <li><a href="#book" class="nav-cta">The Book</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="book">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="endorse">"The book I needed three years ago."</p>
+      <p class="endorse-attr">A SEND PARENT, THREE YEARS OUT OF SCHOOL</p>
+      <p class="whisper">You are not failing.</p>
+      <h1>When Your Child<br>Can't Go to School</h1>
+      <p class="subtitle">A UK parent's manual for school distress, EBSA, and the way through.</p>
+      <p class="author">By <strong>STEPHEN MALLETT</strong><br>Former Headteacher · SENCo · SEN Parent · Founder of SEND Navigate · Author of <em>Parent Shield</em></p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="https://www.amazon.co.uk/dp/[ASIN-PASTE-HERE]" target="_blank" rel="noopener">BUY ON AMAZON</a>
+        <a class="btn-outline" href="/workbook">FREE WORKBOOK</a>
+      </div>
+    </div>
+    <div class="cover-wrap">
+      <img src="/cover-kindle.jpg" alt="When Your Child Can't Go to School — book cover" />
+    </div>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section class="section">
+  <h2 class="section-title">In their words</h2>
+  <p class="section-lead">Two readers — one who has spent forty years sitting with families, and one who has stood at his own kitchen table watching his child struggle to walk through the school gates.</p>
+  <div class="voices">
+    <div class="voice-card">
+      <div class="label">A VOICE FROM THE COMMUNITY</div>
+      <blockquote>"Behind every absence is a story. Not of defiance, as it is so often labelled, but of distress. This book speaks directly into that space — and gives families pathways they did not know they had."</blockquote>
+      <div class="attrib">RABBI MARTIN TAUBMAN</div>
+      <div class="attrib-role">Forty years in education</div>
+    </div>
+    <div class="voice-card">
+      <div class="label">A VOICE FROM BOTH SIDES OF THE TABLE</div>
+      <blockquote>"I have sat at my own kitchen table watching my child struggle to walk through the school gates. This book names what is really happening. Sometimes, that is exactly where hope begins."</blockquote>
+      <div class="attrib">MATTHEW FERGUSON</div>
+      <div class="attrib-role">Teacher of fifteen years · Parent</div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE -->
+<section class="section light">
+  <div class="inner">
+    <h2 class="section-title">What's in the book</h2>
+    <p class="section-lead">Built from twenty-five years inside the UK education system. Designed to be opened at 7am, used by lunchtime, and trusted by a tribunal.</p>
+    <div class="inside-grid">
+      <div class="inside-card"><h3>The Sanctuary Home Protocol</h3><p>A radical low-demand framework to stabilise your child's nervous system in days, not months.</p></div>
+      <div class="inside-card"><h3>The Won't vs Can't Distinction</h3><p>The language shift that ends the blame and starts the legal protection.</p></div>
+      <div class="inside-card"><h3>The Inarguable Evidence Binder</h3><p>What to log, what your GP needs, what to send the Local Authority.</p></div>
+      <div class="inside-card"><h3>The Section 19 Burden Shift</h3><p>The statutory route most parents don't know they can trigger. With template letter.</p></div>
+      <div class="inside-card"><h3>The Parental EHCP Blueprint</h3><p>How to apply directly, without the school's permission — and win the inevitable refusal.</p></div>
+      <div class="inside-card"><h3>EOTAS and the Alternative Routes</h3><p>Education Otherwise Than At School — the legal remedy, with case law and a costed package builder.</p></div>
+      <div class="inside-card"><h3>The First 30 Days Protocol</h3><p>If you've just bought the book and your child is out today — this page tells you what to do this week.</p></div>
+      <div class="inside-card"><h3>The Long Game</h3><p>What recovery looks like over 12–24 months. Reintegration without re-traumatising.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKBOOK BAND -->
+<section class="workbook-band">
+  <div class="inner">
+    <h2>The Companion Workbook</h2>
+    <p>Forty pages of the highest-leverage tools from the book — the Three-State Tracker, the Symptom &amp; Impact Log, the fillable Section 19 letter, and Your Situation Map. Free.</p>
+    <a class="btn-primary" href="/workbook">DOWNLOAD THE FREE WORKBOOK</a>
+  </div>
+</section>
+
+<!-- THREE PATHS -->
+<section class="section">
+  <h2 class="section-title">You've read the book. What next?</h2>
+  <p class="section-lead">Three routes through SEND Navigate, depending on where you are. Every paid engagement begins with a free fifteen-minute call.</p>
+  <div class="paths">
+    <div class="path-card">
+      <p class="pathl">STEP 1 — FREE</p>
+      <h3>Talk it through</h3>
+      <p>A free fifteen-minute call. No pressure, no sales pitch. Just an honest conversation about where you are and what would help next.</p>
+      <p class="price">Free · 15 minutes</p>
+      <a class="cta-link" href="/ehcp-advisory#contact">BOOK A FREE CALL →</a>
+    </div>
+    <div class="path-card">
+      <p class="pathl">STEP 2 — CHEAPEST PAID TIER</p>
+      <h3>Initial Consultation</h3>
+      <p>A focused ninety-minute deep-dive. Pre-read of one document, strategy call, and clear written next steps under CFA 2014.</p>
+      <p class="price">£160 · 90 minutes + written follow-up</p>
+      <a class="cta-link" href="/ehcp-advisory#services">LEARN MORE →</a>
+    </div>
+    <div class="path-card">
+      <p class="pathl">STEP 3 — FULL ADVISORY</p>
+      <h3>The full packages</h3>
+      <p>EHCP Application (£395), Plan Review (£480), Exclusion &amp; Discrimination (£1,200), LA Appeal (£1,440), Tribunal Pack (£2,400) — scoped to your case, never to the urgency of the moment.</p>
+      <p class="price">£395 – £2,400 · fixed price</p>
+      <a class="cta-link" href="/ehcp-advisory#services">SEE ALL PACKAGES →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section light">
+  <div class="inner">
+    <h2 class="section-title">About the author</h2>
+    <div class="about-grid">
+      <div class="author-avatar">SM</div>
+      <div>
+        <p><strong>Stephen Mallett</strong> is a former Headteacher and SENCo with twenty-five years inside the UK education system. He has led schools through inspection, overseen complex SEND provision, written and defended EHCPs, and made the calls to Local Authorities that parents are usually the wrong side of.</p>
+        <p>He is also a parent. The framework in this book is the one he reached for when his own family needed it — and the one he could not find on a shelf.</p>
+        <p>He is the founder of <strong>SEND Navigate</strong>, which provides specialist EHCP and tribunal advisory support to families and the <em>See It. Support It. Teach It.</em> SEND training programme to schools and MATs.</p>
+        <p>He is the author of <em>Parent Shield</em>, the first volume in The SEND Navigate Library.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOL BRIDGE -->
+<section class="school-bridge">
+  <div class="inner">
+    <div>
+      <h2>If you want your child's school to actually understand this material</h2>
+      <p>The book has a final chapter on this — <em>The Other Side of the Table</em>. SEND training for school staff is not statutory in the UK in the way it is for NHS staff. <em>See It. Support It. Teach It.</em> is the SEND Navigate programme that closes that gap.</p>
+      <p>You are welcome to forward the chapter, or the book, to your SENCo. A one-page programme overview is available at the link below.</p>
+    </div>
+    <div style="text-align: center;">
+      <a class="btn-outline" href="/">SEE THE TRAINING PROGRAMME</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>SEND Navigate</strong> · <a href="/">For Schools</a> · <a href="/ehcp-advisory">For Families</a> · <a href="/workbook">Free Workbook</a> · <a href="mailto:hello@sendnavigate.org">hello@sendnavigate.org</a></p>
+  <p style="margin-top: 12px; font-size: 0.85rem;">© SEND Navigate. The SEND Navigate Library.</p>
+  <p class="disclaimer">SEND Navigate provides specialist SEND advisory and case-building support to families. It is not a regulated legal service and does not provide legal advice in the regulated sense of the Legal Services Act 2007. Where a case requires representation by a regulated solicitor or barrister, that will be flagged. Information on this site is general and does not constitute advice on any specific case.</p>
+</footer>
+
+</body>
+</html>

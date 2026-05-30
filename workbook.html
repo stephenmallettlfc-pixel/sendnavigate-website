@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Free School Distress Operating Workbook | SEND Navigate</title>
+  <meta name="description" content="The forty-page UK parent's workbook for when your child cannot go to school. Free download. The same tools used inside SEND Navigate advisory cases." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --peach:       #F5D6B9;
+      --cream:       #F4E4CD;
+      --cream-base:  #EDDFC8;
+      --sandstone:   #ECDCC0;
+      --ink:         #2A2117;
+      --forest:      #3A4A38;
+      --terracotta:  #C8553D;
+      --terracotta-d: #A8442D;
+      --door-glow:   #F2C49B;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Lora', Georgia, serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: var(--cream);
+    }
+
+    /* NAV */
+    nav { background: var(--ink); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--cream); }
+    .logo-text { font-family: 'Lato', sans-serif; font-weight: 700; letter-spacing: 1px; font-size: 1.1rem; }
+    .logo-text span { color: var(--terracotta); }
+    .nav-links { display: flex; gap: 14px; list-style: none; }
+    .nav-links a { color: rgba(244, 228, 205, 0.85); font-family: 'Lato', sans-serif; font-size: 0.9rem;
+      text-decoration: none; padding: 6px 10px; border-radius: 4px; }
+    .nav-links a:hover { color: var(--cream); background: rgba(244, 228, 205, 0.08); }
+    .nav-cta { background: var(--terracotta) !important; color: var(--cream) !important; font-weight: 700 !important; }
+
+    /* HERO */
+    .hero { background: linear-gradient(to bottom, var(--peach) 0%, var(--cream) 70%); padding: 70px 24px 50px; }
+    .hero-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .hero .whisper {
+      font-style: italic;
+      color: rgba(58, 74, 56, 0.7);
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 4.5vw, 2.8rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .hero .lede {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: var(--forest);
+      font-size: 1.15rem;
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    /* FORM CARD */
+    .form-card {
+      background: var(--cream-base);
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 38px 36px 30px;
+      border-radius: 6px;
+      border: 1px solid rgba(42, 33, 23, 0.08);
+      box-shadow: 0 8px 28px rgba(42, 33, 23, 0.06);
+      text-align: left;
+    }
+    .form-card h2 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .form-card .sub {
+      color: var(--forest);
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .form-card label {
+      display: block;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+      margin-top: 14px;
+    }
+    .form-card input[type="text"],
+    .form-card input[type="email"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid rgba(42, 33, 23, 0.2);
+      border-radius: 4px;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: var(--ink);
+      background: white;
+    }
+    .form-card input:focus { outline: 2px solid var(--terracotta); outline-offset: 1px; border-color: var(--terracotta); }
+    .form-card button {
+      width: 100%;
+      margin-top: 22px;
+      background: var(--terracotta);
+      color: var(--cream);
+      border: none;
+      padding: 14px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 1.5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.1s;
+    }
+    .form-card button:hover { background: var(--terracotta-d); transform: translateY(-1px); }
+    .form-card .privacy {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      color: rgba(58, 74, 56, 0.85);
+      text-align: center;
+      line-height: 1.5;
+    }
+    .form-card .privacy a { color: var(--terracotta); }
+
+    /* WHAT'S INSIDE */
+    section.section { max-width: 1100px; margin: 0 auto; padding: 70px 24px; }
+    section.section.light { background: var(--cream-base); max-width: none; }
+    section.section.light .inner { max-width: 1100px; margin: 0 auto; padding: 70px 24px; }
+
+    .section-title {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+      padding-top: 18px;
+      position: relative;
+      text-align: center;
+    }
+    .section-title::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 2px;
+      background: var(--terracotta);
+    }
+    .section-lead {
+      font-family: 'Lora', serif;
+      color: var(--forest);
+      max-width: 720px;
+      margin: 0 auto 36px;
+      text-align: center;
+      font-size: 1.02rem;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+    .tool-card {
+      background: var(--sandstone);
+      padding: 24px 26px;
+      border-radius: 4px;
+      border-left: 3px solid var(--terracotta);
+    }
+    .tool-card .num {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
+    .tool-card h3 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .tool-card p { font-size: 0.93rem; color: var(--forest); line-height: 1.5; }
+
+    /* TESTIMONIAL */
+    .voice-band {
+      background: linear-gradient(to bottom, var(--cream) 0%, var(--peach) 100%);
+      padding: 60px 24px;
+    }
+    .voice-band .inner {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--sandstone);
+      padding: 36px 40px;
+      border-left: 3px solid var(--terracotta);
+      border-radius: 0 4px 4px 0;
+    }
+    .voice-band .label {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: var(--terracotta);
+      margin-bottom: 10px;
+    }
+    .voice-band blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+    .voice-band .attrib {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--ink);
+      letter-spacing: 1px;
+    }
+
+    /* HOW IT WORKS */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+    .how-step {
+      background: var(--cream);
+      padding: 26px;
+      border-radius: 4px;
+      border: 1px solid var(--cream-base);
+      text-align: center;
+    }
+    .how-step .step-num {
+      width: 38px;
+      height: 38px;
+      background: var(--terracotta);
+      color: var(--cream);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+    }
+    .how-step h3 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .how-step p { color: var(--forest); font-size: 0.9rem; line-height: 1.55; }
+
+    /* BOOK CTA */
+    .book-cta {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 60px 24px;
+    }
+    .book-cta .inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .book-cta h2 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--cream);
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+    }
+    .book-cta p {
+      color: rgba(244, 228, 205, 0.85);
+      margin-bottom: 24px;
+      font-size: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--cream);
+      border: none;
+      padding: 14px 30px;
+      border-radius: 6px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.18s;
+    }
+    .btn-primary:hover { background: var(--terracotta-d); }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(244, 228, 205, 0.7);
+      padding: 36px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(244, 228, 205, 0.1);
+    }
+    footer a { color: var(--terracotta); text-decoration: none; }
+    footer p { font-size: 0.88rem; }
+    footer .disclaimer {
+      font-size: 0.76rem;
+      color: rgba(244, 228, 205, 0.45);
+      max-width: 760px;
+      margin: 18px auto 0;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 600px) {
+      .form-card { padding: 28px 22px; }
+      .nav-links { gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="/">
+      <div class="logo-text">SEND<span>NAVIGATE</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/ehcp-advisory">For Families</a></li>
+      <li><a href="/">For Schools</a></li>
+      <li><a href="/book" class="nav-cta">The Book</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO + FORM -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="whisper">If your child is out today, start here.</p>
+    <h1>The School Distress Operating Workbook</h1>
+    <p class="lede">Forty pages. The same tools used inside SEND Navigate advisory cases — yours, free.</p>
+
+    <div class="form-card">
+      <h2>Send the workbook to my inbox</h2>
+      <p class="sub">Free. UK GDPR-compliant. Unsubscribe at any time.</p>
+
+      <!--
+        ────────────────────────────────────────────────────────────
+        MAILERLITE INTEGRATION
+        ────────────────────────────────────────────────────────────
+        Replace this entire <form>...</form> block with the embed
+        code from MailerLite (Forms → your workbook signup form →
+        "Get embed code"). Keep the <div class="form-card"> wrapper
+        and the <h2>, <p class="sub">, and <p class="privacy"> blocks
+        above and below it — these provide the page styling.
+
+        Apply the following overrides to MailerLite's form via their
+        custom CSS panel so it matches the warm palette:
+
+          .ml-form-embedBody { background: transparent !important; }
+          .ml-form-formContent input { font-family: 'Lora', serif; }
+          .ml-form-embedSubmit button {
+            background: #C8553D !important;
+            font-family: 'Lato', sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.5px !important;
+          }
+
+        Until MailerLite is wired up, the form below is functional
+        only as a UI placeholder — submissions will not be captured.
+        ────────────────────────────────────────────────────────────
+      -->
+
+      <form action="#" method="POST" id="workbook-signup">
+        <label for="firstname">FIRST NAME</label>
+        <input type="text" id="firstname" name="firstname" required autocomplete="given-name" />
+
+        <label for="email">EMAIL ADDRESS</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+
+        <input type="hidden" name="source" value="workbook" />
+
+        <button type="submit">SEND ME THE WORKBOOK</button>
+      </form>
+
+      <p class="privacy">
+        You'll get the workbook plus a short five-email series over two weeks. No sales pressure. Read our <a href="/privacy">privacy policy</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section">
+  <h2 class="section-title">What's in the workbook</h2>
+  <p class="section-lead">Forty designed pages of fillable tools — for the parent who can't read a 120-page book this week.</p>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <p class="num">TOOL 01</p>
+      <h3>The Three-State Tracker</h3>
+      <p>Daily Green / Amber / Red check. With "if you see X, do this and don't do this" advice on every state.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 02</p>
+      <h3>The Weekly Tracker grid</h3>
+      <p>Seven days, four windows a day. The evidence base a GP, the LA, or a tribunal will actually accept.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 03</p>
+      <h3>The Core Demands Audit</h3>
+      <p>Twelve categories of demand reduced to a single, fillable map of your home environment.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 04</p>
+      <h3>The Trigger Sweep</h3>
+      <p>Sensory, social, academic, transitional, relational. The list parents miss when they only look at the school day.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 05</p>
+      <h3>The Language Audit</h3>
+      <p>Ten "won't" phrases and the "can't" translation. With a "why this matters" column so you know what each switch protects.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 06</p>
+      <h3>The Symptom &amp; Impact Log</h3>
+      <p>The structure your GP will recognise. Worked example included.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 07</p>
+      <h3>The Section 19 Letter</h3>
+      <p>The fillable template that triggers the Local Authority's statutory duty to provide education. With the exact statutory wording.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 08</p>
+      <h3>The EHCNA "May" Test Checklist</h3>
+      <p>The legal threshold for assessment. Most refusals fail this test — the checklist shows you where.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 09</p>
+      <h3>Exclusion &amp; Discrimination Quick Check</h3>
+      <p>When the situation is not just SEND but discrimination. A five-question check before you escalate.</p>
+    </div>
+    <div class="tool-card">
+      <p class="num">TOOL 10</p>
+      <h3>Your Situation Map</h3>
+      <p>The qualifier that tells you whether a free fifteen-minute call with SEND Navigate is the right next step — or whether the workbook alone is enough.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<div class="voice-band">
+  <div class="inner">
+    <p class="label">A VOICE FROM THE COMMUNITY</p>
+    <blockquote>"Behind every absence is a story. Not of defiance, as it is so often labelled, but of distress."</blockquote>
+    <p class="attrib">RABBI MARTIN TAUBMAN · forty years in education</p>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section light">
+  <div class="inner">
+    <h2 class="section-title">How it works</h2>
+    <p class="section-lead">Three steps. No payment. No friction.</p>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="step-num">1</div>
+        <h3>Enter your details</h3>
+        <p>First name and email. Nothing else.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">2</div>
+        <h3>Confirm your address</h3>
+        <p>Click the link in the confirmation email (UK GDPR — sixty seconds).</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">3</div>
+        <h3>Open the workbook</h3>
+        <p>It arrives as a PDF you can print, fill in, and use today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK CTA -->
+<section class="book-cta">
+  <div class="inner">
+    <h2>The workbook is the toolkit. The book is the map.</h2>
+    <p>If you want the full framework behind these tools — the Sanctuary Home Protocol, the Won't vs Can't distinction, the EOTAS routes, the EHCP blueprint — that lives in the book.</p>
+    <a class="btn-primary" href="/book">SEE THE BOOK</a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>SEND Navigate</strong> · <a href="/">For Schools</a> · <a href="/ehcp-advisory">For Families</a> · <a href="/book">The Book</a> · <a href="mailto:hello@sendnavigate.org">hello@sendnavigate.org</a></p>
+  <p style="margin-top: 12px; font-size: 0.85rem;">© SEND Navigate. The SEND Navigate Library.</p>
+  <p class="disclaimer">SEND Navigate provides specialist SEND advisory and case-building support to families. It is not a regulated legal service and does not provide legal advice in the regulated sense of the Legal Services Act 2007. Where a case requires representation by a regulated solicitor or barrister, that will be flagged. Information on this site is general and does not constitute advice on any specific case.</p>
+</footer>
+
+</body>
+</html>
