@@ -3,8 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LM84B56QZY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LM84B56QZY');
+  </script>
+
   <title>See It. Support It. Teach It. — SEN Training for Schools | SEND Navigate</title>
-  <meta name="description" content="Practical SEN training that changes what happens in the classroom. Three modules, immediate impact. Licensed for schools, MATs and CPD providers." />
+  <meta name="description" content="Practical SEN training that changes what happens in the classroom. Three modules, immediate impact. Licensed for schools, MATs and CPD providers. Created by former Headteacher and SENCo Stephen Mallett." />
+  <meta name="keywords" content="SEN training schools, SEND CPD, INSET training SEND, SEN teacher training UK, EHCP classroom support, neurodiversity training schools, MAT SEND programme" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://sendnavigate.org/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sendnavigate.org/" />
+  <meta property="og:title" content="See It. Support It. Teach It. — SEN Training for Schools | SEND Navigate" />
+  <meta property="og:description" content="Practical SEN training that changes what happens in the classroom. Three modules, immediate impact. Licensed for schools, MATs and CPD providers." />
+  <meta property="og:image" content="https://sendnavigate.org/send_navigate_banner.png" />
+  <meta property="og:site_name" content="SEND Navigate" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="See It. Support It. Teach It. — SEN Training for Schools | SEND Navigate" />
+  <meta name="twitter:description" content="Practical SEN training that changes what happens in the classroom. Three modules, immediate impact. Licensed for schools, MATs and CPD providers." />
+  <meta name="twitter:image" content="https://sendnavigate.org/send_navigate_banner.png" />
+
+  <!-- Schema: Organisation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SEND Navigate",
+    "url": "https://sendnavigate.org",
+    "logo": "https://sendnavigate.org/send_navigate_banner.png",
+    "description": "Practical SEN training for schools and EHCP advisory support for families. Created by former Headteacher and SENCo Stephen Mallett.",
+    "founder": {
+      "@type": "Person",
+      "name": "Stephen Mallett",
+      "jobTitle": "Former Headteacher, SENCo & EHCP Consultant",
+      "url": "https://sendnavigate.org/#about"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@sendnavigate.org",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://uk.linkedin.com/in/stephen-mallett-90149877"
+    ]
+  }
+  </script>
+
+  <!-- Schema: EducationalOrganization / Course -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "See It. Support It. Teach It. — SEN Training Programme",
+    "description": "A three-module, INSET-ready SEN training programme for UK schools built around the EEF Five-a-Day and Positive Behaviour Support. Gives every teacher practical tools to identify, support and teach pupils with SEND.",
+    "provider": {
+      "@type": "Organization",
+      "name": "SEND Navigate",
+      "url": "https://sendnavigate.org"
+    },
+    "educationalLevel": "Professional",
+    "inLanguage": "en-GB",
+    "offers": {
+      "@type": "Offer",
+      "price": "799",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
   <style>
     :root { --navy:#1E3A5F; --amber:#D4781A; --teal:#2D8A7A; --white:#FFFFFF; --offwhite:#F7F9FC; --grey:#6B7280; --light-border:#E5EAF0; }
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
@@ -96,11 +175,30 @@
     .pricing-card .btn { width:100%; text-align:center; font-size:0.875rem; padding:0.7rem 1rem; }
     .pricing-note { text-align:center; margin-top:2rem; padding:1.25rem 1.5rem; background:#FDF0E4; border:1px solid #F5C896; border-radius:8px; font-size:0.9rem; color:#7a4010; }
     .pricing-note strong { color:var(--amber); }
+    /* Resources hub strip */
+    .resources-strip { background:var(--offwhite); border-top:3px solid var(--teal); border-bottom:1px solid var(--light-border); padding:2.5rem 0; }
+    .resources-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:1.5rem; }
+    .resource-card { background:#fff; border:1px solid var(--light-border); border-radius:8px; padding:1.25rem 1.25rem 1rem; transition:box-shadow 0.2s,transform 0.2s; text-decoration:none; display:block; }
+    .resource-card:hover { box-shadow:0 6px 20px rgba(30,58,95,0.10); transform:translateY(-2px); }
+    .resource-card-tag { font-size:0.68rem; font-weight:800; letter-spacing:0.09em; text-transform:uppercase; color:var(--teal); margin-bottom:0.4rem; }
+    .resource-card h3 { color:var(--navy); font-size:0.95rem; line-height:1.35; margin-bottom:0.5rem; }
+    .resource-card p { font-size:0.82rem; color:var(--grey); line-height:1.5; margin-bottom:0.75rem; }
+    .resource-card-link { font-size:0.82rem; font-weight:700; color:var(--teal); }
+    /* About section improvements */
+    .about-grid { display:grid; grid-template-columns:1fr 1.6fr; gap:3.5rem; align-items:center; max-width:1000px; margin:0 auto; }
+    .about-photo-placeholder { background:rgba(255,255,255,0.08); border:2px dashed rgba(255,255,255,0.35); aspect-ratio:1; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:rgba(255,255,255,0.6); font-size:0.82rem; text-align:center; padding:1.5rem; gap:0.5rem; }
+    .about-photo-placeholder strong { color:#fff; font-size:0.9rem; }
+    .about-photo-placeholder em { font-style:normal; font-size:0.75rem; color:rgba(255,255,255,0.45); }
+    /* Social links */
+    .social-links { display:flex; gap:0.75rem; margin-top:1.25rem; flex-wrap:wrap; }
+    .social-link { display:inline-flex; align-items:center; gap:0.4rem; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.85); padding:0.4rem 0.9rem; border-radius:4px; font-size:0.82rem; font-weight:600; text-decoration:none; transition:background 0.2s; }
+    .social-link:hover { background:rgba(255,255,255,0.2); color:#fff; }
     footer { background:var(--navy); color:rgba(255,255,255,0.6); padding:2rem 0; text-align:center; font-size:0.85rem; }
     footer a { color:rgba(255,255,255,0.75); text-decoration:none; }
     footer a:hover { color:#fff; }
-    @media(max-width:900px){ #problem .problem-grid,#why-now .problem-grid{grid-template-columns:1fr;gap:2rem;} #programme .module-grid{grid-template-columns:1fr;gap:1.25rem;} #audience .audience-grid{grid-template-columns:repeat(2,1fr);} #pricing .pricing-grid{grid-template-columns:repeat(2,1fr);} }
-    @media(max-width:640px){ .section{padding:3.5rem 0;} #hero{padding:4rem 0 3rem;} .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:1.5rem;gap:1rem;} .nav-links.open{display:flex;} .nav-toggle{display:block;} .hero-actions{flex-direction:column;} #audience .audience-grid,#pricing .pricing-grid{grid-template-columns:1fr;} }
+    .footer-links { display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin-top:0.75rem; }
+    @media(max-width:900px){ #problem .problem-grid,#why-now .problem-grid{grid-template-columns:1fr;gap:2rem;} #programme .module-grid{grid-template-columns:1fr;gap:1.25rem;} #audience .audience-grid{grid-template-columns:repeat(2,1fr);} #pricing .pricing-grid{grid-template-columns:repeat(2,1fr);} .resources-grid{grid-template-columns:repeat(2,1fr);} .about-grid{grid-template-columns:1fr;} }
+    @media(max-width:640px){ .section{padding:3.5rem 0;} #hero{padding:4rem 0 3rem;} .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:1.5rem;gap:1rem;} .nav-links.open{display:flex;} .nav-toggle{display:block;} .hero-actions{flex-direction:column;} #audience .audience-grid,#pricing .pricing-grid{grid-template-columns:1fr;} .resources-grid{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
@@ -113,8 +211,8 @@
         <li><a href="#audience">Who It's For</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#books">Books</a></li>
-        <li><a href="/ehcp-advisory.html">For Families</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/ehcp-advisory">For Families</a></li>
         <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
@@ -128,7 +226,7 @@
       <p class="hero-sub">A three-module, INSET-ready programme built around the EEF Five-a-Day and Positive Behaviour Support — giving every teacher practical tools to identify, support, and teach pupils with SEND from their very next lesson.</p>
       <div class="hero-actions">
         <a href="https://buy.stripe.com/3cI7sN8bZ4mi7wDg9CaVa00" class="btn btn-primary">Buy School Licence — £799</a>
-        <a href="mailto:caroline@sendnavigate.org?subject=Free Sample Request" class="btn btn-outline">Download Free Sample</a>
+        <a href="/workbook" class="btn btn-outline">Download Free Sample</a>
         <a href="#contact" class="btn btn-outline">Enquire About Licensing</a>
       </div>
       <div class="hero-trust">
@@ -166,7 +264,7 @@
         <div style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--light-border);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(30,58,95,0.07);transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 10px 36px rgba(30,58,95,0.15)';this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(30,58,95,0.07)';this.style.transform='none'">
           <div style="background:linear-gradient(135deg,#1E3A5F 0%,#162d4a 100%);padding:2rem;display:flex;justify-content:center;min-height:200px;align-items:center;">
             <a href="https://www.amazon.co.uk/Parents-Shield-Complete-Navigating-System-ebook/dp/B0H26YM5JL/" target="_blank" rel="noopener">
-              <img src="Parent%20Shield%20-%20Kindle%20Cover.jpg" alt="Parent Shield by Stephen Mallett" style="width:140px;height:auto;border-radius:4px 8px 8px 4px;box-shadow:0 10px 28px rgba(0,0,0,0.4);" />
+              <img src="Parent%20Shield%20-%20Kindle%20Cover.jpg" alt="Parent Shield by Stephen Mallett — EHCP and SEND navigation guide" style="width:140px;height:auto;border-radius:4px 8px 8px 4px;box-shadow:0 10px 28px rgba(0,0,0,0.4);" />
             </a>
           </div>
           <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">
@@ -178,15 +276,15 @@
         </div>
         <div style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--light-border);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(30,58,95,0.07);transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 10px 36px rgba(30,58,95,0.15)';this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(30,58,95,0.07)';this.style.transform='none'">
           <div style="background:linear-gradient(135deg,#2D8A7A 0%,#1a5f54 100%);padding:2rem;display:flex;justify-content:center;min-height:200px;align-items:center;">
-            <a href="https://www.amazon.co.uk/dp/B0H3FXVQZS" target="_blank" rel="noopener">
-              <img src="cover-kindle.jpg" alt="When Your Child Can't Go to School" style="width:140px;height:auto;border-radius:4px 8px 8px 4px;box-shadow:0 10px 28px rgba(0,0,0,0.4);" />
+            <a href="/book" target="_blank" rel="noopener">
+              <img src="cover-kindle.jpg" alt="When Your Child Can't Go to School by Stephen Mallett — EBSA and school distress guide" style="width:140px;height:auto;border-radius:4px 8px 8px 4px;box-shadow:0 10px 28px rgba(0,0,0,0.4);" />
             </a>
           </div>
           <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">
             <div style="font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.4rem;">School Distress &amp; EBSA</div>
             <h3 style="color:var(--navy);font-size:1.1rem;margin-bottom:0.5rem;line-height:1.3;">When Your Child Can't Go to School</h3>
             <p style="color:#4B5563;font-size:0.88rem;line-height:1.6;margin-bottom:1.25rem;flex:1;">The UK parent's manual for school distress, EBSA, and the statutory routes to real help.</p>
-            <a href="https://www.amazon.co.uk/dp/B0H3FXVQZS" target="_blank" rel="noopener" class="btn btn-primary" style="text-align:center;font-size:0.88rem;padding:0.7rem 1rem;">Buy on Amazon UK</a>
+            <a href="/book" class="btn btn-primary" style="text-align:center;font-size:0.88rem;padding:0.7rem 1rem;">Find Out More</a>
           </div>
         </div>
       </div>
@@ -194,7 +292,7 @@
       <div style="max-width:780px;margin:0 auto;background:#fff;border:2px solid var(--amber);border-radius:12px;padding:2rem 2.25rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;box-shadow:0 4px 20px rgba(212,120,26,0.12);">
         <div style="flex:1;min-width:260px;">
           <div style="display:inline-block;background:var(--amber);color:#fff;font-size:0.68rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.7rem;border-radius:2rem;margin-bottom:0.75rem;">Free — No Catch</div>
-          <div style="font-size:1.2rem;font-weight:800;color:var(--navy);line-height:1.3;margin-bottom:0.5rem;">&#128229; For a free parent information guide — click here.</div>
+          <div style="font-size:1.2rem;font-weight:800;color:var(--navy);line-height:1.3;margin-bottom:0.5rem;">&#128229; Free 40-page parent information guide — click here.</div>
           <p style="color:#4B5563;font-size:0.92rem;line-height:1.55;margin:0;">Not ready to buy? Start with the free guide. Enter your email and we'll send Stephen Mallett's parent resource guide straight to your inbox.</p>
         </div>
         <a href="/workbook" class="btn btn-primary" style="font-size:0.95rem;padding:0.9rem 1.75rem;white-space:nowrap;background:var(--amber);border-color:var(--amber);flex-shrink:0;">Get the Free Guide →</a>
@@ -203,7 +301,7 @@
   </section>
 
   <!-- Parent banner -->
-  <a href="/ehcp-advisory.html" style="display:block;text-decoration:none;background:linear-gradient(135deg,#D4781A 0%,#b8640f 100%);color:#fff;padding:1.5rem 0;">
+  <a href="/ehcp-advisory" style="display:block;text-decoration:none;background:linear-gradient(135deg,#D4781A 0%,#b8640f 100%);color:#fff;padding:1.5rem 0;">
     <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;">
       <div style="flex:1;min-width:280px;">
         <div style="display:inline-block;background:rgba(255,255,255,0.2);color:#fff;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.7rem;border-radius:2rem;margin-bottom:0.6rem;">For Parents &amp; Carers</div>
@@ -214,6 +312,46 @@
     </div>
   </a>
 
+  <!-- Resources Hub -->
+  <section id="resources" class="resources-strip">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <div style="display:inline-block;background:var(--teal);color:#fff;font-size:0.72rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:2rem;margin-bottom:0.6rem;">Free Parent &amp; School Resources</div>
+          <h2 style="color:var(--navy);font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:0.25rem;">Guides written by a former Headteacher &amp; SENCo</h2>
+          <p style="color:var(--grey);font-size:0.95rem;">Free, in-depth guides to help parents and schools navigate the SEND system.</p>
+        </div>
+        <a href="/resources" style="color:var(--teal);font-weight:700;font-size:0.9rem;text-decoration:none;white-space:nowrap;">View all resources →</a>
+      </div>
+      <div class="resources-grid">
+        <a href="/what-is-an-ehcp" class="resource-card">
+          <div class="resource-card-tag">Parent Guide</div>
+          <h3>What is an EHCP? A Complete Parent's Guide</h3>
+          <p>Everything you need to know about Education, Health and Care Plans — who qualifies, how to apply, and what to do if you're refused.</p>
+          <span class="resource-card-link">Read the guide →</span>
+        </a>
+        <a href="/send-tribunal" class="resource-card">
+          <div class="resource-card-tag">Legal Guide</div>
+          <h3>SEND Tribunal: A Parent's Complete Guide</h3>
+          <p>How to appeal your local authority's decision — the process, the deadlines, and how to prepare your case.</p>
+          <span class="resource-card-link">Read the guide →</span>
+        </a>
+        <a href="/ehcp-appeal-refusal" class="resource-card">
+          <div class="resource-card-tag">Appeals</div>
+          <h3>How to Appeal an EHCP Refusal</h3>
+          <p>Your LA refused to assess or issue an EHCP. Here is exactly what to do next, step by step.</p>
+          <span class="resource-card-link">Read the guide →</span>
+        </a>
+        <a href="/send-reform-2026" class="resource-card">
+          <div class="resource-card-tag">Policy Update</div>
+          <h3>The 2026 SEND Reform &amp; Schools White Paper</h3>
+          <p>What the government's proposed changes mean for your child's rights and what parents need to do now.</p>
+          <span class="resource-card-link">Read the guide →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section id="why-now" class="section section--alt">
     <div class="container">
       <div class="section-label"><span class="tag">Why Now</span></div>
@@ -223,7 +361,7 @@
         <div class="problem-text">
           <p><strong>The statutory gap.</strong> Under the Health &amp; Care Act 2022, autism and learning-disability training is mandatory for every member of NHS and adult social care staff. In schools — where most neurodivergent children spend most of their week — that same training is non-statutory. Almost 25% of mainstream school staff have received no neurodiversity training at all.</p>
           <p><strong>The diagnosis bottleneck.</strong> NHS waiting lists for ADHD and autism assessments routinely exceed two years. During that wait, children sit in mainstream classrooms with unmet needs — and at significantly elevated risk of isolation, internal exclusion and permanent exclusion.</p>
-          <p><strong>The funding window.</strong> The DfE has launched a £200m SEND teacher-training programme and an £1.8bn “Experts at Hand” fund explicitly designed to tilt provision toward early mainstream support. Schools, MATs and LAs have budget allocated to this — and the procurement window is now.</p>
+          <p><strong>The funding window.</strong> The DfE has launched a £200m SEND teacher-training programme and an £1.8bn "Experts at Hand" fund explicitly designed to tilt provision toward early mainstream support. Schools, MATs and LAs have budget allocated to this — and the procurement window is now.</p>
           <p><strong>The Ofsted lens.</strong> The new inspection framework asks every school to evidence that staff are equipped to identify and meet SEND in the mainstream classroom.</p>
         </div>
         <div class="problem-callout">
@@ -289,9 +427,9 @@
         <div class="pricing-card"><div class="pricing-tier">Single School</div><div class="pricing-name">School Licence</div><div class="pricing-price"><span>£</span>799</div><div class="pricing-period">one-off, unlimited internal use</div><hr class="pricing-divider"/><ul class="pricing-list"><li>Full three-module programme</li><li>Unlimited staff access</li><li>Facilitator guide &amp; slides</li><li>Participant workbooks</li><li>All scaffolding guides + Practitioner's Roadmap</li></ul><a href="https://buy.stripe.com/3cI7sN8bZ4mi7wDg9CaVa00" class="btn btn-primary">Buy Now — £799</a></div>
         <div class="pricing-card pricing-card--featured"><div class="pricing-badge">Most Chosen</div><div class="pricing-tier">Small MAT (2–5 schools)</div><div class="pricing-name">MAT Licence</div><div class="pricing-price"><span>£</span>1,799</div><div class="pricing-period">one-off, trust-wide</div><hr class="pricing-divider"/><ul class="pricing-list"><li>Full programme for all schools</li><li>Trust-wide unlimited access</li><li>MAT Compliance Dashboard for Ofsted</li><li>Central SENCO coordinator pack</li><li>Per-school cost from £360</li></ul><a href="https://buy.stripe.com/cNi9AVgIv4mi3gn9LeaVa01" class="btn btn-primary">Buy Now — £1,799</a></div>
         <div class="pricing-card"><div class="pricing-tier">Large MAT (6+ schools)</div><div class="pricing-name">Large MAT Licence</div><div class="pricing-price"><span>£</span>2,999</div><div class="pricing-period">one-off, trust-wide</div><hr class="pricing-divider"/><ul class="pricing-list"><li>Unlimited schools across the trust</li><li>Priority support &amp; early updates</li><li>MAT Compliance Dashboard for Ofsted</li><li>Per-school cost from £125 for a 24-school trust</li></ul><a href="https://buy.stripe.com/3cIaEZ3VJ1a66sz3mQaVa02" class="btn btn-primary">Buy Now — £2,999</a></div>
-        <div class="pricing-card"><div class="pricing-tier">CPD / INSET Provider</div><div class="pricing-name">Delivery Partner</div><div class="pricing-price"><span>£</span>2,500</div><div class="pricing-period">per year · <strong style="color:var(--amber)">£1,500 early partner rate</strong></div><hr class="pricing-divider"/><ul class="pricing-list"><li>Deliver to multiple schools</li><li>Commercial use licence included</li><li>Editable, co-brandable files</li><li>Marketing &amp; sales materials</li></ul><a href="mailto:caroline@sendnavigate.org?subject=Delivery Partner Licence Enquiry" class="btn btn-outline-navy">Enquire</a></div>
+        <div class="pricing-card"><div class="pricing-tier">CPD / INSET Provider</div><div class="pricing-name">Delivery Partner</div><div class="pricing-price"><span>£</span>2,500</div><div class="pricing-period">per year · <strong style="color:var(--amber)">£1,500 early partner rate</strong></div><hr class="pricing-divider"/><ul class="pricing-list"><li>Deliver to multiple schools</li><li>Commercial use licence included</li><li>Editable, co-brandable files</li><li>Marketing &amp; sales materials</li></ul><a href="mailto:hello@sendnavigate.org?subject=Delivery Partner Licence Enquiry" class="btn btn-outline-navy">Enquire</a></div>
       </div>
-      <div class="pricing-note"><strong>Early Partner Rate:</strong> The first three Delivery Partner licensees can access the programme at <strong>£1,500</strong> — a saving of £1,000. <a href="mailto:caroline@sendnavigate.org?subject=Early Partner Rate Enquiry" style="color:var(--amber);font-weight:700;">Check availability →</a></div>
+      <div class="pricing-note"><strong>Early Partner Rate:</strong> The first five CPD/INSET delivery partners pay £1,500 (not £2,500) for their first year. <a href="mailto:hello@sendnavigate.org?subject=Early Partner Rate Enquiry" style="color:var(--amber);font-weight:700;">Email to claim your place →</a></div>
     </div>
   </section>
 
@@ -301,7 +439,7 @@
         <div style="display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.75rem;border-radius:2rem;margin-bottom:1rem;">Also from SEND Navigate</div>
         <h2 style="color:#fff;margin-bottom:1rem;font-size:clamp(1.5rem,3vw,2rem);">Are you a parent or carer navigating the EHCP or tribunal system?</h2>
         <p style="color:rgba(255,255,255,0.9);font-size:1rem;margin-bottom:1.5rem;">SEND Navigate also offers direct EHCP and tribunal advisory support for families — Initial Consultations from £160, full Appeal and Tribunal preparation packages.</p>
-        <a href="/ehcp-advisory.html" style="display:inline-block;background:#fff;color:#1E3A5F;padding:0.85rem 1.75rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;">SEND Navigate for Families →</a>
+        <a href="/ehcp-advisory" style="display:inline-block;background:#fff;color:#1E3A5F;padding:0.85rem 1.75rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;">SEND Navigate for Families →</a>
       </div>
       <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:1.75rem;">
         <h3 style="color:#fff;margin-bottom:1rem;font-size:1.05rem;">Family-facing services</h3>
@@ -317,22 +455,35 @@
   </section>
 
   <section id="about" style="background:linear-gradient(135deg,#1E3A5F 0%,#162d4a 100%);color:#fff;padding:5rem 0;">
-    <div class="container"><div style="display:grid;grid-template-columns:1fr 1.6fr;gap:3.5rem;align-items:center;max-width:1000px;margin:0 auto;">
-      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);aspect-ratio:1;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;">SM</div>
-      <div>
-        <div style="display:inline-block;background:rgba(212,120,26,0.95);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.75rem;border-radius:2rem;margin-bottom:1rem;">About the Creator</div>
-        <h2 style="color:#fff;margin-bottom:1rem;font-size:clamp(1.75rem,3.5vw,2.5rem);">Stephen Mallett</h2>
-        <p style="color:rgba(255,255,255,0.92);font-size:1.05rem;line-height:1.75;margin-bottom:1rem;">Stephen Mallett spent 25 years working in and leading UK schools — as a teacher, SENCo and Headteacher. He is the Founder of <strong style="color:#fff;">SEND Navigate</strong> and the Author of <em>Parent Shield</em> and <em>When Your Child Can't Go to School</em>.</p>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo-placeholder">
+          <span style="font-size:2.5rem;">📸</span>
+          <strong>Stephen Mallett</strong>
+          <em>Add your professional headshot here — replace this placeholder in the repository with a photo named stephen-mallett.jpg</em>
+        </div>
+        <div>
+          <div style="display:inline-block;background:rgba(212,120,26,0.95);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.75rem;border-radius:2rem;margin-bottom:1rem;">About the Creator</div>
+          <h2 style="color:#fff;margin-bottom:1rem;font-size:clamp(1.75rem,3.5vw,2.5rem);">Stephen Mallett</h2>
+          <p style="color:rgba(255,255,255,0.92);font-size:1.05rem;line-height:1.75;margin-bottom:1rem;">Stephen Mallett spent 25 years working in and leading UK schools — as a classroom teacher, SENCo and Headteacher. He is the Founder of <strong style="color:#fff;">SEND Navigate</strong> and the Author of <em>Parent Shield</em> and <em>When Your Child Can't Go to School</em>.</p>
+          <p style="color:rgba(255,255,255,0.85);font-size:0.97rem;line-height:1.75;margin-bottom:1rem;">As a parent of two children with SEN, Stephen brings a unique dual perspective — the insider knowledge of a school leader and the lived experience of a parent navigating the same system he once ran. This is the foundation of every SEND Navigate training programme and advisory case.</p>
+          <p style="color:rgba(255,255,255,0.85);font-size:0.97rem;line-height:1.75;margin-bottom:1.5rem;">His books are available on Amazon. His free parent guides are used by thousands of families across the UK. His school training programme is designed to close the gap between what EHCPs say and what actually happens in classrooms.</p>
+          <div class="social-links">
+            <a href="https://uk.linkedin.com/in/stephen-mallett-90149877" target="_blank" rel="noopener" class="social-link">🔗 LinkedIn</a>
+            <a href="/resources" class="social-link">📚 Free Guides</a>
+            <a href="/ehcp-advisory" class="social-link">👨‍👩‍👧 For Families</a>
+          </div>
+        </div>
       </div>
-    </div></div>
+    </div>
   </section>
 
   <section id="contact" class="section">
     <div class="container"><div style="max-width:720px;margin:0 auto;text-align:center;">
       <div class="section-label"><span class="tag">Get In Touch</span></div>
       <h2 class="section-title">Ready to bring this to your school or trust?</h2>
-      <p class="section-subtitle">Get in touch for licence enquiries, MAT pricing, partner enquiries, or to request a sample. I reply within one working day.</p>
-      <p style="margin-bottom:1rem;"><strong>Email:</strong> <a href="mailto:caroline@sendnavigate.org" style="color:var(--amber);font-weight:600;">caroline@sendnavigate.org</a></p>
+      <p class="section-subtitle">Get in touch for licence enquiries, MAT pricing, partner enquiries, or to request a sample. We reply within one working day.</p>
+      <p style="margin-bottom:1rem;"><strong>Email:</strong> <a href="mailto:hello@sendnavigate.org" style="color:var(--amber);font-weight:600;">hello@sendnavigate.org</a></p>
       <p style="margin-top:1.5rem;"><a href="https://buy.stripe.com/3cI7sN8bZ4mi7wDg9CaVa00" class="btn btn-primary">Buy a School Licence Now — £799</a></p>
     </div></div>
   </section>
@@ -341,9 +492,23 @@
     <div class="container">
       <p><strong style="color:#fff;">SEND Navigate</strong> — Practical SEN training and advisory for UK schools and families</p>
       <p style="margin-top:0.5rem;">Stephen Mallett, Founder &amp; Author of <em>Parent Shield</em> and <em>When Your Child Can't Go to School</em></p>
-      <p style="margin-top:0.5rem;"><a href="mailto:caroline@sendnavigate.org" style="color:rgba(255,255,255,0.85);text-decoration:none;">caroline@sendnavigate.org</a> &nbsp;|&nbsp; <a href="/ehcp-advisory.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">For Families</a></p>
-      <p style="margin-top:1rem;font-size:0.75rem;color:rgba(255,255,255,0.55);">&copy; SEND Navigate. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/ehcp-advisory">For Families</a>
+        <a href="/workbook">Free Guide</a>
+        <a href="/resources">Resources</a>
+        <a href="/what-is-an-ehcp">What is an EHCP?</a>
+        <a href="/send-tribunal">SEND Tribunal</a>
+        <a href="/book">Books</a>
+        <a href="mailto:hello@sendnavigate.org">hello@sendnavigate.org</a>
+      </div>
+      <p style="margin-top:1rem;font-size:0.75rem;color:rgba(255,255,255,0.55);">&copy; 2026 SEND Navigate. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
 </body>
 </html>
