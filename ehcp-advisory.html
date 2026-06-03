@@ -839,7 +839,9 @@
           <p><strong>Hours:</strong> Mon–Fri 9am–6pm. Evening calls available by arrangement for working parents.</p>
           <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--grey);">All conversations are confidential. Documents are stored securely and deleted at the end of the engagement unless you ask otherwise.</p>
         </div>
-        <form class="contact-form" action="mailto:hello@sendnavigate.org" method="post" enctype="text/plain">
+        <form class="contact-form" name="advisory-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="advisory-enquiry">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
           <input type="text" name="name" placeholder="Your name" required>
           <input type="email" name="email" placeholder="Email address" required>
           <input type="tel" name="phone" placeholder="Phone (optional)">
@@ -854,7 +856,7 @@
             <option>Not sure yet — just want to talk</option>
           </select>
           <textarea name="message" rows="4" placeholder="Briefly — where are you in the process?" required></textarea>
-          <button type="submit" class="btn btn-primary">Book my free 15-minute call</button>
+          <button type="submit" class="btn btn-primary" onclick="if(typeof gtag!=='undefined'){gtag('event','generate_lead',{event_category:'Contact Form',event_label:'Advisory Enquiry',value:1});}">Book my free 15-minute call</button>
         </form>
       </div>
     </div>

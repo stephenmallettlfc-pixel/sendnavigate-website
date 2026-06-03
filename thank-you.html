@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LM84B56QZY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LM84B56QZY');
+    // Fire conversion event on page load as backup (in case onclick didn't fire)
+    gtag('event', 'generate_lead', {
+      event_category: 'Contact Form',
+      event_label: 'Advisory Enquiry',
+      value: 1
+    });
+  </script>
+
+  <title>Thank You — We'll Be In Touch | SEND Navigate</title>
+  <meta name="description" content="Thank you for getting in touch with SEND Navigate. Stephen Mallett will respond within one working day." />
+  <!-- Prevent indexing of thank-you page -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: #1E3A5F;
+      background: #FFFFFF;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    :root {
+      --navy:        #1E3A5F;
+      --teal:        #2D8A7A;
+      --teal-dark:   #1f6c5f;
+      --warm:        #C97B5A;
+      --cream:       #FBF6EE;
+      --offwhite:    #F7F9FC;
+      --grey:        #6B7280;
+      --light-border:#E5EAF0;
+    }
+
+    nav {
+      background: var(--navy);
+      box-shadow: 0 2px 12px rgba(30,58,95,0.15);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nav-logo {
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--teal); }
+
+    .main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      background: var(--cream);
+    }
+
+    .card {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 3.5rem 3rem;
+      max-width: 620px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(30,58,95,0.10);
+    }
+
+    .check-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.75rem;
+      font-size: 2rem;
+      color: #FFFFFF;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.25rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: #374151;
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline {
+      background: var(--offwhite);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      margin: 1.75rem 0;
+      text-align: left;
+    }
+    .timeline h3 {
+      color: var(--navy);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 0.85rem;
+      align-items: flex-start;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      width: 28px;
+      height: 28px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .timeline-text strong { color: var(--navy); display: block; font-size: 0.95rem; }
+    .timeline-text span { color: var(--grey); font-size: 0.88rem; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--light-border);
+      margin: 1.75rem 0;
+    }
+
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .btn-primary { background: var(--teal); color: #FFFFFF; border-color: var(--teal); }
+    .btn-primary:hover { background: var(--teal-dark); border-color: var(--teal-dark); }
+    .btn-outline-navy { background: transparent; color: var(--navy); border-color: var(--navy); }
+    .btn-outline-navy:hover { background: var(--navy); color: #FFFFFF; }
+
+    .reassurance {
+      font-size: 0.88rem;
+      color: var(--grey);
+      margin-top: 1.25rem;
+    }
+
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+    footer a { color: rgba(255,255,255,0.7); }
+
+    @media (max-width: 540px) {
+      .card { padding: 2.5rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">SEND <span>Navigate</span></a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="card">
+      <div class="check-icon">&#10003;</div>
+      <h1>Thank you — your message has been received</h1>
+      <p class="lead">Stephen will review your enquiry and be in touch within one working day — usually much sooner.</p>
+
+      <div class="timeline">
+        <h3>What happens next</h3>
+        <div class="timeline-item">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-text">
+            <strong>Within 1 working day</strong>
+            <span>Stephen reviews your enquiry and sends a personal reply to your email address.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-text">
+            <strong>Free 15-minute call</strong>
+            <span>You'll be offered a no-obligation call to talk through your situation and identify the right level of support.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-text">
+            <strong>A clear plan</strong>
+            <span>If you'd like to proceed, Stephen will outline exactly what support looks like and what it costs — no surprises.</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <p style="color: #374151; font-size: 0.95rem;">While you wait, you might find these useful:</p>
+
+      <div class="links-row">
+        <a href="/what-is-an-ehcp.html" class="btn btn-outline-navy">EHCP Guide</a>
+        <a href="/send-tribunal.html" class="btn btn-outline-navy">Tribunal Guide</a>
+        <a href="/ehcp-appeal-refusal.html" class="btn btn-outline-navy">Appeal Refusal Guide</a>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+      </div>
+
+      <p class="reassurance">All conversations are confidential. Documents are stored securely and deleted at the end of the engagement unless you ask otherwise.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; SEND Navigate &nbsp;|&nbsp; <a href="mailto:hello@sendnavigate.org">hello@sendnavigate.org</a></p>
+  </footer>
+
+</body>
+</html>
