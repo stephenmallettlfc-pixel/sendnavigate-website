@@ -131,11 +131,11 @@
     .problem-text p { color: var(--mid); line-height: 1.8; margin-bottom: 1.1rem; }
     .problem-text strong { color: var(--navy); }
     .stat-callout { background: var(--navy); border-radius: 12px; padding: 2rem; }
-    .stat-callout h3 { color: var(--amber); font-size: 1.1rem; margin-bottom: 1.5rem; }
-    .stat-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
-    .stat-row:last-child { margin-bottom: 0; }
-    .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--teal); line-height: 1; flex-shrink: 0; width: 4rem; }
-    .stat-desc { color: rgba(255,255,255,0.82); font-size: 0.92rem; line-height: 1.6; padding-top: 0.3rem; }
+    .stat-callout h3 { color: var(--amber); font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stat-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1.25rem 1.25rem 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .stat-num { font-size: 2.6rem; font-weight: 800; color: var(--teal); line-height: 1; }
+    .stat-desc { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.55; }
 
     /* PHILOSOPHY */
     .philosophy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
@@ -238,6 +238,20 @@
     .faq-a { padding: 0 1.5rem 1.25rem; font-size: 0.92rem; color: var(--mid); line-height: 1.75; display: none; }
     .faq-item.open .faq-a { display: block; }
 
+    /* AUTHOR'S WORDS */
+    .author-words { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-d) 100%); padding: 5rem 0; }
+    .author-words-inner { max-width: 820px; margin: 0 auto; }
+    .author-words-tag { display: inline-block; background: rgba(212,120,26,0.85); color: #fff; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2rem; margin-bottom: 2rem; }
+    .author-words blockquote { border-left: 4px solid var(--amber); padding-left: 2rem; margin-bottom: 2.5rem; }
+    .author-words blockquote p { color: rgba(255,255,255,0.92); font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.85; font-style: italic; margin-bottom: 1rem; }
+    .author-words blockquote p:last-child { margin-bottom: 0; }
+    .author-signature { display: flex; align-items: center; gap: 1.25rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.12); }
+    .author-avatar { width: 56px; height: 56px; background: var(--amber); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: #fff; flex-shrink: 0; }
+    .author-sig-text h4 { color: #fff; font-size: 1rem; margin-bottom: 0.2rem; }
+    .author-sig-text p { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.5; }
+    .author-creds { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .author-cred { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 2rem; padding: 0.25rem 0.75rem; font-size: 0.75rem; color: rgba(255,255,255,0.7); font-weight: 600; }
+
     /* CTA BAND */
     .cta-band { background: linear-gradient(135deg, var(--amber) 0%, var(--amber-d) 100%); padding: 4rem 0; text-align: center; }
     .cta-band h2 { color: #fff; margin-bottom: 1rem; font-size: clamp(1.5rem, 3vw, 2rem); }
@@ -277,6 +291,7 @@
   <div class="nav-inner">
     <a href="/" class="nav-logo">SEND<span>Navigate</span></a>
     <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
       <li><a href="#programme">The Programme</a></li>
       <li><a href="#toolkit">What's Included</a></li>
       <li><a href="#evidence">EEF Evidence</a></li>
@@ -338,21 +353,23 @@
       </div>
       <div class="stat-callout">
         <h3>The scale of the challenge</h3>
-        <div class="stat-row">
-          <div class="stat-num">1 in 5</div>
-          <div class="stat-desc">pupils in your school has a special educational need or disability — identified or not.</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-num">~50%</div>
-          <div class="stat-desc">of those pupils are not yet formally identified. Their teacher may be the first adult to spot the signs.</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-num">70%+</div>
-          <div class="stat-desc">of SEN pupils report feeling "different" from classmates before Year 7 — before most diagnoses arrive.</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-num">2 yrs</div>
-          <div class="stat-desc">is the typical NHS waiting time for an autism or ADHD assessment. Schools cannot wait. They need to act now.</div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-num">1 in 5</div>
+            <div class="stat-desc">pupils in your school has a special educational need or disability — identified or not.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">~50%</div>
+            <div class="stat-desc">of those pupils are not yet formally identified. Their teacher may be the first adult to spot the signs.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">70%+</div>
+            <div class="stat-desc">of SEN pupils report feeling "different" from classmates before Year 7 — before most diagnoses arrive.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2 yrs</div>
+            <div class="stat-desc">typical NHS wait for autism or ADHD assessment. Schools cannot wait. They need to act now.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -655,6 +672,36 @@
       <div class="testimonial-card">
         <p class="testimonial-quote">The scripts alone were worth the day. I've been teaching for twelve years and nobody had ever given me the actual words to use when a pupil escalates. I used one of them the next morning.</p>
         <div class="testimonial-attr">Secondary Teacher — after completing the programme</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR'S WORDS -->
+<section class="author-words">
+  <div class="container">
+    <div class="author-words-inner">
+      <div class="author-words-tag">A Note from the Author</div>
+      <blockquote>
+        <p>I built this programme because I kept seeing the same thing from two very different chairs.</p>
+        <p>As a Headteacher and SENCo, I watched teachers who genuinely cared about their students — teachers who stayed late, who worried at home, who tried everything they could think of — struggle because nobody had ever given them a clear framework for what they were actually looking at. They could see that something was wrong. They just didn't have the language, the tools, or the confidence to act on it.</p>
+        <p>As a parent of two children with SEN, I sat across the table from those same teachers and felt the gap from the other side. Not a gap in care. A gap in practical skill.</p>
+        <p>This programme is my attempt to close that gap. It is not theoretical. It is not a policy document. It is a set of tools that a teacher can pick up on a Tuesday morning and use in period one. The three-step method — See It, Support It, Teach It — is the framework I wish every teacher in every school my children attended had been given.</p>
+        <p>If you are a headteacher or SENCo reading this: your staff already want to do this well. They just need the right tools. That is what this programme gives them.</p>
+      </blockquote>
+      <div class="author-signature">
+        <div class="author-avatar">SM</div>
+        <div class="author-sig-text">
+          <h4>Stephen Mallett</h4>
+          <p>Founder, SEND Navigate &nbsp;&middot;&nbsp; Former Headteacher &amp; SENCo &nbsp;&middot;&nbsp; Parent of two children with SEN</p>
+          <div class="author-creds">
+            <span class="author-cred">25 years in UK education</span>
+            <span class="author-cred">Headteacher</span>
+            <span class="author-cred">SENCo</span>
+            <span class="author-cred">Author</span>
+            <span class="author-cred">SEN Parent</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
