@@ -525,6 +525,60 @@
     }
     .pricing-note strong { color: var(--amber); }
 
+    /* ─── Early Adopter Banner ─── */
+    .early-adopter-bar {
+      background: linear-gradient(135deg, #b8640f 0%, #D4781A 100%);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 0.9rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .early-adopter-bar .eab-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .eab-badge {
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .pricing-ea-price {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--amber);
+      line-height: 1;
+      margin-bottom: 0;
+    }
+    .pricing-ea-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--amber);
+      margin-bottom: 0.25rem;
+    }
+    .pricing-standard-price {
+      font-size: 0.8rem;
+      color: var(--grey);
+      text-decoration: line-through;
+      margin-top: 0.15rem;
+    }
+    .pricing-price-block {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
     /* ─── About Creator ─── */
     #about {
       background: var(--navy);
@@ -692,60 +746,6 @@
       .footer-inner { flex-direction: column; text-align: center; }
       .contact-methods { flex-direction: column; }
     }
-
-    /* ─── Early Adopter Bar ─── */
-    .early-adopter-bar {
-      background: linear-gradient(135deg, #b8640f 0%, #D4781A 100%);
-      color: #FFFFFF;
-      text-align: center;
-      padding: 0.9rem 1.5rem;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-    .early-adopter-bar .eab-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .eab-badge {
-      background: rgba(255,255,255,0.25);
-      border: 1px solid rgba(255,255,255,0.5);
-      border-radius: 4px;
-      padding: 0.2rem 0.6rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .pricing-ea-price {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--amber);
-      line-height: 1;
-      margin-bottom: 0;
-    }
-    .pricing-ea-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--amber);
-      margin-bottom: 0.25rem;
-    }
-    .pricing-standard-price {
-      font-size: 0.8rem;
-      color: var(--grey);
-      text-decoration: line-through;
-      margin-top: 0.15rem;
-    }
-    .pricing-price-block {
-      text-align: center;
-      margin-bottom: 0.5rem;
-    }
   </style>
 </head>
 <body>
@@ -780,7 +780,7 @@
         <p class="hero-sub">A three-module, INSET-ready programme built around the EEF Five-a-Day and Positive Behaviour Support — giving every teacher practical tools to identify, support, and teach pupils with SEND from their very next lesson. Designed for schools and MATs spending the DfE's £200m SEND training package and Local Authorities deploying the £1.8bn Experts at Hand fund.</p>
         <div class="hero-actions">
           <a href="#pricing" class="btn btn-primary">See Pricing — from £299 (early adopter)</a>
-          <a href="mailto:caroline@sendnavigate.org?subject=Free Sample Request — See It. Support It. Teach It." class="btn btn-outline">Download Free Sample</a>
+          <a href="mailto:info@sendnavigate.org?subject=Free Sample Request — See It. Support It. Teach It." class="btn btn-outline">Download Free Sample</a>
           <a href="#contact" class="btn btn-outline">Enquire About Licensing</a>
         </div>
         <div class="hero-trust">
@@ -804,18 +804,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ─── Are you a parent? — Top-of-page redirect for family visitors ─── -->
-  <a href="/ehcp-advisory.html" style="display: block; text-decoration: none; background: linear-gradient(135deg, #D4781A 0%, #b8640f 100%); color: #FFFFFF; padding: 1.5rem 0; transition: all 0.2s ease;">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
-      <div style="flex: 1; min-width: 280px;">
-        <div style="display: inline-block; background: rgba(255,255,255,0.2); color: #FFFFFF; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 2rem; margin-bottom: 0.6rem;">For Parents &amp; Carers</div>
-        <div style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; line-height: 1.35;">Are you a parent looking for help with an EHCP, exclusion, or tribunal?</div>
-        <div style="font-size: 0.95rem; color: rgba(255,255,255,0.92); margin-top: 0.4rem;">SEND Navigate also offers direct advisory services for families. Click here for our SEN / EHCP / Disability Consultancy Services →</div>
-      </div>
-      <div style="background: #FFFFFF; color: #1E3A5F; padding: 0.85rem 1.5rem; border-radius: 6px; font-weight: 700; font-size: 0.95rem; white-space: nowrap;">Take me there →</div>
-    </div>
-  </a>
 
   <!-- ─── Why Now — Statutory Context ─── -->
   <section id="why-now" class="section section--alt">
@@ -973,7 +961,7 @@
   <div class="early-adopter-bar">
     <div class="eab-inner">
       <span class="eab-badge">⏰ Early Adopter Offer</span>
-      <span>Save up to £100 on a primary licence — or over £500 on a MAT licence. Reduced rates until <strong>30 June 2026</strong>.</span>
+      <span>Save up to £100 on a primary school licence — or over £500 on a MAT licence. Reduced rates available until <strong>30 June 2026</strong>.</span>
       <a href="mailto:info@sendnavigate.org?subject=Early Adopter Pricing" style="color:#fff;text-decoration:underline;white-space:nowrap;">Claim your rate →</a>
     </div>
   </div>
@@ -1028,7 +1016,7 @@
           <a href="mailto:info@sendnavigate.org?subject=Secondary School Licence" class="btn btn-primary">Get Early Adopter Rate</a>
         </div>
 
-        <!-- MAT Licence -->
+                <!-- MAT Licence -->
         <div class="pricing-card">
           <div class="pricing-tier">Multi-Academy Trust</div>
           <div class="pricing-name">MAT Licence</div>
@@ -1045,7 +1033,7 @@
             <li>Trust-wide unlimited staff access</li>
             <li>MAT Compliance Dashboard for Ofsted</li>
             <li>Central SENCO coordinator pack</li>
-            <li>From £160/school (5-school early adopter)</li>
+            <li>Small MAT: from £160/school (early adopter)</li>
           </ul>
           <a href="mailto:info@sendnavigate.org?subject=MAT Licence Enquiry" class="btn btn-outline-navy">Enquire — MAT Pricing</a>
         </div>
@@ -1074,6 +1062,8 @@
       </div>
     </div>
   </section>
+
+</section>
 
   <!-- ─── Also from SEND Navigate — Families ─── -->
   <section id="for-families" class="section" style="background: linear-gradient(135deg, #1E3A5F 0%, #1f6c5f 100%); color: #FFFFFF; padding: 4rem 0;">
