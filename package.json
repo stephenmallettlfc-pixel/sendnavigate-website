@@ -1,0 +1,9 @@
+{
+  "name": "sendnavigate-website",
+  "version": "1.0.0",
+  "description": "SEND Navigate website",
+  "type": "module",
+  "dependencies": {
+    "@netlify/functions": "*"
+  }
+}
