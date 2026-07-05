@@ -92,7 +92,7 @@ export default async (req) => {
                   <td style="background:#E3F4F1;border-left:4px solid #2D8A7A;border-radius:0 8px 8px 0;padding:16px 20px;margin-bottom:10px;">
                     <p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#2D8A7A;text-transform:uppercase;letter-spacing:0.08em;">Module 1 Slide Deck (Excerpt)</p>
                     <p style="margin:0 0 10px;font-size:14px;color:#374151;line-height:1.6;">The opening section of the <em>See It</em> module — the eight SEN profiles your staff need to recognise, and the masking framework that changes how teachers read behaviour.</p>
-                    <a href="https://sendnavigate.org/wb.pdf" style="display:inline-block;background:#2D8A7A;color:#ffffff;text-decoration:none;font-weight:700;font-size:13px;padding:8px 18px;border-radius:5px;">Download Sample Slides →</a>
+                    <a href="https://sendnavigate.org/sample_module1_slides.pdf" style="display:inline-block;background:#2D8A7A;color:#ffffff;text-decoration:none;font-weight:700;font-size:13px;padding:8px 18px;border-radius:5px;">Download Sample Slides →</a>
                   </td>
                 </tr>
                 <tr><td style="height:10px;"></td></tr>
@@ -100,7 +100,7 @@ export default async (req) => {
                   <td style="background:#E8EFF7;border-left:4px solid #1E3A5F;border-radius:0 8px 8px 0;padding:16px 20px;">
                     <p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#1E3A5F;text-transform:uppercase;letter-spacing:0.08em;">Facilitator Guide Introduction</p>
                     <p style="margin:0 0 10px;font-size:14px;color:#374151;line-height:1.6;">The opening section of the guide your SENCo will use to run the INSET day — including the SLT briefing notes and the programme philosophy.</p>
-                    <a href="https://sendnavigate.org/wb.pdf" style="display:inline-block;background:#1E3A5F;color:#ffffff;text-decoration:none;font-weight:700;font-size:13px;padding:8px 18px;border-radius:5px;">Download Facilitator Guide Intro →</a>
+                    <a href="https://sendnavigate.org/sample_facilitator_guide.pdf" style="display:inline-block;background:#1E3A5F;color:#ffffff;text-decoration:none;font-weight:700;font-size:13px;padding:8px 18px;border-radius:5px;">Download Facilitator Guide Intro →</a>
                   </td>
                 </tr>
                 <tr><td style="height:10px;"></td></tr>
@@ -108,7 +108,7 @@ export default async (req) => {
                   <td style="background:#FDF0E4;border-left:4px solid #D4781A;border-radius:0 8px 8px 0;padding:16px 20px;">
                     <p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#D4781A;text-transform:uppercase;letter-spacing:0.08em;">EEF Five-a-Day Mapping Overview</p>
                     <p style="margin:0 0 10px;font-size:14px;color:#374151;line-height:1.6;">The research evidence trail — a section-by-section mapping against the EEF's adaptive teaching framework, ready for your Ofsted evidence pack.</p>
-                    <a href="https://sendnavigate.org/wb.pdf" style="display:inline-block;background:#D4781A;color:#ffffff;text-decoration:none;font-weight:700;font-size:13px;padding:8px 18px;border-radius:5px;">Download EEF Mapping →</a>
+                    <a href="https://sendnavigate.org/sample_eef_mapping.pdf" style="display:inline-block;background:#D4781A;color:#ffffff;text-decoration:none;font-weight:700;font-size:13px;padding:8px 18px;border-radius:5px;">Download EEF Mapping →</a>
                   </td>
                 </tr>
               </table>
