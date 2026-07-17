@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Ads Global Site Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18171403554"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18171403554');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEN Books for Parents | SEND Navigate — by Stephen Mallett</title>
@@ -701,5 +709,19 @@
     if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
   </script>
 
+  <!-- Google Ads: Track Amazon Book Link Clicks -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="amazon.co.uk"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18171403554/amazon_book_click',
+          'event_category': 'Book Sale',
+          'event_label': link.href
+        });
+      });
+    });
+  });
+  </script>
 </body>
 </html>
