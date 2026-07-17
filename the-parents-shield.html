@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Ads Global Site Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18171403554"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18171403554');
+  </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <!-- Google tag (gtag.js) -->
@@ -562,5 +570,19 @@ footer a{color:var(--teal-l)}
   <p class="footer-disclaimer">SEND Navigate provides consultancy, advocacy, and document preparation services. We are not solicitors and do not provide legal advice. All work is carried out within the framework of the Children and Families Act 2014 and the SEND Code of Practice 2015. The Parent's Shield is for information purposes and does not constitute legal advice.</p>
 </footer>
 
+  <!-- Google Ads: Track Amazon Book Link Clicks -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="amazon.co.uk"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18171403554/amazon_book_click',
+          'event_category': 'Book Sale',
+          'event_label': link.href
+        });
+      });
+    });
+  });
+  </script>
 </body>
 </html>
