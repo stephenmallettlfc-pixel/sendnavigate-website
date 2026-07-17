@@ -1,6 +1,14 @@
 ﻿<!DOCTYPE html><!-- Netlify Forms: enabled -->
 <html lang="en">
 <head>
+  <!-- Google Ads Global Site Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18171403554"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18171403554');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Google tag (gtag.js) -->
@@ -938,5 +946,29 @@
     </div>
   </footer>
 
+  <!-- Google Ads: Track Contact Form Submissions -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('form').forEach(function(form) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18171403554/form_submission',
+          'event_category': 'Lead',
+          'event_label': 'Contact Form'
+        });
+      });
+    });
+    // Track "Book a Call" / CTA button clicks
+    document.querySelectorAll('a[href*="calendly"], a[href*="book"], a[href*="get-help"], a[href*="contact"]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18171403554/cta_click',
+          'event_category': 'Lead',
+          'event_label': btn.textContent.trim().substring(0, 50)
+        });
+      });
+    });
+  });
+  </script>
 </body>
 </html>
