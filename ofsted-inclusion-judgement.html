@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What the Ofsted Inclusion Judgement Means for Your School — and How to Prepare | SEND Navigate</title>
+  <meta name="description" content="From November 2025, inclusion is a standalone judgement on every school's Ofsted report card. Here's what inspectors look for — and how to ensure your staff are ready.">
+  <link rel="canonical" href="https://sendnavigate.org/ofsted-inclusion-judgement">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1E3A5F;
+      --amber: #D4781A;
+      --teal: #2D8A7A;
+      --white: #FFFFFF;
+      --offwhite: #F7F9FC;
+      --grey: #6B7280;
+      --light-border: #E5EAF0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: #374151;
+      line-height: 1.7;
+      background: #fff;
+    }
+    h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
+    p { color: #374151; }
+    a { color: var(--teal); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* NAV */
+    nav { background: var(--navy); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .nav-logo { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; list-style: none; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+    .nav-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 0.88rem; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta-parents { background: var(--amber) !important; color: var(--white) !important; padding: 0.45rem 0.9rem; border-radius: 4px; font-weight: 600; }
+    .nav-cta { background: var(--teal) !important; color: var(--white) !important; padding: 0.45rem 0.9rem; border-radius: 4px; font-weight: 600; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+
+    /* HERO — SEO LANDING PAGE VARIANT */
+    .page-hero { background: var(--navy); color: white; padding: 5rem 0 4rem; }
+    .breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .breadcrumb a { color: var(--teal); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .page-hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); color: white; line-height: 1.2; margin-bottom: 1.25rem; max-width: 820px; }
+    .hero-lede { font-size: 1.15rem; color: rgba(255,255,255,0.8); max-width: 680px; margin-bottom: 2rem; line-height: 1.6; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(45,138,122,0.25); border: 1px solid rgba(45,138,122,0.5); border-radius: 4px; padding: 0.4rem 0.85rem; font-size: 0.8rem; color: #7dd3c8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2.5rem; }
+    .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-cta-row a { display: inline-block; padding: 0.85rem 1.75rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+    .btn-amber-hero { background: var(--amber); color: white; }
+    .btn-teal-hero { background: var(--teal); color: white; }
+    .btn-outline-hero { background: transparent; border: 2px solid rgba(255,255,255,0.55); color: white; }
+
+    /* CONTENT LAYOUT */
+    .content-wrap { display: flex; gap: 3.5rem; max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem 5rem; align-items: flex-start; }
+    .content-main { flex: 1; max-width: 720px; }
+    .content-main p { margin-bottom: 1.25rem; line-height: 1.75; }
+    .content-main h2 { font-size: clamp(1.3rem, 2.8vw, 1.6rem); color: var(--navy); margin: 2.75rem 0 0.9rem; line-height: 1.3; }
+    .content-main h3 { font-size: 1.05rem; color: var(--navy); margin: 2rem 0 0.65rem; font-weight: 700; }
+    .content-main ul, .content-main ol { margin: 0.75rem 0 1.5rem 1.5rem; }
+    .content-main li { margin-bottom: 0.5rem; line-height: 1.65; }
+    .content-main strong { color: #111827; font-weight: 600; }
+    .content-main hr { border: none; border-top: 1px solid var(--light-border); margin: 2.5rem 0; }
+    .content-main a { color: var(--teal); }
+
+    /* CALLOUT */
+    .callout-teal { background: #EBF5F3; border: 1px solid #B8DDD8; border-radius: 6px; padding: 1.35rem 1.5rem; margin: 1.75rem 0; }
+    .callout-teal p { color: #1E4A42; margin-bottom: 0; }
+    .callout-amber { background: #FEF5EC; border: 1px solid #F5C997; border-radius: 6px; padding: 1.35rem 1.5rem; margin: 1.75rem 0; }
+    .callout-amber p { color: #6B3A0A; margin-bottom: 0; }
+
+    /* RATING SCALE */
+    .rating-scale { display: flex; gap: 0.4rem; flex-wrap: wrap; margin: 1rem 0 1.5rem; }
+    .rating-pill { padding: 0.3rem 0.75rem; border-radius: 3px; font-size: 0.8rem; font-weight: 700; }
+    .pill-exemplary { background: #D1FAE5; color: #065F46; }
+    .pill-strong { background: #BBF7D0; color: #166534; }
+    .pill-secure { background: #FEF3C7; color: #92400E; }
+    .pill-attention { background: #FECDD3; color: #9F1239; }
+    .pill-concern { background: #FCA5A5; color: #7F1D1D; }
+
+    /* THREE STEPS */
+    .steps-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; margin: 1.5rem 0 2rem; }
+    .step-card { background: var(--navy); color: white; border-radius: 6px; padding: 1.25rem 1.25rem 1.25rem; }
+    .step-number { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--teal); letter-spacing: 0.06em; margin-bottom: 0.35rem; }
+    .step-title { font-size: 1rem; font-weight: 700; color: white; margin-bottom: 0.35rem; line-height: 1.25; }
+    .step-desc { font-size: 0.82rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
+
+    /* SIDEBAR */
+    .content-sidebar { width: 272px; flex-shrink: 0; position: sticky; top: 80px; }
+    .sidebar-card { background: var(--offwhite); border: 1px solid var(--light-border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 0.65rem; font-weight: 700; }
+    .sidebar-card p { font-size: 0.855rem; margin-bottom: 0.75rem; color: var(--grey); }
+    .sidebar-card .btn-teal { display: block; background: var(--teal); color: white; text-decoration: none; padding: 0.65rem 1rem; border-radius: 4px; font-weight: 600; font-size: 0.875rem; text-align: center; margin-bottom: 0.5rem; }
+    .sidebar-card .btn-amber { display: block; background: var(--amber); color: white; text-decoration: none; padding: 0.65rem 1rem; border-radius: 4px; font-weight: 600; font-size: 0.875rem; text-align: center; }
+    .sidebar-card .price-note { font-size: 0.775rem; color: var(--grey); text-align: center; margin-top: 0.6rem; }
+    .sidebar-divider { height: 1px; background: var(--light-border); margin: 1rem 0; }
+
+    /* IN-CONTENT CTA */
+    .cta-block { background: var(--navy); border-radius: 8px; padding: 2rem 2rem 2rem; margin: 2.5rem 0; color: white; }
+    .cta-block h3 { color: white; font-size: 1.15rem; margin-bottom: 0.65rem; }
+    .cta-block p { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .cta-block-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .cta-block-btns a { display: inline-block; padding: 0.65rem 1.25rem; border-radius: 4px; font-weight: 600; font-size: 0.875rem; text-decoration: none; }
+
+    /* FOOTER CTA */
+    .footer-cta { background: var(--teal); color: white; padding: 4.5rem 0; text-align: center; }
+    .footer-cta h2 { color: white; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.85rem; }
+    .footer-cta p { color: rgba(255,255,255,0.85); margin-bottom: 2rem; max-width: 580px; margin-left: auto; margin-right: auto; }
+    .footer-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .footer-cta-btns a { display: inline-block; padding: 0.9rem 1.75rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+    .btn-white { background: white; color: var(--teal); }
+    .btn-navy { background: var(--navy); color: white; }
+    .btn-outline-white { background: transparent; border: 2px solid rgba(255,255,255,0.7); color: white; }
+
+    /* FOOTER */
+    footer { background: #12253E; color: rgba(255,255,255,0.65); padding: 3rem 0 2rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
+    .footer-brand .footer-logo { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; display: block; margin-bottom: 0.5rem; }
+    .footer-brand .footer-logo span { color: var(--teal); }
+    .footer-brand p { font-size: 0.82rem; max-width: 260px; }
+    .footer-links { font-size: 0.82rem; }
+    .footer-links h5 { color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.07em; font-size: 0.72rem; margin-bottom: 0.6rem; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; display: block; margin-bottom: 0.35rem; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-note { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-top: 1.5rem; font-style: italic; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .content-sidebar { display: none; }
+      .content-wrap { padding: 2.5rem 1.5rem 4rem; }
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+      .nav-links.open { display: flex; position: absolute; top: 57px; left: 0; right: 0; background: var(--navy); padding: 1rem 1.5rem 1.5rem; z-index: 99; }
+      .nav-toggle { display: block; }
+      .hero-cta-row { flex-direction: column; }
+      .footer-cta-btns { flex-direction: column; align-items: center; }
+      .cta-block-btns { flex-direction: column; }
+      .footer-inner { flex-direction: column; }
+      .footer-bottom { flex-direction: column; }
+      .rating-scale { flex-direction: column; max-width: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="https://sendnavigate.org" class="nav-logo">SEND<span>Navigate</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="https://sendnavigate.org/#consultancy">For Parents</a></li>
+        <li><a href="https://sendnavigate.org/#why-now">For Schools</a></li>
+        <li><a href="https://sendnavigate.org/#programme">The Programme</a></li>
+        <li><a href="https://sendnavigate.org/#pricing">Pricing</a></li>
+        <li><a href="https://sendnavigate.org/#about">About</a></li>
+        <li><a href="https://sendnavigate.org/books">Books</a></li>
+        <li><a class="nav-cta-parents" href="https://sendnavigate.org/ehcp-advisory">Get Help Now</a></li>
+        <li><a href="https://sendnavigate.org/#contact" class="nav-cta">Schools Enquiry</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="https://sendnavigate.org">Home</a> &rsaquo; Ofsted Inclusion Judgement</p>
+      <h1>What the Ofsted Inclusion Judgement Means for Your School — and How to Prepare</h1>
+      <p class="hero-lede">From November 2025, inclusion is a standalone judgement on every school's Ofsted report card. Here's what inspectors look for — and how to ensure your staff are ready.</p>
+      <div class="hero-badge">CPD Certified — Member No. 22898</div>
+      <div class="hero-cta-row">
+        <a href="https://buy.stripe.com/00weVf1NBdWS04b5uYaVa0v" class="btn-amber-hero">Primary Licence — £349/yr</a>
+        <a href="https://buy.stripe.com/cNi7sNgIv5qmcQXaPiaVa0w" class="btn-teal-hero">Secondary Licence — £549/yr</a>
+        <a href="https://sendnavigate.org/#contact" class="btn-outline-hero">Schools Enquiry</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+    <div class="content-main">
+
+      <p>Every school in England is now inspected against a new standalone inclusion judgement. For the first time, inclusion is not buried inside a broader quality of education grade — it has its own rating, its own evidence base, and its own entry on your report card.</p>
+
+      <p>If your school is inspected under the new framework, inspectors will make a specific assessment of how well you identify and support pupils who face barriers to learning. They will look at outcomes for disadvantaged pupils, pupils with SEND, and pupils known to social care — separately and specifically.</p>
+
+      <p>This is new territory for most schools. And it lands at exactly the moment when SEND identification is rising, NHS waiting lists for autism and ADHD assessments exceed two years, and almost 25% of mainstream staff report receiving no neurodiversity training at all.</p>
+
+      <h2>What Inspectors Will Look For</h2>
+
+      <p>The new framework asks inspectors to evaluate whether:</p>
+
+      <ul>
+        <li><strong>Staff can identify</strong> barriers to learning early — before they become behaviour incidents or exclusions</li>
+        <li><strong>Reasonable adjustments</strong> are being made consistently across the school, not just in SEND-designated provision</li>
+        <li><strong>Teachers in mainstream classrooms</strong> — not only SENCOs and TAs — understand how to adapt their teaching for pupils with unmet needs</li>
+        <li><strong>The school has evidence</strong> that staff have received meaningful training on SEND and inclusion, not just completed an e-learning module</li>
+      </ul>
+
+      <p>The five-point scale means there is no longer a pass/fail. There is a spectrum, and your position on that spectrum will depend on what inspectors observe in classrooms and what evidence you can produce.</p>
+
+      <div class="rating-scale">
+        <span class="rating-pill pill-exemplary">Exemplary</span>
+        <span class="rating-pill pill-strong">Strong</span>
+        <span class="rating-pill pill-secure">Secure</span>
+        <span class="rating-pill pill-attention">Attention needed</span>
+        <span class="rating-pill pill-concern">Causing concern</span>
+      </div>
+
+      <h2>The Evidence Problem</h2>
+
+      <p>For most schools, the challenge is not that inclusion is absent — it is that inclusion is unevenly distributed. A few highly skilled SENCOs and experienced TAs carry provision that the broader staff body cannot replicate when they are absent, overwhelmed, or dealing with a different pupil.</p>
+
+      <p>Inspectors will look at what happens in period three on a Tuesday in a mainstream English or maths lesson when the SENCO is in a meeting. That is the test. Not the support plan. Not the EHCP. What the classroom teacher does, in real time, with a pupil who is struggling.</p>
+
+      <div class="callout-amber">
+        <p><strong>That is the gap the Ofsted inclusion judgement exposes.</strong> And it is the gap that most existing SEND training does not close — because most training teaches staff <em>about</em> SEND, not <em>what to do</em> when a pupil is struggling in front of them.</p>
+      </div>
+
+      <h2>What Strong Preparation Looks Like</h2>
+
+      <p>Schools that are well-placed under the new framework share three characteristics:</p>
+
+      <p><strong>1. Whole-staff training, not SENCO-only training.</strong> Inspectors want to see that every teacher — not just designated support staff — has received training on identifying and responding to SEND in their classroom.</p>
+
+      <p><strong>2. Practical, classroom-level skills.</strong> Training that teaches <em>what SEND is</em> does not prepare staff for <em>what to do when a pupil is struggling in front of them</em>. The most defensible evidence is staff who can demonstrate a consistent, teachable method for in-the-moment identification and response.</p>
+
+      <p><strong>3. A documented training record.</strong> A formal training register — showing who completed what, when, and to what standard — is the evidence base you need. CPD-accredited training produces official certificates. An in-house session without accreditation is harder to evidence to an inspector.</p>
+
+      <h2>How SEND Navigate Addresses All Three</h2>
+
+      <p><strong>See It. Support It. Teach It.</strong> is a three-module, CPD-accredited (No. 22898) whole-staff programme designed specifically for this moment.</p>
+
+      <p>It is built on the EEF's Five-a-Day framework — the evidence base Ofsted recognises — and is structured around three practical questions every classroom teacher faces:</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">Module 1</div>
+          <div class="step-title">See It</div>
+          <div class="step-desc">How to identify unmet SEND need in a lesson before it escalates into a behaviour incident</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Module 2</div>
+          <div class="step-title">Support It</div>
+          <div class="step-desc">What to do in the moment, without disrupting the lesson for the other twenty-nine pupils</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Module 3</div>
+          <div class="step-title">Teach It</div>
+          <div class="step-desc">How to adapt your teaching practice so that SEND-aware delivery becomes normal, not exceptional</div>
+        </div>
+      </div>
+
+      <p>The programme is <strong>INSET-ready</strong>. You do not need an external trainer. A SENCO or senior leader delivers it internally, to your whole staff, in your own time. Every participant receives a CPD certificate. The MAT licence includes a Compliance Dashboard that produces a training completion record you can show to inspectors.</p>
+
+      <div class="callout-teal">
+        <p><strong>DfE fund-eligible:</strong> The Department for Education's £200m SEND teacher training programme explicitly funds whole-staff SEND CPD. School-level and MAT licences for the SEND Navigate programme are DfE fund-eligible. Talk to your SBM or finance lead about using this allocation before the procurement window closes.</p>
+      </div>
+
+      <div class="cta-block">
+        <h3>Ready to prepare your school?</h3>
+        <p>A primary school licence is £349 per year. A secondary school licence is £549 per year. Unlimited staff, full programme, all materials included.</p>
+        <div class="cta-block-btns">
+          <a href="https://buy.stripe.com/00weVf1NBdWS04b5uYaVa0v" style="background: var(--amber); color: white;">Primary — £349/yr</a>
+          <a href="https://buy.stripe.com/cNi7sNgIv5qmcQXaPiaVa0w" style="background: var(--teal); color: white;">Secondary — £549/yr</a>
+          <a href="https://sendnavigate.org/#contact" style="background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.3);">Enquire About MAT Licences</a>
+        </div>
+      </div>
+
+      <p class="footer-note">CPD Certified — Member No. 22898. Written by Stephen Mallett, former Headteacher and SENCo. Questions? Email <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></p>
+
+    </div>
+
+    <aside class="content-sidebar">
+      <div class="sidebar-card">
+        <h4>Get a School Licence</h4>
+        <p>Whole-staff. CPD-accredited. INSET-ready. DfE fund-eligible.</p>
+        <a href="https://buy.stripe.com/00weVf1NBdWS04b5uYaVa0v" class="btn-teal">Primary School — £349/yr</a>
+        <a href="https://buy.stripe.com/cNi7sNgIv5qmcQXaPiaVa0w" class="btn-amber">Secondary School — £549/yr</a>
+        <p class="price-note">MAT licences from £1,499/yr — <a href="mailto:stephen@sendnavigate.com">email Stephen</a></p>
+      </div>
+      <div class="sidebar-card">
+        <h4>Programme Overview</h4>
+        <p>Built on the EEF Five-a-Day framework. Three modules. Every teacher. Every school.</p>
+        <a href="https://sendnavigate.org/#programme" style="display:block; color: var(--teal); font-size:0.85rem; text-decoration:none;">See the Programme →</a>
+        <div class="sidebar-divider"></div>
+        <a href="https://sendnavigate.org/#pricing" style="display:block; color: var(--teal); font-size:0.85rem; text-decoration:none; margin-bottom: 0.4rem;">See full pricing →</a>
+        <a href="/blog/dfe-send-fund" style="display:block; color: var(--teal); font-size:0.85rem; text-decoration:none;">How to use the DfE £200m fund →</a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="footer-cta">
+    <div class="container">
+      <h2>Prepare your whole school for the inclusion judgement</h2>
+      <p>Three modules. Every teacher. CPD-accredited certificates. A training register for Ofsted. INSET-ready — no external trainer needed.</p>
+      <div class="footer-cta-btns">
+        <a href="https://buy.stripe.com/00weVf1NBdWS04b5uYaVa0v" class="btn-white">Primary School — £349/yr</a>
+        <a href="https://buy.stripe.com/cNi7sNgIv5qmcQXaPiaVa0w" class="btn-navy">Secondary School — £549/yr</a>
+        <a href="https://sendnavigate.org/#contact" class="btn-outline-white">MAT Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="https://sendnavigate.org" class="footer-logo">SEND<span>Navigate</span></a>
+          <p>Practical SEND training for every teacher in your school. CPD-accredited. INSET-ready. Evidence-based.</p>
+        </div>
+        <div class="footer-links">
+          <h5>For Schools</h5>
+          <a href="https://sendnavigate.org/#why-now">Why Now</a>
+          <a href="https://sendnavigate.org/#programme">The Programme</a>
+          <a href="https://sendnavigate.org/#pricing">Pricing</a>
+          <a href="https://sendnavigate.org/#contact">Schools Enquiry</a>
+        </div>
+        <div class="footer-links">
+          <h5>For Parents</h5>
+          <a href="https://sendnavigate.org/ehcp-advisory">Get Help Now</a>
+          <a href="https://sendnavigate.org/books">Books</a>
+          <a href="https://sendnavigate.org/#consultancy">Consultancy</a>
+        </div>
+        <div class="footer-links">
+          <h5>Resources</h5>
+          <a href="/blog">Blog</a>
+          <a href="/blog/ofsted-inclusion-judgement">Ofsted Blog Post</a>
+          <a href="/blog/dfe-send-fund">DfE £200m Fund</a>
+          <a href="/blog/why-teachers-feel-unprepared">Why Teachers Feel Unprepared</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SEND Navigate. CPD Certified — Member No. 22898.</span>
+        <span><a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
