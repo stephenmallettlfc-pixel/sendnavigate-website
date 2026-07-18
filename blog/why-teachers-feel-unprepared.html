@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why 60% of Teachers Feel Unprepared for SEND — and What Schools Can Do About It | SEND Navigate</title>
+  <meta name="description" content="Research consistently finds the majority of teachers feel ill-equipped to support SEND in the classroom. Here's why standard CPD fails — and what actually works.">
+  <link rel="canonical" href="https://sendnavigate.org/blog/why-teachers-feel-unprepared">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1E3A5F;
+      --amber: #D4781A;
+      --teal: #2D8A7A;
+      --white: #FFFFFF;
+      --offwhite: #F7F9FC;
+      --grey: #6B7280;
+      --light-border: #E5EAF0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: #374151;
+      line-height: 1.7;
+      background: #fff;
+    }
+    h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
+    p { color: #374151; }
+    a { color: var(--teal); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* NAV */
+    nav { background: var(--navy); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .nav-logo { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; list-style: none; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+    .nav-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 0.88rem; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta-parents { background: var(--amber) !important; color: var(--white) !important; padding: 0.45rem 0.9rem; border-radius: 4px; font-weight: 600; }
+    .nav-cta { background: var(--teal) !important; color: var(--white) !important; padding: 0.45rem 0.9rem; border-radius: 4px; font-weight: 600; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+
+    /* BLOG HERO */
+    .blog-hero { background: var(--navy); color: var(--white); padding: 4rem 0 3.5rem; }
+    .breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .breadcrumb a { color: var(--teal); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .blog-hero h1 { font-size: clamp(1.8rem, 4.5vw, 2.75rem); line-height: 1.2; max-width: 780px; color: var(--white); margin-bottom: 1.5rem; }
+    .post-meta { color: rgba(255,255,255,0.65); font-size: 0.875rem; display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; }
+    .tag { background: rgba(45,138,122,0.25); color: #5ecfbc; padding: 0.2rem 0.6rem; border-radius: 3px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* ARTICLE */
+    .article-wrap { display: flex; gap: 3.5rem; max-width: 1100px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; align-items: flex-start; }
+    .article-body { flex: 1; max-width: 720px; }
+    .article-body p { margin-bottom: 1.25rem; line-height: 1.75; }
+    .article-body h2 { font-size: clamp(1.25rem, 2.8vw, 1.55rem); color: var(--navy); margin: 2.5rem 0 0.85rem; line-height: 1.3; }
+    .article-body h3 { font-size: 1.05rem; color: var(--navy); margin: 2rem 0 0.65rem; font-weight: 700; }
+    .article-body ul, .article-body ol { margin: 0.75rem 0 1.5rem 1.5rem; }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.65; }
+    .article-body strong { color: #111827; font-weight: 600; }
+    .article-body hr { border: none; border-top: 1px solid var(--light-border); margin: 2.5rem 0; }
+    .article-body a { color: var(--teal); }
+    .article-footer-note { background: var(--offwhite); border-radius: 6px; padding: 1.25rem 1.5rem; font-size: 0.9rem; color: var(--grey); font-style: italic; margin-top: 2.5rem; border: 1px solid var(--light-border); }
+
+    /* STAT CALLOUT */
+    .stat-block { background: var(--navy); color: white; border-radius: 8px; padding: 2rem 2rem 1.75rem; text-align: center; margin: 2rem 0; }
+    .stat-block .stat-number { font-size: 3.5rem; font-weight: 700; color: var(--teal); line-height: 1; display: block; }
+    .stat-block .stat-label { font-size: 1rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem; }
+
+    /* SIDEBAR */
+    .article-sidebar { width: 272px; flex-shrink: 0; position: sticky; top: 80px; }
+    .sidebar-card { background: var(--offwhite); border: 1px solid var(--light-border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 0.65rem; font-weight: 700; }
+    .sidebar-card p { font-size: 0.855rem; margin-bottom: 0.75rem; color: var(--grey); }
+    .sidebar-card .btn-teal { display: block; background: var(--teal); color: white; text-decoration: none; padding: 0.65rem 1rem; border-radius: 4px; font-weight: 600; font-size: 0.875rem; text-align: center; margin-bottom: 0.5rem; }
+    .sidebar-card .btn-amber { display: block; background: var(--amber); color: white; text-decoration: none; padding: 0.65rem 1rem; border-radius: 4px; font-weight: 600; font-size: 0.875rem; text-align: center; }
+    .sidebar-card .price-note { font-size: 0.775rem; color: var(--grey); text-align: center; margin-top: 0.6rem; }
+    .sidebar-divider { height: 1px; background: var(--light-border); margin: 1rem 0; }
+
+    /* ARTICLE CTA BLOCK */
+    .article-cta { background: var(--offwhite); border-left: 4px solid var(--teal); border-radius: 0 6px 6px 0; padding: 1.5rem 1.75rem; margin: 2.5rem 0; }
+    .article-cta p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .article-cta .btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.85rem; }
+    .article-cta a.btn-teal { display: inline-block; background: var(--teal); color: white; text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.875rem; }
+    .article-cta a.btn-amber { display: inline-block; background: var(--amber); color: white; text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.875rem; }
+
+    /* FOOTER CTA */
+    .footer-cta { background: var(--teal); color: white; padding: 4rem 0; text-align: center; }
+    .footer-cta h2 { color: white; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.85rem; }
+    .footer-cta p { color: rgba(255,255,255,0.85); margin-bottom: 2rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .footer-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .footer-cta-btns a { display: inline-block; padding: 0.9rem 1.75rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+    .btn-white { background: white; color: var(--teal); }
+    .btn-outline-white { background: transparent; border: 2px solid rgba(255,255,255,0.7); color: white; }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 3rem 0 2rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
+    .footer-brand .footer-logo { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; display: block; margin-bottom: 0.5rem; }
+    .footer-brand .footer-logo span { color: var(--teal); }
+    .footer-brand p { font-size: 0.82rem; max-width: 260px; }
+    .footer-links { font-size: 0.82rem; }
+    .footer-links h5 { color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.07em; font-size: 0.72rem; margin-bottom: 0.6rem; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; display: block; margin-bottom: 0.35rem; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .article-sidebar { display: none; }
+      .article-wrap { padding: 2.5rem 1.5rem 4rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+      .nav-links.open { display: flex; position: absolute; top: 57px; left: 0; right: 0; background: var(--navy); padding: 1rem 1.5rem 1.5rem; z-index: 99; }
+      .nav-toggle { display: block; }
+      .footer-inner { flex-direction: column; }
+      .footer-bottom { flex-direction: column; }
+      .footer-cta-btns { flex-direction: column; align-items: center; }
+      .article-cta .btn-row { flex-direction: column; }
+      .stat-block .stat-number { font-size: 2.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="https://sendnavigate.org" class="nav-logo">SEND<span>Navigate</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="https://sendnavigate.org/#consultancy">For Parents</a></li>
+        <li><a href="https://sendnavigate.org/#why-now">For Schools</a></li>
+        <li><a href="https://sendnavigate.org/#programme">The Programme</a></li>
+        <li><a href="https://sendnavigate.org/#pricing">Pricing</a></li>
+        <li><a href="https://sendnavigate.org/#about">About</a></li>
+        <li><a href="https://sendnavigate.org/books">Books</a></li>
+        <li><a class="nav-cta-parents" href="https://sendnavigate.org/ehcp-advisory">Get Help Now</a></li>
+        <li><a href="https://sendnavigate.org/#contact" class="nav-cta">Schools Enquiry</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="blog-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="https://sendnavigate.org">Home</a> &rsaquo; <a href="/blog">Blog</a> &rsaquo; SEND Training</p>
+      <h1>Why 60% of Teachers Feel Unprepared for SEND — and What Schools Can Do About It</h1>
+      <div class="post-meta">
+        <span class="tag">SEND Training</span>
+        <span>July 2026</span>
+        <span>Stephen Mallett, Former Headteacher</span>
+        <span>7 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrap">
+    <article class="article-body">
+
+      <div class="stat-block">
+        <span class="stat-number">60%</span>
+        <p class="stat-label">of teachers report feeling unprepared to support pupils with SEND after completing their initial training</p>
+      </div>
+
+      <p>That figure has remained stubbornly consistent for over a decade, despite significant investment in SEND awareness programmes, e-learning modules, and INSET days. Schools spend time and money on training. The problem persists.</p>
+
+      <p>It is worth asking why — because the answer changes what you should do next.</p>
+
+      <h2>The Problem Is Not Awareness. It Is Skill.</h2>
+
+      <p>Most SEND training teaches teachers <em>about</em> special educational needs. It describes what autism looks like. It explains the neuroscience of ADHD. It covers dyslexia, dyspraxia, attachment disorder, and a dozen other categories.</p>
+
+      <p>This knowledge is not without value. But it does not prepare a classroom teacher for the moment when a pupil stops engaging in period three, when a Year 7 is becoming increasingly dysregulated during group work, or when a child who is "high-functioning" is quietly struggling in a way that looks like disinterest.</p>
+
+      <p>The gap between SEND <em>knowledge</em> and SEND <em>skill</em> is the gap between knowing that ADHD affects working memory and knowing what to do, right now, in this lesson, with this pupil, without disrupting the other twenty-nine.</p>
+
+      <p>That is the skill most teachers do not have. And it is the skill most training does not build.</p>
+
+      <h2>Why E-Learning Modules Do Not Close the Gap</h2>
+
+      <p>E-learning SEND modules have two structural problems.</p>
+
+      <p>The first is <strong>context</strong>. Learning about autism on a screen, alone, in an empty staffroom at 4pm, gives you information. It does not give you a felt sense of what unmet SEND looks like in motion — in a classroom, between a teacher and a child, in real time. The transfer from screen to classroom is weak, and research on CPD transfer consistently supports this.</p>
+
+      <p>The second is <strong>method</strong>. Most e-learning modules have no method. They do not teach a repeatable process — a set of steps you can follow when you notice a pupil is struggling. They teach content. But classroom teaching is not about content. It is about habit, reflex, and a professional skill set that functions under pressure.</p>
+
+      <p>When the module is over and Monday morning arrives, most teachers are back to doing what they have always done.</p>
+
+      <h2>Why INSET Days Often Miss the Mark</h2>
+
+      <p>External trainers who run SEND INSET days frequently deliver excellent content. The problem is that a single day — or a half-day — cannot build embedded practice.</p>
+
+      <p>Staff leave the session informed, often energised, with a clutch of ideas. Three weeks later, the pressure of day-to-day teaching reasserts itself. The ideas fade. The habit was never formed.</p>
+
+      <p>The research on effective CPD is clear on this: training that changes behaviour requires repeated exposure, structured practice, and a shared language across a team. A one-off day, however good, rarely achieves that.</p>
+
+      <h2>What Actually Works</h2>
+
+      <p>The CPD research base — including the EEF's Teaching and Learning Toolkit and its SEND-specific guidance — identifies several consistent features of effective professional development:</p>
+
+      <p><strong>1. It is embedded in practice, not separated from it.</strong> The training connects directly to what teachers do in their classrooms. It uses the language of teaching — lesson structure, pupil response, classroom environment — rather than the language of diagnosis.</p>
+
+      <p><strong>2. It builds a shared language across a team.</strong> When every teacher in a school uses the same framework for identifying and responding to SEND, the professional conversation changes. SENCOs and class teachers can talk to each other more efficiently. TAs know what they are reinforcing. Parents receive a consistent message.</p>
+
+      <p><strong>3. It is spaced and structured, not single-event.</strong> Multiple touchpoints — three modules rather than one session — allow habits to form and be reinforced.</p>
+
+      <p><strong>4. It gives teachers a method, not just knowledge.</strong> A repeatable process — something you can fall back on when a pupil is struggling in front of you — is what actually changes classroom behaviour.</p>
+
+      <h2>Closing the Gap</h2>
+
+      <p>The teachers who feel most prepared for SEND are not necessarily those who have attended the most training. They are those who have <em>a method</em> — a way of seeing what is happening in front of them, a set of concrete responses, and the confidence to act.</p>
+
+      <p>That is buildable. It is teachable. And when it is taught well, across an entire staff team, with a common framework and documented completion, it changes what happens in lessons — and it gives your school the evidence base it needs for Ofsted's new standalone inclusion judgement.</p>
+
+      <hr>
+
+      <div class="article-cta">
+        <p><strong>SEND Navigate's See It. Support It. Teach It. programme</strong> is built on the EEF Five-a-Day framework — a three-module, INSET-ready, CPD-accredited programme that gives every classroom teacher a practical method for identifying and supporting SEND.</p>
+        <p>Primary school licences from £349/yr — unlimited staff. Secondary school licences from £549/yr.</p>
+        <div class="btn-row">
+          <a href="https://sendnavigate.org/#programme" class="btn-teal">See the Programme →</a>
+          <a href="https://sendnavigate.org/#pricing" class="btn-amber">See Pricing</a>
+        </div>
+      </div>
+
+      <div class="article-footer-note">
+        CPD Certified — Member No. 22898. Written by Stephen Mallett, former Headteacher and SENCo. Questions? Email <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a>
+      </div>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <h4>Get a School Licence</h4>
+        <p>Give every teacher a practical SEND method. Unlimited staff, CPD-accredited.</p>
+        <a href="https://buy.stripe.com/00weVf1NBdWS04b5uYaVa0v" class="btn-teal">Primary School — £349/yr</a>
+        <a href="https://buy.stripe.com/cNi7sNgIv5qmcQXaPiaVa0w" class="btn-amber">Secondary School — £549/yr</a>
+        <p class="price-note">Includes MAT Compliance Dashboard &amp; CPD certificates</p>
+      </div>
+      <div class="sidebar-card">
+        <h4>Also in this series</h4>
+        <div class="sidebar-divider"></div>
+        <a href="/blog/ofsted-inclusion-judgement" style="display:block; color: var(--teal); font-size:0.85rem; margin-bottom:0.5rem; text-decoration:none;">What the Ofsted inclusion judgement means →</a>
+        <a href="/blog/dfe-send-fund" style="display:block; color: var(--teal); font-size:0.85rem; text-decoration:none;">How to use the DfE £200m SEND Fund →</a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="footer-cta">
+    <div class="container">
+      <h2>Give every teacher a method, not just awareness</h2>
+      <p>Three modules. Whole-staff delivery. CPD-accredited certificates. INSET-ready — no external trainer needed.</p>
+      <div class="footer-cta-btns">
+        <a href="https://sendnavigate.org/#programme" class="btn-white">See the Programme</a>
+        <a href="https://sendnavigate.org/#contact" class="btn-outline-white">Schools Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="https://sendnavigate.org" class="footer-logo">SEND<span>Navigate</span></a>
+          <p>Practical SEND training for every teacher in your school. CPD-accredited. INSET-ready. Evidence-based.</p>
+        </div>
+        <div class="footer-links">
+          <h5>For Schools</h5>
+          <a href="https://sendnavigate.org/#why-now">Why Now</a>
+          <a href="https://sendnavigate.org/#programme">The Programme</a>
+          <a href="https://sendnavigate.org/#pricing">Pricing</a>
+          <a href="https://sendnavigate.org/#contact">Schools Enquiry</a>
+        </div>
+        <div class="footer-links">
+          <h5>For Parents</h5>
+          <a href="https://sendnavigate.org/ehcp-advisory">Get Help Now</a>
+          <a href="https://sendnavigate.org/books">Books</a>
+          <a href="https://sendnavigate.org/#consultancy">Consultancy</a>
+        </div>
+        <div class="footer-links">
+          <h5>Resources</h5>
+          <a href="/blog">Blog</a>
+          <a href="/blog/ofsted-inclusion-judgement">Ofsted Inclusion Judgement</a>
+          <a href="/blog/dfe-send-fund">DfE £200m SEND Fund</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SEND Navigate. CPD Certified — Member No. 22898.</span>
+        <span><a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
