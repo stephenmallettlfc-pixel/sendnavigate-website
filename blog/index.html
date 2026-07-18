@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — SEND Navigate | Practical SEND Training Resources for Schools</title>
+  <meta name="description" content="Articles on SEND training, Ofsted inclusion judgements, the DfE £200m fund, and practical strategies for classroom teachers. Written by a former Headteacher and SENCo.">
+  <link rel="canonical" href="https://sendnavigate.org/blog">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1E3A5F;
+      --amber: #D4781A;
+      --teal: #2D8A7A;
+      --white: #FFFFFF;
+      --offwhite: #F7F9FC;
+      --grey: #6B7280;
+      --light-border: #E5EAF0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: #374151;
+      line-height: 1.7;
+      background: #fff;
+    }
+    h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
+    p { color: #374151; }
+    a { color: var(--teal); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* NAV */
+    nav { background: var(--navy); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .nav-logo { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; list-style: none; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+    .nav-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 0.88rem; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta-parents { background: var(--amber) !important; color: var(--white) !important; padding: 0.45rem 0.9rem; border-radius: 4px; font-weight: 600; }
+    .nav-cta { background: var(--teal) !important; color: var(--white) !important; padding: 0.45rem 0.9rem; border-radius: 4px; font-weight: 600; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+
+    /* PAGE HERO */
+    .page-hero { background: var(--navy); color: white; padding: 3.5rem 0; }
+    .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: white; margin-bottom: 0.75rem; }
+    .page-hero p { color: rgba(255,255,255,0.75); font-size: 1.05rem; max-width: 620px; }
+    .breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .breadcrumb a { color: var(--teal); text-decoration: none; }
+
+    /* BLOG GRID */
+    .blog-section { padding: 4rem 0 5rem; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+
+    /* CARD */
+    .blog-card { border: 1px solid var(--light-border); border-radius: 8px; overflow: hidden; background: white; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; }
+    .blog-card:hover { box-shadow: 0 6px 24px rgba(30,58,95,0.12); transform: translateY(-2px); }
+    .card-header { background: var(--navy); padding: 1.75rem 1.5rem 1.5rem; flex-shrink: 0; }
+    .card-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.75rem; display: inline-block; }
+    .tag-ofsted { color: #f4a84a; }
+    .tag-funding { color: #7dd3c8; }
+    .tag-training { color: #86efac; }
+    .card-header h2 { font-size: 1.1rem; color: white; line-height: 1.35; font-weight: 700; }
+    .card-header h2 a { color: white; text-decoration: none; }
+    .card-header h2 a:hover { text-decoration: underline; }
+    .card-body { padding: 1.25rem 1.5rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .card-body p { font-size: 0.9rem; color: var(--grey); line-height: 1.65; flex: 1; margin-bottom: 1.25rem; }
+    .card-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--grey); border-top: 1px solid var(--light-border); padding-top: 0.85rem; }
+    .card-read-link { color: var(--teal); text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+    .card-read-link:hover { text-decoration: underline; }
+
+    /* SECTION HEADER */
+    .section-intro { max-width: 680px; }
+    .section-intro h2 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); color: var(--navy); margin-bottom: 0.5rem; }
+    .section-intro p { color: var(--grey); }
+
+    /* NEWSLETTER */
+    .newsletter-strip { background: var(--offwhite); border: 1px solid var(--light-border); border-radius: 8px; padding: 2rem 2.5rem; margin: 3rem 0 0; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .newsletter-strip h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 0.3rem; }
+    .newsletter-strip p { font-size: 0.875rem; color: var(--grey); }
+    .newsletter-strip a { display: inline-block; background: var(--teal); color: white; text-decoration: none; padding: 0.65rem 1.4rem; border-radius: 4px; font-weight: 600; font-size: 0.875rem; white-space: nowrap; }
+
+    /* FOOTER CTA */
+    .footer-cta { background: var(--navy); color: white; padding: 4rem 0; text-align: center; margin-top: 0; }
+    .footer-cta h2 { color: white; font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: 0.75rem; }
+    .footer-cta p { color: rgba(255,255,255,0.8); margin-bottom: 2rem; max-width: 540px; margin-left: auto; margin-right: auto; }
+    .footer-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .footer-cta-btns a { display: inline-block; padding: 0.85rem 1.6rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+    .btn-teal-solid { background: var(--teal); color: white; }
+    .btn-amber-solid { background: var(--amber); color: white; }
+
+    /* FOOTER */
+    footer { background: #12253E; color: rgba(255,255,255,0.65); padding: 3rem 0 2rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
+    .footer-brand .footer-logo { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; display: block; margin-bottom: 0.5rem; }
+    .footer-brand .footer-logo span { color: var(--teal); }
+    .footer-brand p { font-size: 0.82rem; max-width: 260px; }
+    .footer-links { font-size: 0.82rem; }
+    .footer-links h5 { color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.07em; font-size: 0.72rem; margin-bottom: 0.6rem; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; display: block; margin-bottom: 0.35rem; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+      .nav-links.open { display: flex; position: absolute; top: 57px; left: 0; right: 0; background: var(--navy); padding: 1rem 1.5rem 1.5rem; z-index: 99; }
+      .nav-toggle { display: block; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .newsletter-strip { flex-direction: column; text-align: center; }
+      .footer-inner { flex-direction: column; }
+      .footer-bottom { flex-direction: column; }
+      .footer-cta-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="https://sendnavigate.org" class="nav-logo">SEND<span>Navigate</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="https://sendnavigate.org/#consultancy">For Parents</a></li>
+        <li><a href="https://sendnavigate.org/#why-now">For Schools</a></li>
+        <li><a href="https://sendnavigate.org/#programme">The Programme</a></li>
+        <li><a href="https://sendnavigate.org/#pricing">Pricing</a></li>
+        <li><a href="https://sendnavigate.org/#about">About</a></li>
+        <li><a href="https://sendnavigate.org/books">Books</a></li>
+        <li><a class="nav-cta-parents" href="https://sendnavigate.org/ehcp-advisory">Get Help Now</a></li>
+        <li><a href="https://sendnavigate.org/#contact" class="nav-cta">Schools Enquiry</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="https://sendnavigate.org">Home</a> &rsaquo; Blog</p>
+      <h1>SEND Insights for Schools</h1>
+      <p>Practical guidance on SEND identification, classroom support, Ofsted inspection, and training funding — written by a former Headteacher and SENCo with 25 years' experience.</p>
+    </div>
+  </div>
+
+  <section class="blog-section">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Latest Articles</h2>
+        <p>Resources to help school leaders and teachers navigate SEND in 2026 — the Ofsted inclusion judgement, the DfE £200m fund, and what actually closes the training gap.</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <div class="card-header">
+            <span class="card-tag tag-ofsted">Ofsted &amp; Inspection</span>
+            <h2><a href="/blog/ofsted-inclusion-judgement">What the Ofsted Inclusion Judgement Actually Means for Classroom Teachers</a></h2>
+          </div>
+          <div class="card-body">
+            <p>From November 2025, inclusion is a standalone judgement — with its own rating on your report card. Here's what inspectors look for, and what the evidence problem really is.</p>
+            <div class="card-meta">
+              <span>July 2026 &bull; 8 min read</span>
+              <a href="/blog/ofsted-inclusion-judgement" class="card-read-link">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="card-header">
+            <span class="card-tag tag-funding">Funding &amp; Policy</span>
+            <h2><a href="/blog/dfe-send-fund">How Schools Can Use the DfE £200m SEND Fund for Whole-Staff Training</a></h2>
+          </div>
+          <div class="card-body">
+            <p>The DfE's £200m SEND teacher training programme is open. Here's what it funds, who can access it, what qualifies as eligible spend, and why the procurement window is now.</p>
+            <div class="card-meta">
+              <span>July 2026 &bull; 7 min read</span>
+              <a href="/blog/dfe-send-fund" class="card-read-link">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="card-header">
+            <span class="card-tag tag-training">SEND Training</span>
+            <h2><a href="/blog/why-teachers-feel-unprepared">Why 60% of Teachers Feel Unprepared for SEND — and What Schools Can Do About It</a></h2>
+          </div>
+          <div class="card-body">
+            <p>Research consistently finds the majority of teachers feel ill-equipped to support pupils with SEND. Here's why standard CPD fails — and what the evidence says actually works.</p>
+            <div class="card-meta">
+              <span>July 2026 &bull; 7 min read</span>
+              <a href="/blog/why-teachers-feel-unprepared" class="card-read-link">Read →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="newsletter-strip">
+        <div>
+          <h3>Stay informed on SEND in schools</h3>
+          <p>New articles, policy updates, and practical guidance — delivered to your inbox.</p>
+        </div>
+        <a href="https://sendnavigate.org/#contact">Get Updates</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="footer-cta">
+    <div class="container">
+      <h2>Ready to prepare your school for the inclusion judgement?</h2>
+      <p>See It. Support It. Teach It. — whole-staff, INSET-ready, CPD-accredited. Primary from £349/yr.</p>
+      <div class="footer-cta-btns">
+        <a href="https://buy.stripe.com/00weVf1NBdWS04b5uYaVa0v" class="btn-teal-solid">Primary School — £349/yr</a>
+        <a href="https://buy.stripe.com/cNi7sNgIv5qmcQXaPiaVa0w" class="btn-amber-solid">Secondary School — £549/yr</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="https://sendnavigate.org" class="footer-logo">SEND<span>Navigate</span></a>
+          <p>Practical SEND training for every teacher in your school. CPD-accredited. INSET-ready. Evidence-based.</p>
+        </div>
+        <div class="footer-links">
+          <h5>For Schools</h5>
+          <a href="https://sendnavigate.org/#why-now">Why Now</a>
+          <a href="https://sendnavigate.org/#programme">The Programme</a>
+          <a href="https://sendnavigate.org/#pricing">Pricing</a>
+          <a href="https://sendnavigate.org/#contact">Schools Enquiry</a>
+        </div>
+        <div class="footer-links">
+          <h5>For Parents</h5>
+          <a href="https://sendnavigate.org/ehcp-advisory">Get Help Now</a>
+          <a href="https://sendnavigate.org/books">Books</a>
+          <a href="https://sendnavigate.org/#consultancy">Consultancy</a>
+        </div>
+        <div class="footer-links">
+          <h5>Blog</h5>
+          <a href="/blog/ofsted-inclusion-judgement">Ofsted Inclusion Judgement</a>
+          <a href="/blog/dfe-send-fund">DfE £200m SEND Fund</a>
+          <a href="/blog/why-teachers-feel-unprepared">Why Teachers Feel Unprepared</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SEND Navigate. CPD Certified — Member No. 22898.</span>
+        <span><a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
