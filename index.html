@@ -14,7 +14,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEND Navigate — Expert SEN Consultancy for Parents | EHCP, Tribunal & Appeals</title>
+  <title>SEND Navigate — Expert SEN Consultancy for Parents | EHCP, Tribunal &amp; Appeals</title>
   <meta name="description" content="Struggling with your child's EHCP, a refused assessment, or a looming tribunal? SEND Navigate gives parents expert SEN consultancy from a former Headteacher and SENCo with 25 years inside the system. Book a free 30-minute consultation today." />
   <meta name="keywords" content="SEN consultancy, EHCP help, SEND tribunal, EHCP appeal, special educational needs advice, SEN advocate UK" />
   <link rel="canonical" href="https://sendnavigate.org/" />
@@ -24,6 +24,7 @@
   <meta property="og:description" content="Struggling with your child's EHCP or a tribunal? Get expert help from a former Headteacher and SENCo with 25 years inside the system." />
   <meta property="og:url" content="https://sendnavigate.org/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sendnavigate.org/assets/hero-parent-child.jpg" />
 
   <!-- Google Fonts: Playfair Display (headings) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,23 +44,28 @@
 
     /* ─── Colour Variables ─── */
     :root {
-      --navy:       #1E3A5F;
-      --navy-dark:  #0f1e33;
-      --navy-mid:   #162d4a;
-      --amber:      #D4781A;
-      --amber-dark: #b8640f;
-      --teal:       #2D8A7A;
-      --teal-dark:  #1d6b5e;
-      --red:        #C0392B;
-      --red-dark:   #922b21;
-      --gold:       #FFD580;
-      --white:      #FFFFFF;
-      --offwhite:   #F7F9FC;
-      --offwhite2:  #EFF3F8;
-      --grey:       #6B7280;
-      --grey-light: #9CA3AF;
-      --text-body:  #374151;
-      --border:     #E5EAF0;
+      --navy:        #1E3A5F;
+      --navy-dark:   #0f1e33;
+      --navy-mid:    #162d4a;
+      --forest:      #2C5F4A;
+      --forest-dark: #1d4232;
+      --forest-light:#3a7a60;
+      --amber:       #C97B2A;
+      --amber-dark:  #a86320;
+      --amber-light: #f5a84a;
+      --gold:        #F0C060;
+      --stone:       #F5F0E8;
+      --stone-dark:  #EDE5D8;
+      --cream:       #FDFAF5;
+      --white:       #FFFFFF;
+      --offwhite:    #F7F9FC;
+      --grey:        #6B7280;
+      --grey-light:  #9CA3AF;
+      --text-body:   #374151;
+      --border:      #E5EAF0;
+      --border-warm: #E8E0D0;
+      --red:         #C0392B;
+      --red-dark:    #922b21;
     }
 
     /* ─── Typography ─── */
@@ -68,7 +74,7 @@
       line-height: 1.2;
       font-weight: 700;
     }
-    h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
     h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
     h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); font-family: 'Inter', sans-serif; font-weight: 700; }
     p  { color: var(--text-body); font-family: 'Inter', sans-serif; }
@@ -76,8 +82,10 @@
     /* ─── Utilities ─── */
     .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
     .section   { padding: 5.5rem 0; }
-    .section--alt { background: var(--offwhite); }
-    .section--dark { background: var(--navy); }
+    .section--stone { background: var(--stone); }
+    .section--cream { background: var(--cream); }
+    .section--dark  { background: var(--navy); }
+    .section--forest { background: var(--forest); }
 
     .eyebrow {
       display: inline-block;
@@ -89,8 +97,9 @@
       color: var(--amber);
       margin-bottom: 1rem;
     }
-    .eyebrow--white { color: rgba(255,255,255,0.7); }
-    .eyebrow--teal  { color: var(--teal); }
+    .eyebrow--white  { color: rgba(255,255,255,0.75); }
+    .eyebrow--forest { color: var(--forest-light); }
+    .eyebrow--gold   { color: var(--gold); }
 
     .section-title {
       text-align: center;
@@ -123,18 +132,85 @@
       letter-spacing: 0.01em;
     }
     .btn-primary   { background: var(--amber); color: var(--white); border-color: var(--amber); }
-    .btn-primary:hover { background: var(--amber-dark); border-color: var(--amber-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(212,120,26,0.35); }
+    .btn-primary:hover { background: var(--amber-dark); border-color: var(--amber-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,123,42,0.35); }
     .btn-hero      { background: var(--white); color: var(--navy); border-color: var(--white); font-size: 1.05rem; padding: 1rem 2rem; }
     .btn-hero:hover { background: #f0f4f8; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(0,0,0,0.15); }
     .btn-outline-white { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.5); }
     .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
-    .btn-red       { background: var(--red); color: var(--white); border-color: var(--red); }
-    .btn-red:hover { background: var(--red-dark); border-color: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(192,57,43,0.3); }
-    .btn-teal      { background: var(--teal); color: var(--white); border-color: var(--teal); }
-    .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .btn-forest    { background: var(--forest); color: var(--white); border-color: var(--forest); }
+    .btn-forest:hover { background: var(--forest-dark); transform: translateY(-1px); }
     .btn-outline-navy { background: transparent; color: var(--navy); border-color: var(--navy); }
     .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
+    .btn-red       { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-red:hover { background: var(--red-dark); border-color: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(192,57,43,0.3); }
     .btn-lg { font-size: 1.1rem; padding: 1.1rem 2.25rem; }
+
+    /* ─── Ambient Music Player ─── */
+    .music-player {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(15, 30, 51, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 3rem;
+      padding: 0.55rem 1rem 0.55rem 0.6rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      cursor: pointer;
+      transition: all 0.22s;
+      user-select: none;
+    }
+    .music-player:hover { background: rgba(15,30,51,0.98); box-shadow: 0 6px 32px rgba(0,0,0,0.35); }
+    .music-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--amber);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.18s;
+    }
+    .music-btn:hover { background: var(--amber-dark); }
+    .music-btn svg { width: 14px; height: 14px; fill: white; }
+    .music-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .music-wave {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      height: 16px;
+    }
+    .music-wave span {
+      display: block;
+      width: 3px;
+      background: var(--amber-light);
+      border-radius: 2px;
+      animation: wave-bar 1.2s ease-in-out infinite;
+    }
+    .music-wave span:nth-child(1) { height: 6px; animation-delay: 0s; }
+    .music-wave span:nth-child(2) { height: 12px; animation-delay: 0.15s; }
+    .music-wave span:nth-child(3) { height: 9px; animation-delay: 0.3s; }
+    .music-wave span:nth-child(4) { height: 14px; animation-delay: 0.45s; }
+    .music-wave span:nth-child(5) { height: 7px; animation-delay: 0.6s; }
+    .music-wave.paused span { animation-play-state: paused; height: 4px !important; }
+    @keyframes wave-bar {
+      0%, 100% { transform: scaleY(0.5); opacity: 0.7; }
+      50% { transform: scaleY(1); opacity: 1; }
+    }
 
     /* ─── Navigation ─── */
     nav {
@@ -163,17 +239,12 @@
       letter-spacing: 0.02em;
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.5rem;
     }
-    .nav-logo-icon {
-      width: 28px;
-      height: 28px;
-      background: var(--amber);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
+    .nav-logo-svg {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
     }
     .nav-logo span { color: var(--amber); }
     .nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
@@ -201,15 +272,15 @@
 
     /* ─── ANNOUNCEMENT BAR ─── */
     .announcement-bar {
-      background: var(--amber);
-      color: var(--white);
+      background: var(--forest);
+      color: rgba(255,255,255,0.95);
       text-align: center;
       padding: 0.65rem 1.5rem;
       font-size: 0.85rem;
       font-weight: 600;
       letter-spacing: 0.01em;
     }
-    .announcement-bar a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+    .announcement-bar a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
     .announcement-bar a:hover { opacity: 0.85; }
 
     /* ─── HERO ─── */
@@ -221,18 +292,32 @@
       background: var(--navy-dark);
       overflow: hidden;
     }
-    .hero-bg {
+    .hero-photo {
       position: absolute;
       inset: 0;
-      background-image: url('assets/hero-bg-parents.jpg');
+      background-image: url('assets/hero-parent-child.jpg');
       background-size: cover;
-      background-position: center right;
-      opacity: 0.45;
+      background-position: center 30%;
+      opacity: 0.55;
+      transition: opacity 0.5s ease;
     }
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(105deg, rgba(15,30,51,0.97) 0%, rgba(15,30,51,0.85) 50%, rgba(15,30,51,0.5) 100%);
+      background: linear-gradient(
+        105deg,
+        rgba(10,22,40,0.96) 0%,
+        rgba(10,22,40,0.88) 45%,
+        rgba(10,22,40,0.45) 100%
+      );
+    }
+    .hero-overlay-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 180px;
+      background: linear-gradient(to top, rgba(10,22,40,0.7) 0%, transparent 100%);
     }
     .hero-content {
       position: relative;
@@ -244,8 +329,8 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: 2rem;
       padding: 0.4rem 1rem;
       font-size: 0.78rem;
@@ -258,7 +343,7 @@
     .hero-badge-dot {
       width: 7px;
       height: 7px;
-      background: var(--amber);
+      background: var(--amber-light);
       border-radius: 50%;
       animation: pulse-dot 2s infinite;
     }
@@ -301,7 +386,7 @@
     }
     .hero-free-note {
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.5);
       margin-top: -1rem;
       margin-bottom: 2.5rem;
     }
@@ -314,8 +399,8 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
       border-radius: 2rem;
       padding: 0.35rem 0.85rem;
       font-size: 0.78rem;
@@ -360,8 +445,9 @@
     /* ─── SOCIAL PROOF BAR ─── */
     .proof-bar {
       background: var(--white);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-warm);
       padding: 1.5rem 0;
+      box-shadow: 0 2px 12px rgba(30,58,95,0.05);
     }
     .proof-bar-inner {
       display: flex;
@@ -376,18 +462,26 @@
     .proof-item {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.7rem;
       font-size: 0.88rem;
       font-weight: 600;
       color: var(--navy);
     }
-    .proof-item-icon {
-      font-size: 1.2rem;
+    .proof-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--stone);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
+    .proof-icon svg { width: 18px; height: 18px; }
     .proof-divider {
       width: 1px;
-      height: 24px;
-      background: var(--border);
+      height: 28px;
+      background: var(--border-warm);
     }
     .google-stars {
       display: flex;
@@ -398,9 +492,9 @@
 
     /* ─── EMOTIONAL HOOK ─── */
     #emotional-hook {
-      background: var(--offwhite);
+      background: var(--cream);
       padding: 5.5rem 0;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-warm);
     }
     .hook-grid {
       display: grid;
@@ -422,39 +516,39 @@
     }
     .hook-scenarios {
       background: var(--white);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 2.5rem;
       box-shadow: 0 4px 32px rgba(30,58,95,0.08);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-warm);
     }
-    .hook-scenarios h3 {
-      color: var(--navy);
-      font-size: 1rem;
-      font-weight: 700;
+    .hook-scenarios-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 1.5rem;
       color: var(--grey);
+      margin-bottom: 1.5rem;
     }
     .scenario-item {
       display: flex;
       align-items: flex-start;
       gap: 1rem;
       padding: 1rem 0;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-warm);
     }
     .scenario-item:last-child { border-bottom: none; padding-bottom: 0; }
     .scenario-icon {
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       border-radius: 8px;
-      background: #FEF3E8;
+      background: var(--stone);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
       flex-shrink: 0;
     }
+    .scenario-icon svg { width: 18px; height: 18px; }
     .scenario-text {
       font-size: 0.95rem;
       color: var(--text-body);
@@ -469,9 +563,62 @@
       align-items: center;
     }
 
+    /* ─── PHOTO BREAK SECTION ─── */
+    .photo-break {
+      position: relative;
+      height: 340px;
+      overflow: hidden;
+    }
+    .photo-break-img {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/abstract-hope.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      background-attachment: fixed;
+    }
+    .photo-break-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(10,22,40,0.82) 0%,
+        rgba(10,22,40,0.55) 50%,
+        rgba(10,22,40,0.3) 100%
+      );
+      display: flex;
+      align-items: center;
+    }
+    .photo-break-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .photo-break-content blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-style: italic;
+      color: var(--white);
+      max-width: 680px;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--gold);
+    }
+    .photo-break-content blockquote cite {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-style: normal;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      margin-top: 1rem;
+      letter-spacing: 0.04em;
+    }
+
     /* ─── FREE CONSULTATION BANNER ─── */
     .free-consult-banner {
-      background: linear-gradient(135deg, #C0392B 0%, #922b21 100%);
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
       padding: 4.5rem 0;
       position: relative;
       overflow: hidden;
@@ -481,15 +628,6 @@
       position: absolute;
       top: -80px; right: -80px;
       width: 400px; height: 400px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.05);
-      pointer-events: none;
-    }
-    .free-consult-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; left: -60px;
-      width: 300px; height: 300px;
       border-radius: 50%;
       background: rgba(255,255,255,0.04);
       pointer-events: none;
@@ -510,10 +648,7 @@
       font-size: clamp(1.6rem, 3.5vw, 2.4rem);
       margin-bottom: 0.75rem;
     }
-    .free-consult-text h2 em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    .free-consult-text h2 em { font-style: italic; color: var(--gold); }
     .free-consult-text p {
       color: rgba(255,255,255,0.88);
       font-size: 1.05rem;
@@ -525,7 +660,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
-      margin-bottom: 0;
     }
     .free-consult-bullets li {
       display: flex;
@@ -535,11 +669,7 @@
       color: rgba(255,255,255,0.9);
       font-weight: 500;
     }
-    .free-consult-bullets li::before {
-      content: '✓';
-      color: var(--gold);
-      font-weight: 800;
-    }
+    .free-consult-bullets li::before { content: '✓'; color: var(--gold); font-weight: 800; }
     .free-consult-cta {
       display: flex;
       flex-direction: column;
@@ -548,26 +678,15 @@
       text-align: center;
       min-width: 220px;
     }
-    .free-consult-cta .btn-hero {
-      width: 100%;
-      justify-content: center;
-      font-size: 1rem;
-      padding: 1.1rem 1.5rem;
-    }
-    .free-consult-cta .free-note {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.65);
-    }
+    .free-consult-cta .btn-hero { width: 100%; justify-content: center; font-size: 1rem; padding: 1.1rem 1.5rem; }
+    .free-consult-cta .free-note { font-size: 0.8rem; color: rgba(255,255,255,0.65); }
 
     /* ─── GOOGLE REVIEWS ─── */
     #reviews {
       padding: 5.5rem 0;
       background: var(--white);
     }
-    .reviews-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
+    .reviews-header { text-align: center; margin-bottom: 3rem; }
     .google-badge {
       display: inline-flex;
       align-items: center;
@@ -582,11 +701,7 @@
       margin-bottom: 1.25rem;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
-    .google-badge-g {
-      font-size: 1rem;
-      font-weight: 800;
-      color: #4285F4;
-    }
+    .google-badge-g { font-size: 1rem; font-weight: 800; color: #4285F4; }
     .google-badge-stars { color: #FBBC04; letter-spacing: 1px; }
     .reviews-grid {
       display: grid;
@@ -596,27 +711,16 @@
     }
     .review-card {
       background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
+      border: 1px solid var(--border-warm);
+      border-radius: 16px;
       padding: 2rem;
       position: relative;
       transition: box-shadow 0.2s, transform 0.2s;
       box-shadow: 0 2px 16px rgba(30,58,95,0.06);
     }
-    .review-card:hover {
-      box-shadow: 0 8px 32px rgba(30,58,95,0.12);
-      transform: translateY(-3px);
-    }
-    .review-card--featured {
-      border-color: var(--amber);
-      border-width: 2px;
-    }
-    .review-stars {
-      color: #FBBC04;
-      font-size: 1rem;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
+    .review-card:hover { box-shadow: 0 8px 32px rgba(30,58,95,0.12); transform: translateY(-3px); }
+    .review-card--featured { border-color: var(--amber); border-width: 2px; }
+    .review-stars { color: #FBBC04; font-size: 1rem; letter-spacing: 2px; margin-bottom: 1rem; }
     .review-quote {
       font-size: 0.95rem;
       line-height: 1.75;
@@ -630,17 +734,13 @@
       font-family: 'Playfair Display', serif;
       font-size: 3.5rem;
       color: var(--amber);
-      opacity: 0.2;
+      opacity: 0.18;
       position: absolute;
       top: -0.75rem;
       left: -0.5rem;
       line-height: 1;
     }
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+    .review-author { display: flex; align-items: center; gap: 0.75rem; }
     .review-avatar {
       width: 42px;
       height: 42px;
@@ -672,14 +772,10 @@
 
     /* ─── SERVICES SECTION ─── */
     #services {
-      background: var(--offwhite);
+      background: var(--stone);
       padding: 5.5rem 0;
     }
-    .services-intro {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 3.5rem;
-    }
+    .services-intro { text-align: center; max-width: 680px; margin: 0 auto 3.5rem; }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -688,8 +784,8 @@
     }
     .service-card {
       background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      border: 1px solid var(--border-warm);
+      border-radius: 14px;
       padding: 2rem 1.75rem;
       transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
       position: relative;
@@ -712,18 +808,8 @@
       line-height: 1;
       margin-bottom: 0.35rem;
     }
-    .service-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.6rem;
-    }
-    .service-desc {
-      font-size: 0.87rem;
-      color: var(--grey);
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-    }
+    .service-name { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+    .service-desc { font-size: 0.87rem; color: var(--grey); line-height: 1.6; margin-bottom: 1.25rem; }
     .service-link {
       font-size: 0.85rem;
       font-weight: 700;
@@ -736,24 +822,15 @@
     .service-link:hover { color: var(--amber-dark); }
     .free-consult-card {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 2.5rem 3rem;
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 2rem;
       align-items: center;
     }
-    .free-consult-card h3 {
-      color: var(--white);
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .free-consult-card p {
-      color: rgba(255,255,255,0.78);
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
+    .free-consult-card h3 { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .free-consult-card p { color: rgba(255,255,255,0.78); font-size: 0.95rem; line-height: 1.7; }
 
     /* ─── ABOUT STEPHEN ─── */
     #about {
@@ -762,47 +839,49 @@
     }
     .about-grid {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 4rem;
+      grid-template-columns: 320px 1fr;
+      gap: 4.5rem;
       align-items: start;
     }
-    .about-avatar-wrap {
-      position: relative;
-    }
-    .about-avatar {
+    .about-photo-wrap { position: relative; }
+    .about-photo {
       width: 100%;
-      aspect-ratio: 1;
       border-radius: 16px;
-      background: linear-gradient(145deg, var(--navy) 0%, var(--navy-dark) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5rem;
-      color: rgba(255,255,255,0.15);
       overflow: hidden;
+      box-shadow: 0 12px 48px rgba(30,58,95,0.18);
       position: relative;
     }
-    .about-avatar-initials {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      font-weight: 800;
-      color: var(--white);
-      opacity: 0.9;
-      letter-spacing: -0.02em;
+    .about-photo img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
     }
-    .about-avatar-accent {
+    .about-photo-badge {
       position: absolute;
-      bottom: -12px;
-      right: -12px;
-      width: 80px;
-      height: 80px;
+      bottom: -16px;
+      right: -16px;
       background: var(--amber);
       border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      box-shadow: 0 4px 20px rgba(212,120,26,0.4);
+      padding: 0.85rem 1.1rem;
+      box-shadow: 0 4px 20px rgba(201,123,42,0.4);
+      text-align: center;
+    }
+    .about-photo-badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+    .about-photo-badge-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.2rem;
     }
     .about-text .eyebrow { display: block; margin-bottom: 0.75rem; }
     .about-text h2 { color: var(--navy); margin-bottom: 1.25rem; }
@@ -821,33 +900,61 @@
     .credential-chip {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      background: var(--offwhite);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.7rem 1rem;
+      gap: 0.7rem;
+      background: var(--stone);
+      border: 1px solid var(--border-warm);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--navy);
     }
-    .credential-chip-icon { font-size: 1rem; }
+    .credential-chip-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgba(30,58,95,0.1);
+    }
+    .credential-chip-icon svg { width: 16px; height: 16px; }
 
     /* ─── SCHOOLS DIVIDER ─── */
     .schools-divider {
-      background: var(--navy);
-      padding: 3.5rem 0;
-      text-align: center;
-      border-top: 3px solid var(--teal);
+      position: relative;
+      overflow: hidden;
     }
-    .schools-divider .eyebrow { color: var(--teal); display: block; margin-bottom: 0.75rem; }
+    .schools-divider-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/section-schools.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+    }
+    .schools-divider-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--forest);
+    }
+    .schools-divider-content {
+      position: relative;
+      z-index: 2;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .schools-divider .eyebrow { color: rgba(255,255,255,0.6); display: block; margin-bottom: 0.75rem; }
     .schools-divider h2 { color: var(--white); margin-bottom: 0.75rem; }
-    .schools-divider p { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 1.75rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .schools-divider p { color: rgba(255,255,255,0.78); font-size: 1rem; margin-bottom: 1.75rem; max-width: 600px; margin-left: auto; margin-right: auto; }
     .schools-divider-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
     /* ─── BOOKS ─── */
     #books {
       padding: 5.5rem 0;
-      background: var(--offwhite);
+      background: var(--stone);
     }
     .books-grid {
       display: grid;
@@ -856,8 +963,8 @@
     }
     .book-card {
       background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
+      border: 1px solid var(--border-warm);
+      border-radius: 16px;
       padding: 2.5rem;
       display: grid;
       grid-template-columns: 120px 1fr;
@@ -865,10 +972,7 @@
       align-items: start;
       transition: box-shadow 0.2s, transform 0.2s;
     }
-    .book-card:hover {
-      box-shadow: 0 8px 32px rgba(30,58,95,0.1);
-      transform: translateY(-3px);
-    }
+    .book-card:hover { box-shadow: 0 8px 32px rgba(30,58,95,0.1); transform: translateY(-3px); }
     .book-cover {
       width: 120px;
       aspect-ratio: 2/3;
@@ -911,14 +1015,14 @@
     }
     .book-btn--kindle { background: #FF9900; color: var(--white); }
     .book-btn--kindle:hover { background: #e68a00; }
-    .book-btn--paper { background: var(--offwhite); color: var(--navy); border: 1px solid var(--border); }
-    .book-btn--paper:hover { background: var(--offwhite2); border-color: var(--navy); }
-    .book-btn--more { background: transparent; color: var(--navy); border: 1px solid var(--border); }
-    .book-btn--more:hover { background: var(--offwhite); }
+    .book-btn--paper { background: var(--stone); color: var(--navy); border: 1px solid var(--border-warm); }
+    .book-btn--paper:hover { background: var(--stone-dark); }
+    .book-btn--more { background: transparent; color: var(--navy); border: 1px solid var(--border-warm); }
+    .book-btn--more:hover { background: var(--stone); }
 
     /* ─── FREE RESOURCES ─── */
     .resources-strip {
-      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%);
       padding: 3.5rem 0;
     }
     .resources-strip-inner {
@@ -946,7 +1050,7 @@
       gap: 3rem;
       margin-bottom: 2.5rem;
     }
-    .footer-brand .nav-logo { font-size: 1.1rem; margin-bottom: 0.75rem; display: inline-flex; }
+    .footer-brand .nav-logo { font-size: 1.1rem; margin-bottom: 0.85rem; display: inline-flex; }
     .footer-brand p { color: rgba(255,255,255,0.5); font-size: 0.88rem; line-height: 1.7; max-width: 280px; }
     .footer-col h4 {
       font-family: 'Inter', sans-serif;
@@ -978,18 +1082,20 @@
       .hook-grid { gap: 2.5rem; }
       .reviews-grid { grid-template-columns: repeat(2, 1fr); }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 260px 1fr; gap: 3rem; }
     }
     @media (max-width: 900px) {
       .hook-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; }
-      .about-avatar { width: 180px; height: 180px; margin: 0 auto; }
-      .about-avatar-wrap { display: flex; justify-content: center; }
+      .about-photo img { height: 260px; }
+      .about-photo-wrap { max-width: 320px; margin: 0 auto; }
       .free-consult-inner { grid-template-columns: 1fr; }
       .free-consult-cta { align-items: flex-start; }
       .free-consult-card { grid-template-columns: 1fr; }
       .books-grid { grid-template-columns: 1fr; }
       .resources-strip-inner { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .photo-break-img { background-attachment: scroll; }
     }
     @media (max-width: 640px) {
       #hero { min-height: 100svh; }
@@ -1006,21 +1112,42 @@
       .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy-dark); padding: 1.25rem; gap: 0.25rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
       .nav-links.open { display: flex; }
       .nav-toggle { display: block; }
+      .music-player { bottom: 1rem; right: 1rem; }
+      .photo-break { height: 260px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- ─── Ambient Music Player ─── -->
+  <div class="music-player" id="musicPlayer" title="Toggle ambient music" role="button" tabindex="0" aria-label="Toggle ambient background music">
+    <button class="music-btn" id="musicBtn" aria-label="Play ambient music">
+      <!-- Play icon (shown when paused) -->
+      <svg id="iconPlay" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+      <!-- Pause icon (hidden when paused) -->
+      <svg id="iconPause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <div class="music-wave paused" id="musicWave">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <span class="music-label" id="musicLabel">Ambient</span>
+  </div>
+  <audio id="ambientAudio" src="assets/ambient-bg.mp3" loop preload="none"></audio>
+
   <!-- ─── Announcement Bar ─── -->
   <div class="announcement-bar">
-    🎯 Free 30-minute consultation — no obligation, no sales pitch. <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8">Book your slot now &rarr;</a>
+    Free 30-minute consultation — no obligation, no sales pitch. <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8">Book your slot now &rarr;</a>
   </div>
 
   <!-- ─── Navigation ─── -->
   <nav>
     <div class="nav-inner">
       <a href="/" class="nav-logo">
-        <div class="nav-logo-icon">🛡</div>
+        <!-- Shield SVG logo -->
+        <svg class="nav-logo-svg" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 2L4 7v8c0 6.5 4.7 12.6 11 14 6.3-1.4 11-7.5 11-14V7L15 2z" fill="#C97B2A"/>
+          <path d="M11 15l3 3 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         SEND<span>Navigate</span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -1041,8 +1168,9 @@
 
   <!-- ─── HERO ─── -->
   <section id="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-photo" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-overlay-bottom" aria-hidden="true"></div>
     <div class="hero-content">
       <div class="hero-badge">
         <div class="hero-badge-dot"></div>
@@ -1062,13 +1190,13 @@
         </a>
         <a href="#services" class="btn btn-outline-white">See Services &amp; Fees</a>
       </div>
-      <p class="hero-free-note">Free consultation · No obligation · No sales pitch · We reply within one working day</p>
+      <p class="hero-free-note">Free consultation &middot; No obligation &middot; No sales pitch &middot; We reply within one working day</p>
       <div class="hero-trust-row">
-        <span class="trust-chip"><span class="trust-chip-check">✓</span> 25 years inside the SEND system</span>
-        <span class="trust-chip"><span class="trust-chip-check">✓</span> Former Headteacher &amp; SENCo</span>
-        <span class="trust-chip"><span class="trust-chip-check">✓</span> Tribunal wins</span>
-        <span class="trust-chip"><span class="trust-chip-check">✓</span> Flat-fee pricing</span>
-        <span class="trust-chip"><span class="trust-chip-check">✓</span> 5-star Google reviews</span>
+        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> 25 years inside the SEND system</span>
+        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> Former Headteacher &amp; SENCo</span>
+        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> Tribunal wins</span>
+        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> Flat-fee pricing</span>
+        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> 5-star Google reviews</span>
       </div>
     </div>
     <a href="#emotional-hook" class="hero-scroll" aria-label="Scroll down">
@@ -1080,31 +1208,51 @@
   <div class="proof-bar">
     <div class="proof-bar-inner">
       <div class="proof-item">
-        <span class="proof-item-icon">⭐</span>
+        <div class="proof-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#FBBC04"/>
+          </svg>
+        </div>
         <div>
-          <div class="google-stars">★★★★★</div>
+          <div class="google-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <div style="font-size:0.78rem; color:var(--grey); font-weight:500;">5-star Google reviews</div>
         </div>
       </div>
       <div class="proof-divider"></div>
       <div class="proof-item">
-        <span class="proof-item-icon">⚖️</span>
+        <div class="proof-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="#1E3A5F"/>
+          </svg>
+        </div>
         <span>Tribunal wins against LA legal teams</span>
       </div>
       <div class="proof-divider"></div>
       <div class="proof-item">
-        <span class="proof-item-icon">📅</span>
-        <span>Free 30-minute consultation — no obligation</span>
+        <div class="proof-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" fill="#1E3A5F"/>
+          </svg>
+        </div>
+        <span>Free 30-minute consultation</span>
       </div>
       <div class="proof-divider"></div>
       <div class="proof-item">
-        <span class="proof-item-icon">🎓</span>
+        <div class="proof-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#1E3A5F"/>
+          </svg>
+        </div>
         <span>25 years as Headteacher &amp; SENCo</span>
       </div>
       <div class="proof-divider"></div>
       <div class="proof-item">
-        <span class="proof-item-icon">💷</span>
-        <span>Flat-fee pricing — no hourly surprises</span>
+        <div class="proof-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" fill="#1E3A5F"/>
+          </svg>
+        </div>
+        <span>Flat-fee pricing — no surprises</span>
       </div>
     </div>
   </div>
@@ -1128,37 +1276,70 @@
           </div>
         </div>
         <div class="hook-scenarios">
-          <h3>Are you dealing with any of these?</h3>
+          <p class="hook-scenarios-title">Are you dealing with any of these?</p>
           <div class="scenario-item">
-            <div class="scenario-icon">📋</div>
+            <div class="scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" fill="#C97B2A"/>
+              </svg>
+            </div>
             <div class="scenario-text"><strong>The LA has refused to assess your child for an EHCP</strong> — and you do not know how to challenge it.</div>
           </div>
           <div class="scenario-item">
-            <div class="scenario-icon">📄</div>
+            <div class="scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" fill="#C97B2A"/>
+              </svg>
+            </div>
             <div class="scenario-text"><strong>Your child has an EHCP but the provision is vague or inadequate</strong> — and the school is not delivering what it promises.</div>
           </div>
           <div class="scenario-item">
-            <div class="scenario-icon">⚖️</div>
+            <div class="scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="#C97B2A"/>
+              </svg>
+            </div>
             <div class="scenario-text"><strong>You are facing a SEND tribunal</strong> — and the LA has a legal team. You need someone in your corner.</div>
           </div>
           <div class="scenario-item">
-            <div class="scenario-icon">🚫</div>
+            <div class="scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#C97B2A"/>
+              </svg>
+            </div>
             <div class="scenario-text"><strong>Your child has been excluded or is at risk of exclusion</strong> — and you believe their SEN needs are not being met.</div>
           </div>
           <div class="scenario-item">
-            <div class="scenario-icon">🏫</div>
+            <div class="scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#C97B2A"/>
+              </svg>
+            </div>
             <div class="scenario-text"><strong>You want your child in a specific school</strong> — and the LA is directing you elsewhere.</div>
           </div>
-          <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center;">
+          <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-warm); text-align: center;">
             <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-primary" style="width:100%; justify-content:center;">
               Talk to Stephen — Free, No Obligation &rarr;
             </a>
-            <p style="font-size:0.8rem; color:var(--grey); margin-top:0.6rem;">30 minutes · Online or by phone · We reply within one working day</p>
+            <p style="font-size:0.8rem; color:var(--grey); margin-top:0.6rem;">30 minutes &middot; Online or by phone &middot; We reply within one working day</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ─── PHOTO BREAK / QUOTE ─── -->
+  <div class="photo-break">
+    <div class="photo-break-img" aria-hidden="true"></div>
+    <div class="photo-break-overlay">
+      <div class="photo-break-content">
+        <blockquote>
+          "Every child deserves an education that meets their needs. My job is to make sure the system delivers what the law says it must."
+          <cite>— Stephen Mallett, Former Headteacher &amp; SENCo</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
 
   <!-- ─── FREE CONSULTATION BANNER ─── -->
   <div class="free-consult-banner" id="free-consult">
@@ -1191,49 +1372,45 @@
       <div class="reviews-header">
         <div class="google-badge">
           <span class="google-badge-g">G</span>
-          <span class="google-badge-stars">★★★★★</span>
-          <span>Google Reviews — 5.0</span>
+          <span class="google-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>Google Reviews &mdash; 5.0</span>
         </div>
         <h2 class="section-title">What parents say about working with SEND Navigate</h2>
         <p class="section-subtitle">These are real outcomes for real families who came to us when they felt they had nowhere left to turn.</p>
       </div>
 
       <div class="reviews-grid">
-
-        <!-- Review 1: Ryan O'Kane -->
         <div class="review-card review-card--featured">
-          <div class="review-google-tag">★ Google</div>
-          <div class="review-stars">★★★★★</div>
+          <div class="review-google-tag">&#9733; Google</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="review-quote">
-            I cannot recommend Stephen Mallett highly enough. From the very beginning of our SENDIST tribunal appeal, Stephen provided exceptional support, expert knowledge, and clear guidance throughout the entire process. His professionalism, patience, and understanding gave us confidence every step of the way. Thanks to Stephen's expertise and dedication, we achieved the outcome we had hoped for — securing a specialist educational setting that meets our son's special educational needs. This result will make a life-changing difference to our son's future.
+            I cannot recommend Stephen Mallett highly enough. From the very beginning of our SENDIST tribunal appeal, Stephen provided exceptional support, expert knowledge, and clear guidance throughout the entire process. His professionalism, patience, and understanding gave us confidence every step of the way. Thanks to Stephen&rsquo;s expertise and dedication, we achieved the outcome we had hoped for &mdash; securing a specialist educational setting that meets our son&rsquo;s special educational needs. This result will make a life-changing difference to our son&rsquo;s future.
           </p>
           <div class="review-author">
-            <div class="review-avatar" style="background: linear-gradient(135deg, var(--teal), #0e6655);">R</div>
+            <div class="review-avatar" style="background: linear-gradient(135deg, var(--forest), var(--forest-dark));">R</div>
             <div>
-              <div class="review-name">Ryan O'Kane</div>
-              <div class="review-meta">Tribunal outcome: Specialist placement secured — June 2026</div>
+              <div class="review-name">Ryan O&rsquo;Kane</div>
+              <div class="review-meta">Tribunal outcome: Specialist placement secured &mdash; June 2026</div>
             </div>
           </div>
         </div>
 
-        <!-- Review 2: Anonymous tribunal win -->
         <div class="review-card">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="review-quote">
-            This would not have been possible without Stephen's help. He took over our case when we thought we had nowhere to turn. Every time the LA tried to manoeuvre us into sending our son to the state school, he fought them back and ensured that our rights were upheld. He represented us at the tribunal and stood firm against the legal representation of the LA — and now our son has a place at the school we wanted him to have.
+            This would not have been possible without Stephen&rsquo;s help. He took over our case when we thought we had nowhere to turn. Every time the LA tried to manoeuvre us into sending our son to the state school, he fought them back and ensured that our rights were upheld. He represented us at the tribunal and stood firm against the legal representation of the LA &mdash; and now our son has a place at the school we wanted him to have.
           </p>
           <div class="review-author">
-            <div class="review-avatar" style="background: linear-gradient(135deg, var(--red), #7b241c);">P</div>
+            <div class="review-avatar" style="background: linear-gradient(135deg, var(--red), var(--red-dark));">P</div>
             <div>
               <div class="review-name">Parent of a child with complex SEN needs</div>
-              <div class="review-meta">LA directed to name specialist school — June 2026</div>
+              <div class="review-meta">LA directed to name specialist school &mdash; June 2026</div>
             </div>
           </div>
         </div>
 
-        <!-- Review 3: Free report -->
         <div class="review-card">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="review-quote">
             After months of getting nowhere with the LA, I reached out to SEND Navigate. Stephen responded the same day, spent time understanding our situation, and produced a detailed report that gave us a clear roadmap for the first time. We finally felt like we understood what we were entitled to and what we needed to do next. The free consultation alone was worth more than I expected.
           </p>
@@ -1241,16 +1418,15 @@
             <div class="review-avatar" style="background: linear-gradient(135deg, var(--amber), var(--amber-dark));">S</div>
             <div>
               <div class="review-name">Parent, South East England</div>
-              <div class="review-meta">EHCP Application Support — 2026</div>
+              <div class="review-meta">EHCP Application Support &mdash; 2026</div>
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="reviews-cta">
         <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-red btn-lg">Get the Same Expert Help &rarr;</a>
-        <p style="margin-top:0.85rem; font-size:0.85rem; color:var(--grey);">Start with a free 30-minute consultation — no obligation, no commitment required.</p>
+        <p style="margin-top:0.85rem; font-size:0.85rem; color:var(--grey);">Start with a free 30-minute consultation &mdash; no obligation, no commitment required.</p>
       </div>
     </div>
   </section>
@@ -1259,64 +1435,62 @@
   <section id="services">
     <div class="container">
       <div class="services-intro">
-        <span class="eyebrow eyebrow--teal">Services &amp; Fees</span>
+        <span class="eyebrow eyebrow--forest">Services &amp; Fees</span>
         <h2 class="section-title">Clear, flat-fee pricing. You always know what you are paying.</h2>
-        <p class="section-subtitle">Every package is capped — no hourly billing, no hidden costs, no surprises. You agree the fee before we start, and that is what you pay.</p>
+        <p class="section-subtitle">Every package is capped &mdash; no hourly billing, no hidden costs, no surprises. You agree the fee before we start, and that is what you pay.</p>
       </div>
 
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-price">£160</div>
-          <div class="service-name">Initial Consultation</div>
-          <div class="service-desc">A 60-minute deep-dive into your situation — your rights, your options, and a clear action plan. With or without further support.</div>
+          <div class="service-price">&pound;95<span style="font-size:1rem; font-weight:500; color:var(--grey);">/hr</span></div>
+          <div class="service-name">Hourly Consultation</div>
+          <div class="service-desc">Expert advice billed by the hour — ideal for a focused question, a letter review, or a quick strategy session.</div>
           <a href="/ehcp-advisory" class="service-link">Find out more &rarr;</a>
         </div>
         <div class="service-card">
-          <div class="service-price">£395</div>
+          <div class="service-price">&pound;175</div>
+          <div class="service-name">Initial Consultation</div>
+          <div class="service-desc">A 90-minute deep-dive into your situation — your rights, your options, and a clear written action plan.</div>
+          <a href="/ehcp-advisory" class="service-link">Find out more &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-price">&pound;450</div>
           <div class="service-name">EHCP Application Support</div>
           <div class="service-desc">Full support through the EHCP application process — from initial request through to draft EHCP review and response.</div>
           <a href="/ehcp-advisory" class="service-link">Find out more &rarr;</a>
         </div>
         <div class="service-card">
-          <div class="service-price">£480</div>
+          <div class="service-price">&pound;550</div>
           <div class="service-name">EHCP Review &amp; Strengthening</div>
           <div class="service-desc">We review your existing EHCP, identify weaknesses, and work with you to challenge and strengthen every section.</div>
           <a href="/ehcp-advisory" class="service-link">Find out more &rarr;</a>
         </div>
         <div class="service-card">
-          <div class="service-price">£1,200</div>
-          <div class="service-name">Exclusion &amp; Discrimination Support</div>
-          <div class="service-desc">Full case management for exclusion challenges and disability discrimination complaints — from evidence gathering to formal challenge.</div>
-          <a href="/ehcp-advisory" class="service-link">Find out more &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">£1,440</div>
+          <div class="service-price">&pound;1,600</div>
           <div class="service-name">LA Decision Appeal Package</div>
           <div class="service-desc">Complete preparation and management of your appeal against an LA decision — refusal to assess, refusal to issue, or inadequate EHCP.</div>
           <a href="/ehcp-advisory" class="service-link">Find out more &rarr;</a>
         </div>
         <div class="service-card service-card--featured">
-          <div class="service-price">£2,400</div>
-          <div class="service-name">Complete Tribunal Preparation Pack</div>
+          <div class="service-price">&pound;5,500</div>
+          <div class="service-name">Tribunal + Representation</div>
           <div class="service-desc">Full tribunal preparation — evidence bundle, witness statements, legal arguments, and representation. We fight your case all the way.</div>
           <a href="/ehcp-advisory" class="service-link">Find out more &rarr;</a>
         </div>
       </div>
 
-      <!-- Free Consultation Card -->
       <div class="free-consult-card">
         <div>
           <h3>Not sure which service you need?</h3>
-          <p>Start with a free 30-minute consultation. Stephen will listen to your situation and tell you exactly what you need — with no obligation to proceed. Most parents find that 30 minutes gives them more clarity than months of searching online.</p>
+          <p>Start with a free 30-minute consultation. Stephen will listen to your situation and tell you exactly what you need &mdash; with no obligation to proceed. Most parents find that 30 minutes gives them more clarity than months of searching online.</p>
         </div>
         <div style="display:flex; flex-direction:column; gap:0.75rem; align-items:center; text-align:center;">
           <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-hero" style="white-space:nowrap;">
             Book Free Consultation &rarr;
           </a>
-          <span style="font-size:0.8rem; color:rgba(255,255,255,0.55);">Free · No obligation · 30 minutes</span>
+          <span style="font-size:0.8rem; color:rgba(255,255,255,0.55);">Free &middot; No obligation &middot; 30 minutes</span>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -1324,31 +1498,64 @@
   <section id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-avatar-wrap">
-          <div class="about-avatar">
-            <span class="about-avatar-initials">SM</span>
+        <div class="about-photo-wrap">
+          <div class="about-photo">
+            <img src="assets/section-consultation.jpg" alt="Professional consultation — expert support for parents" loading="lazy" />
           </div>
-          <div class="about-avatar-accent">🎓</div>
+          <div class="about-photo-badge">
+            <div class="about-photo-badge-num">25</div>
+            <div class="about-photo-badge-label">Years Inside<br>the System</div>
+          </div>
         </div>
         <div class="about-text">
           <span class="eyebrow">About Stephen Mallett</span>
           <h2>25 years inside the SEND system. Two children with SEN of his own.</h2>
           <p>
-            Stephen Mallett spent 25 years working in UK schools — as a classroom teacher, a SENCo, and a Headteacher. He has seen the SEND system from every angle: the school that is under-resourced, the LA that delays and deflects, and the parent who is exhausted and alone.
+            Stephen Mallett spent 25 years working in UK schools &mdash; as a classroom teacher, a SENCo, and a Headteacher. He has seen the SEND system from every angle: the school that is under-resourced, the LA that delays and deflects, and the parent who is exhausted and alone.
           </p>
           <p>
-            He also knows that experience from the other side. Stephen has two children of his own with SEN. He has sat in the meetings, read the letters, and felt the frustration of a system that is supposed to help but often does not. That dual perspective — professional expertise and personal experience — is what makes SEND Navigate different.
+            He also knows that experience from the other side. Stephen has two children of his own with SEN. He has sat in the meetings, read the letters, and felt the frustration of a system that is supposed to help but often does not. That dual perspective &mdash; professional expertise and personal experience &mdash; is what makes SEND Navigate different.
           </p>
           <p>
             Stephen is also the author of two books on SEN rights for parents, published on Amazon, and the creator of a CPD-accredited SEN training programme for schools and MATs.
           </p>
           <div class="credentials-grid">
-            <div class="credential-chip"><span class="credential-chip-icon">🏫</span> Former Headteacher</div>
-            <div class="credential-chip"><span class="credential-chip-icon">📋</span> Former SENCo</div>
-            <div class="credential-chip"><span class="credential-chip-icon">📚</span> Published SEN Author</div>
-            <div class="credential-chip"><span class="credential-chip-icon">👨‍👧</span> SEN Parent</div>
-            <div class="credential-chip"><span class="credential-chip-icon">⚖️</span> Tribunal Representative</div>
-            <div class="credential-chip"><span class="credential-chip-icon">🎓</span> CPD Programme Creator</div>
+            <div class="credential-chip">
+              <div class="credential-chip-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="#1E3A5F"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#1E3A5F"/></svg>
+              </div>
+              Former Headteacher
+            </div>
+            <div class="credential-chip">
+              <div class="credential-chip-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z" fill="#1E3A5F"/></svg>
+              </div>
+              Former SENCo
+            </div>
+            <div class="credential-chip">
+              <div class="credential-chip-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-10 0H2v20h20V2h-4zm-6-1a3 3 0 0 1 3 3H9a3 3 0 0 1 3-3z" fill="#1E3A5F"/></svg>
+              </div>
+              Published SEN Author
+            </div>
+            <div class="credential-chip">
+              <div class="credential-chip-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#1E3A5F"/></svg>
+              </div>
+              SEN Parent
+            </div>
+            <div class="credential-chip">
+              <div class="credential-chip-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#1E3A5F"/></svg>
+              </div>
+              Tribunal Representative
+            </div>
+            <div class="credential-chip">
+              <div class="credential-chip-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="#1E3A5F"/></svg>
+              </div>
+              CPD Programme Creator
+            </div>
           </div>
           <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-primary">Book a Free Consultation with Stephen &rarr;</a>
         </div>
@@ -1358,13 +1565,17 @@
 
   <!-- ─── SCHOOLS DIVIDER ─── -->
   <div class="schools-divider">
-    <div class="container">
-      <span class="eyebrow">Also from SEND Navigate</span>
-      <h2>CPD-Accredited SEN Training for Schools &amp; MATs</h2>
-      <p>See It. Support It. Teach It. — a practical, INSET-ready programme built on the EEF Five-a-Day framework. Delivered by your SENCo. No external trainers required.</p>
-      <div class="schools-divider-actions">
-        <a href="/for-schools" class="btn btn-teal">Explore the Programme &rarr;</a>
-        <a href="mailto:stephen@sendnavigate.com?subject=School Training Enquiry" class="btn btn-outline-white">Request a Free Sample</a>
+    <div class="schools-divider-bg" aria-hidden="true"></div>
+    <div class="schools-divider-overlay" aria-hidden="true"></div>
+    <div class="schools-divider-content">
+      <div class="container">
+        <span class="eyebrow">Also from SEND Navigate</span>
+        <h2>CPD-Accredited SEN Training for Schools &amp; MATs</h2>
+        <p>See It. Support It. Teach It. &mdash; a practical, INSET-ready programme built on the EEF Five-a-Day framework. Delivered by your SENCo. No external trainers required.</p>
+        <div class="schools-divider-actions">
+          <a href="/for-schools" class="btn btn-hero">Explore the Programme &rarr;</a>
+          <a href="mailto:stephen@sendnavigate.com?subject=School Training Enquiry" class="btn btn-outline-white">Request a Free Sample</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1375,19 +1586,17 @@
       <div style="text-align:center; margin-bottom:3rem;">
         <span class="eyebrow">Books by Stephen Mallett</span>
         <h2 class="section-title">Practical guides for parents navigating the SEND system</h2>
-        <p class="section-subtitle">Written from 25 years of professional experience and personal lived experience as a SEN parent — in plain English, not legal jargon.</p>
+        <p class="section-subtitle">Written from 25 years of professional experience and personal lived experience as a SEN parent &mdash; in plain English, not legal jargon.</p>
       </div>
       <div class="books-grid">
-
-        <!-- Book 1: Parent Shield -->
         <div class="book-card">
           <div class="book-cover">
-            <img src="Parent Shield - Kindle Cover.jpg" alt="The Parent's Shield book cover" onerror="this.style.display='none'; this.parentElement.innerHTML='🛡';" />
+            <img src="Parent Shield - Kindle Cover.jpg" alt="The Parent's Shield book cover" onerror="this.style.display='none';" />
           </div>
           <div class="book-info">
             <span class="book-tag book-tag--red">SEN Rights for Parents</span>
-            <h3>The Parent's Shield</h3>
-            <p>A complete guide to navigating the SEND system — from EHCP applications and annual reviews to appeals and tribunal. Written for parents who want to understand their rights and use them.</p>
+            <h3>The Parent&rsquo;s Shield</h3>
+            <p>A complete guide to navigating the SEND system &mdash; from EHCP applications and annual reviews to appeals and tribunal. Written for parents who want to understand their rights and use them.</p>
             <div class="book-actions">
               <a href="https://www.amazon.co.uk/dp/B0H26YM5JL" target="_blank" rel="noopener" class="book-btn book-btn--kindle">Kindle Edition</a>
               <a href="https://www.amazon.co.uk/dp/B0H2GMWKCQ" target="_blank" rel="noopener" class="book-btn book-btn--paper">Paperback</a>
@@ -1395,23 +1604,20 @@
             </div>
           </div>
         </div>
-
-        <!-- Book 2: Not Refusing. Unable. -->
         <div class="book-card">
           <div class="book-cover">
-            <img src="cover-kindle.jpg" alt="Not Refusing. Unable. book cover" onerror="this.style.display='none'; this.parentElement.innerHTML='📖';" />
+            <img src="cover-kindle.jpg" alt="Not Refusing. Unable. book cover" onerror="this.style.display='none';" />
           </div>
           <div class="book-info">
             <span class="book-tag book-tag--navy">School Attendance &amp; EBSA</span>
             <h3>Not Refusing. Unable.</h3>
-            <p>A guide to Emotionally Based School Avoidance (EBSA) — helping parents understand why their child cannot attend school, what the law says, and how to get the right support in place.</p>
+            <p>A guide to Emotionally Based School Avoidance (EBSA) &mdash; helping parents understand why their child cannot attend school, what the law says, and how to get the right support in place.</p>
             <div class="book-actions">
               <a href="https://www.amazon.co.uk/dp/B0H3FXVQZS" target="_blank" rel="noopener" class="book-btn book-btn--kindle">View on Amazon</a>
               <a href="/book" class="book-btn book-btn--more">Find out more</a>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -1421,7 +1627,7 @@
     <div class="resources-strip-inner">
       <div>
         <h3>Free 40-page EHCP Case-Building Guide</h3>
-        <p>Download the free guide used by hundreds of parents to understand and challenge their child's EHCP — no email required.</p>
+        <p>Download the free guide used by hundreds of parents to understand and challenge their child&rsquo;s EHCP &mdash; no email required.</p>
       </div>
       <a href="/free-ehcp-checklist" class="btn btn-hero" style="white-space:nowrap;">Download Free &rarr;</a>
     </div>
@@ -1433,10 +1639,13 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="nav-logo" style="margin-bottom:0.85rem;">
-            <div class="nav-logo-icon">🛡</div>
+            <svg class="nav-logo-svg" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 2L4 7v8c0 6.5 4.7 12.6 11 14 6.3-1.4 11-7.5 11-14V7L15 2z" fill="#C97B2A"/>
+              <path d="M11 15l3 3 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             SEND<span>Navigate</span>
           </a>
-          <p>Expert SEN consultancy for parents navigating the SEND system — EHCP, tribunal, exclusion, and appeals. Founded by a former Headteacher and SENCo with 25 years of experience.</p>
+          <p>Expert SEN consultancy for parents navigating the SEND system &mdash; EHCP, tribunal, exclusion, and appeals. Founded by a former Headteacher and SENCo with 25 years of experience.</p>
         </div>
         <div class="footer-col">
           <h4>For Parents</h4>
@@ -1474,22 +1683,51 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
+    // ─── Mobile nav toggle ───
     const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
+    const navLinks  = document.getElementById('navLinks');
     if (navToggle && navLinks) {
-      navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
+      navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     }
 
-    // Google Ads conversion tracking for consultation booking
+    // ─── Ambient music player ───
+    const audio      = document.getElementById('ambientAudio');
+    const musicBtn   = document.getElementById('musicBtn');
+    const iconPlay   = document.getElementById('iconPlay');
+    const iconPause  = document.getElementById('iconPause');
+    const musicWave  = document.getElementById('musicWave');
+    const musicLabel = document.getElementById('musicLabel');
+    const musicPlayer = document.getElementById('musicPlayer');
+    let isPlaying = false;
+
+    function toggleMusic() {
+      if (isPlaying) {
+        audio.pause();
+        iconPlay.style.display  = 'block';
+        iconPause.style.display = 'none';
+        musicWave.classList.add('paused');
+        musicLabel.textContent = 'Ambient';
+        isPlaying = false;
+      } else {
+        audio.volume = 0.22;
+        audio.play().then(() => {
+          iconPlay.style.display  = 'none';
+          iconPause.style.display = 'block';
+          musicWave.classList.remove('paused');
+          musicLabel.textContent = 'Playing';
+          isPlaying = true;
+        }).catch(() => {});
+      }
+    }
+
+    musicPlayer.addEventListener('click', toggleMusic);
+    musicPlayer.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMusic(); } });
+
+    // ─── Google Ads conversion tracking ───
     document.querySelectorAll('a[href*="calendar.app.google"]').forEach(link => {
       link.addEventListener('click', () => {
         if (typeof gtag !== 'undefined') {
-          gtag('event', 'conversion', {
-            'send_to': 'AW-18171403554/consultation_booking'
-          });
+          gtag('event', 'conversion', { 'send_to': 'AW-18171403554/consultation_booking' });
         }
       });
     });
