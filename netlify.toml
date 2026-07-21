@@ -5,6 +5,11 @@
   directory = "netlify/functions"
 
 [[redirects]]
+  from = "/free-consultation"
+  to = "/free-consultation.html"
+  status = 200
+
+[[redirects]]
   from = "/for-schools"
   to = "/for-schools.html"
   status = 200
