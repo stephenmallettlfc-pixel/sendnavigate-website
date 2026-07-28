@@ -1297,7 +1297,7 @@
       });
     });
     // Track "Book a Call" / CTA button clicks
-    document.querySelectorAll('a[href*="calendly"], a[href*="book"], a[href*="get-help"], a[href*="contact"]').forEach(function(btn) {
+    document.querySelectorAll('a[href*="calendly"], a[href*="calendar.app.google"], a[href*="calendar.google.com"], a[href*="book"], a[href*="get-help"], a[href*="contact"]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         gtag('event', 'conversion', {
           'send_to': 'AW-18171403554/cta_click',
