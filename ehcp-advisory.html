@@ -536,7 +536,7 @@
     <div class="nav-inner">
       <a href="/" class="nav-logo">SEND<span>Navigate</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">For Schools</a></li>
+        <li><a href="/" style="display:none;">For Schools</a></li>
         <li><a href="#empathy">Who We Help</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#process">How It Works</a></li>
@@ -551,6 +551,24 @@
     </div>
   </nav>
 
+  <!-- Sticky Mobile CTA -->
+  <div id="sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;background:var(--teal);padding:0.85rem 1.5rem;z-index:9999;text-align:center;box-shadow:0 -4px 16px rgba(0,0,0,0.2);">
+    <a href="#contact" style="background:#fff;color:var(--teal);font-weight:800;font-size:1rem;padding:0.65rem 2rem;border-radius:6px;display:inline-block;text-decoration:none;" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{event_category:'Sticky CTA',event_label:'Book Free Review'});}">📅 Book Your Free 30-Min Review</a>
+  </div>
+  <script>
+  (function(){
+    var sticky = document.getElementById('sticky-cta');
+    var hero = document.getElementById('hero');
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > (hero ? hero.offsetHeight : 400)){
+        sticky.style.display = 'block';
+      } else {
+        sticky.style.display = 'none';
+      }
+    }, {passive:true});
+  })();
+  </script>
+
   <!-- Hero -->
   <section id="hero">
     <div class="container">
@@ -559,8 +577,12 @@
         <h1>The system is complicated.<br><em>You're not.</em></h1>
         <p class="hero-sub">Free legal guidance for parents navigating the EHCP and SEND tribunal system. A former Headteacher and SENCo with 25 years inside the system will review your case — and send you a written report on your legal position. No obligation.</p>
         <div class="hero-actions">
-          <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-primary" target="_blank" rel="noopener">Book Free 30-Min Review + Report</a>
+          <a href="#contact" class="btn btn-primary" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{event_category:'Hero CTA',event_label:'Book Free Review'});}" >Book Free 30-Min Review + Report</a>
           <a href="/free-ehcp-checklist" class="btn btn-outline">⬇ Free EHCP Checklist</a>
+        </div>
+        <div style="margin-bottom:1.5rem;padding:1rem 1.25rem;background:rgba(255,255,255,0.08);border-radius:8px;border-left:4px solid var(--teal);max-width:680px;">
+          <p style="font-size:0.9rem;font-style:italic;color:#e2e8f0;margin-bottom:0.4rem;">&ldquo;He stood firm against the legal representation of the LA &mdash; and now our son has a place at the school we wanted him to have.&rdquo;</p>
+          <p style="font-size:0.78rem;color:#94a3b8;margin:0;">Parent &mdash; Tribunal win, June 2026</p>
         </div>
         <div class="hero-trust">
           <div class="trust-item"><div class="trust-icon">✦</div><span>Former Headteacher &amp; SENCo</span></div>
