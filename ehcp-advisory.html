@@ -462,6 +462,7 @@
     #cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; max-width: 680px; margin: 0 auto 2rem; }
 
     /* Contact */
+    /* Design note — Advocate's Field Notes: booking guidance is a calm, high-visibility margin note that reassures parents without interrupting the main booking action. */
     #contact { background: var(--offwhite); }
     .contact-grid {
       display: grid;
@@ -487,6 +488,36 @@
     @media (max-width: 760px) {
       .contact-grid { grid-template-columns: 1fr; }
     }
+
+    .booking-reassurance {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+      max-width: 39rem;
+      padding: 0.9rem 1rem;
+      background: #F4FAF8;
+      border: 1px solid rgba(45, 138, 122, 0.24);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+    }
+    .booking-reassurance__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.85rem;
+      height: 1.85rem;
+      flex: 0 0 1.85rem;
+      margin-top: 0.08rem;
+      background: var(--teal);
+      border-radius: 50%;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+    .booking-reassurance__copy { color: #374151; font-size: 0.88rem; line-height: 1.5; }
+    .booking-reassurance__copy strong { display: block; margin-bottom: 0.12rem; color: var(--navy); font-size: 0.92rem; }
+    .booking-reassurance__copy a { color: var(--teal-dark); font-weight: 800; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 
     /* Footer */
     footer {
@@ -603,6 +634,13 @@
           <h2 style="color: var(--navy); margin: 1rem 0; line-height: 1.3;">The LA has a legal team.<br>Now you have expert guidance too.</h2>
           <p style="font-size: 1.05rem; color: #374151; margin-bottom: 1.75rem;">Book a free 30-minute legal guidance review — and receive a written report on your case. Know exactly where you stand before you spend a penny.</p>
           <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2rem;">Book My Free 30-Min Review →</a>
+          <aside class="booking-reassurance" role="note" aria-label="Booking confirmation email information">
+            <span class="booking-reassurance__icon" aria-hidden="true">✉</span>
+            <div class="booking-reassurance__copy">
+              <strong>Booked a slot? Look out for the confirmation email.</strong>
+              It can occasionally arrive in your spam or junk folder. If you cannot find it, email <a href="mailto:stephen@sendnavigate.com?subject=Free%20consultation%20booking%20confirmation">Stephen directly</a> and he will check your booking.
+            </div>
+          </aside>
           <p style="margin-top: 0.85rem; font-size: 0.88rem; color: var(--grey);">Written report included. Sent to you after the call.</p>
           <div style="margin-top: 2rem; padding: 1.25rem; background: var(--cream); border-radius: 8px; border-left: 4px solid var(--gold);">
             <p style="font-size: 0.9rem; font-style: italic; color: #374151; margin-bottom: 0.5rem;">"He stood firm against the legal representation of the LA — and now our son has a place at the school we wanted him to have."</p>
@@ -1206,6 +1244,10 @@
 
       <div style="text-align:center;">
         <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-primary" style="font-size:1.05rem; padding:1rem 2.25rem;">Get the Same Expert Help &rarr;</a>
+        <aside class="booking-reassurance" role="note" aria-label="Booking confirmation email information" style="margin-left:auto;margin-right:auto;text-align:left;">
+          <span class="booking-reassurance__icon" aria-hidden="true">✉</span>
+          <div class="booking-reassurance__copy"><strong>After booking, check your inbox and spam folder.</strong>If the confirmation email is missing, <a href="mailto:stephen@sendnavigate.com?subject=Free%20consultation%20booking%20confirmation">email Stephen directly</a>.</div>
+        </aside>
         <p style="margin-top:0.85rem; font-size:0.85rem; color:#6B7280;">Start with a free 30-minute consultation — no obligation, no commitment required.</p>
       </div>
     </div>
@@ -1234,6 +1276,10 @@
       <h2>Start with a free 30-minute legal guidance review.</h2>
       <p>No obligation. No upsell. You'll receive a written report on your case after the call — your legal position, your options, your next steps. Free.</p>
       <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-primary" style="background: #FFFFFF; color: var(--navy); border-color: #FFFFFF;" target="_blank" rel="noopener">Book my free 30-min review</a>
+      <aside class="booking-reassurance" role="note" aria-label="Booking confirmation email information" style="margin-left:auto;margin-right:auto;text-align:left;">
+        <span class="booking-reassurance__icon" aria-hidden="true">✉</span>
+        <div class="booking-reassurance__copy"><strong>Check your inbox after booking.</strong>Your confirmation can occasionally land in spam or junk. If you cannot find it, <a href="mailto:stephen@sendnavigate.com?subject=Free%20consultation%20booking%20confirmation">email Stephen directly</a>.</div>
+      </aside>
     </div>
   </section>
 
@@ -1246,6 +1292,13 @@
           <h2 style="color: var(--navy); margin: 0.5rem 0 1.25rem;">Book your free 30-minute legal guidance review</h2>
           <p>Use the calendar to book your free 30-minute slot directly — or send a message using the form.</p>
           <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-primary" target="_blank" rel="noopener" style="margin-top:1rem;display:inline-block;">📅 Book a time now — see live availability</a>
+          <aside class="booking-reassurance" role="note" aria-label="Booking confirmation email information">
+            <span class="booking-reassurance__icon" aria-hidden="true">✉</span>
+            <div class="booking-reassurance__copy">
+              <strong>Please check your inbox after booking.</strong>
+              Your confirmation email can occasionally go to spam or junk. If you cannot see it, email <a href="mailto:stephen@sendnavigate.com?subject=Free%20consultation%20booking%20confirmation">stephen@sendnavigate.com</a> so Stephen can help.
+            </div>
+          </aside>
           <p style="margin-top: 1.5rem;"><strong>Email:</strong> <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></p>
           
           <p><strong>Hours:</strong> Mon–Fri 9am–6pm. Evening calls available by arrangement for working parents.</p>
@@ -1289,6 +1342,7 @@
           </select>
           <textarea name="message" rows="4" placeholder="Briefly — where are you in the process?" required></textarea>
           <button type="submit" class="btn btn-primary" onclick="if(typeof gtag!=='undefined'){gtag('event','generate_lead',{event_category:'Contact Form',event_label:'Advisory Enquiry',value:1});}">Book my free 30-minute review</button>
+          <p style="margin-top:0.8rem; font-size:0.83rem; line-height:1.5; color:var(--grey);">After you submit, please check your inbox and spam folder for Stephen's reply. If it does not arrive, email <a href="mailto:stephen@sendnavigate.com?subject=Free%20consultation%20enquiry" style="color:var(--teal-dark);font-weight:700;">stephen@sendnavigate.com</a>.</p>
         </form>
       </div>
     </div>

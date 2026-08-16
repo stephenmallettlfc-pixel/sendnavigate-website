@@ -26,8 +26,8 @@
     });
   </script>
 
-  <title>Thank You — Your Sample Is on Its Way | SEND Navigate</title>
-  <meta name="description" content="Thank you for requesting a sample of the See It. Support It. Teach It. programme. Your sample pack will arrive shortly." />
+  <title>Thank You — Free Consultation Enquiry Received | SEND Navigate</title>
+  <meta name="description" content="Thank you for contacting SEND Navigate about a free consultation. Check your inbox and spam folder for Stephen's reply." />
   <!-- Prevent indexing of thank-you page -->
   <meta name="robots" content="noindex, nofollow" />
 
@@ -193,6 +193,36 @@
       margin-top: 1.25rem;
     }
 
+    /* Design note — Advocate's Field Notes: a clear post-action notice reassures users that email delivery, not their request, may need attention. */
+    .email-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin: 1.5rem 0 0;
+      padding: 1rem 1.1rem;
+      text-align: left;
+      background: #F4FAF8;
+      border: 1px solid rgba(45, 138, 122, 0.24);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+    }
+    .email-check__icon {
+      width: 1.9rem;
+      height: 1.9rem;
+      display: inline-flex;
+      flex: 0 0 1.9rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+    .email-check strong { display: block; color: var(--navy); font-size: 0.93rem; margin-bottom: 0.15rem; }
+    .email-check p { color: #374151; font-size: 0.88rem; line-height: 1.5; }
+    .email-check a { color: var(--teal-dark); font-weight: 800; text-underline-offset: 2px; }
+
     footer {
       background: var(--navy);
       color: rgba(255,255,255,0.7);
@@ -218,42 +248,50 @@
   <main class="main">
     <div class="card">
       <div class="check-icon">&#10003;</div>
-      <h1>Thank you — your sample is on its way.</h1>
-      <p class="lead">Check your inbox. Your free sample of the <em>See It. Support It. Teach It.</em> programme will arrive within a few minutes.</p>
+      <h1>Thank you — Stephen has received your enquiry.</h1>
+      <p class="lead">He will review your message and reply about your free consultation as soon as possible.</p>
+
+      <aside class="email-check" role="note" aria-label="Email delivery information">
+        <span class="email-check__icon" aria-hidden="true">✉</span>
+        <div>
+          <strong>Please check your spam or junk folder too.</strong>
+          <p>Replies and booking information can occasionally be filtered there. If you cannot find Stephen's email, contact him directly at <a href="mailto:stephen@sendnavigate.com?subject=Free%20consultation%20enquiry">stephen@sendnavigate.com</a>.</p>
+        </div>
+      </aside>
 
       <div class="timeline">
-        <h3>What you will receive</h3>
+        <h3>What happens next</h3>
         <div class="timeline-item">
           <div class="timeline-dot">1</div>
           <div class="timeline-text">
-            <strong>Module 1 slide deck (excerpt)</strong>
-            <span>A preview of the See It module — the identification framework your staff will use from day one.</span>
+            <strong>Stephen reviews your message</strong>
+            <span>He will consider the information you have shared about your child and situation.</span>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot">2</div>
           <div class="timeline-text">
-            <strong>Facilitator Guide introduction</strong>
-            <span>The opening section of the guide your SENCo will use to run the INSET day — no external trainer required.</span>
+            <strong>You receive a reply</strong>
+            <span>Look for an email from Stephen, including in spam or junk, with the next step for your enquiry.</span>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot">3</div>
           <div class="timeline-text">
-            <strong>EEF Five-a-Day mapping overview</strong>
-            <span>The research evidence trail — ready to drop into your Ofsted evidence pack.</span>
+            <strong>Your free review is arranged</strong>
+            <span>Stephen will help you confirm a suitable time or advise on the best way forward.</span>
           </div>
         </div>
       </div>
 
       <hr class="divider">
 
-      <p style="color: #374151; font-size: 0.95rem;">Ready to take the next step?</p>
+      <p style="color: #374151; font-size: 0.95rem;">Need to add something to your enquiry?</p>
 
       <div class="links-row">
-        <a href="/for-schools#pricing" class="btn btn-primary">View Licence Pricing</a>
-        <a href="mailto:stephen@sendnavigate.com?subject=MAT Licence Enquiry" class="btn btn-outline-navy">Enquire About MAT Pricing</a>
-        <a href="/" class="btn btn-outline-navy">Back to Home</a>
+        <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-primary" target="_blank" rel="noopener">Book a free 30-min review</a>
+        <a href="mailto:stephen@sendnavigate.com?subject=Free%20consultation%20enquiry" class="btn btn-outline-navy">Email Stephen</a>
+        <a href="/ehcp-advisory" class="btn btn-outline-navy">Back to advisory support</a>
       </div>
 
       <p class="reassurance">All conversations are confidential. Documents are stored securely and deleted at the end of the engagement unless you ask otherwise.</p>
