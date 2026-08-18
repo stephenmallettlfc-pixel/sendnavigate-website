@@ -18,3 +18,14 @@
   from = "/thank-you"
   to = "/thank-you.html"
   status = 200
+
+[[redirects]]
+  from = "/Parent_Shield_Landing_Page.html"
+  to = "/ehcp-advisory"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/Parent_Shield_Landing_Page"
+  to = "/ehcp-advisory"
+  status = 301
+  force = true
