@@ -29,3 +29,15 @@
   to = "/ehcp-advisory"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/parent_shield_landing_page.html"
+  to = "/ehcp-advisory"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/parent_shield_landing_page"
+  to = "/ehcp-advisory"
+  status = 301
+  force = true
