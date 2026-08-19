@@ -367,6 +367,9 @@
     .service-price { font-family:'Playfair Display',serif; font-size:2rem; font-weight:800; color:var(--amber-dark); line-height:1; margin-bottom:0.35rem; }
     .service-name { font-size:0.95rem; font-weight:700; color:var(--ink); margin-bottom:0.6rem; }
     .service-desc { font-size:0.87rem; color:var(--text-muted); line-height:1.6; margin-bottom:1.25rem; }
+    .service-time { font-size:0.8rem; color:var(--sage-dark); font-weight:700; line-height:1.45; margin:-0.45rem 0 1.1rem; }
+    .services-time-policy { background:#EAF2EC; border-left:4px solid var(--sage); border-radius:0 10px 10px 0; padding:1rem 1.15rem; margin:-1.5rem auto 2rem; max-width:900px; color:var(--ink); font-size:0.9rem; line-height:1.65; }
+    .services-time-policy strong { color:var(--sage-dark); }
     .service-link { font-size:0.84rem; font-weight:700; color:#fff; background:var(--amber); text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem; padding:0.62rem 0.85rem; border-radius:6px; }
     .service-link:hover { color:#fff; background:var(--amber-dark); }
     .service-group-heading { grid-column:1 / -1; margin:0.9rem 0 -0.15rem; font-family:'Inter',sans-serif; font-size:0.76rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage-dark); }
@@ -771,6 +774,7 @@
         <span class="eyebrow eyebrow--sage">Services &amp; Fees</span>
         <h2 class="section-title">Clear, flat-fee pricing. You always know what you are paying.</h2>
         <p class="section-subtitle">Choose a defined support package or hourly advice. Every fee is shown clearly before you commit, with no hidden costs or surprises. Each “Book securely” button opens the matching Stripe checkout.</p>
+      <p class="services-time-policy"><strong>Included professional time is shown for every package.</strong> The allowance covers work within the agreed case scope, including relevant review, calls, meetings, drafting, correspondence, preparation and reasonable administration. We will agree a further fee with you before carrying out work beyond the allowance or outside that scope.</p>
       </div>
       <div class="services-grid">
         <p class="service-group-heading">Advice, reviews &amp; EHCP support</p>
@@ -778,36 +782,42 @@
           <div class="service-price">&pound;95<span style="font-size:1rem;font-weight:500;color:var(--text-muted);">/hr</span></div>
           <div class="service-name">Hourly Consultation</div>
           <div class="service-desc">Focused expert advice for a question, document review, correspondence or strategy session.</div>
+          <p class="service-time">Professional time included: Up to 1 hour of professional time per £95 booking</p>
           <a href="https://buy.stripe.com/4gM28tdwj7yu6sz5uYaVa0E" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;95/hr &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;175</div>
           <div class="service-name">Initial Consultation</div>
           <div class="service-desc">A focused case review with clear written next steps and practical guidance on your options.</div>
+          <p class="service-time">Professional time included: Up to 3.5 hours of professional time</p>
           <a href="https://buy.stripe.com/28E4gB77V3ieg39aPiaVa0F" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;175 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;275</div>
           <div class="service-name">Formal Legal Letter</div>
           <div class="service-desc">Professionally drafted, legally framed correspondence to your local authority or school.</div>
+          <p class="service-time">Professional time included: Up to 5.5 hours of professional time</p>
           <a href="https://buy.stripe.com/9B66oJ0Jx6uq3gng9CaVa0G" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;275 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;350</div>
           <div class="service-name">Annual Review Support</div>
           <div class="service-desc">Preparation, proposed amendments and coaching for your child’s EHCP annual review.</div>
+          <p class="service-time">Professional time included: Up to 7 hours of professional time</p>
           <a href="https://buy.stripe.com/28EaEZ63R1a64kr8HaaVa0H" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;350 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;450</div>
           <div class="service-name">EHCP Application Support</div>
           <div class="service-desc">Evidence-led support from the initial request through to draft EHCP review and response.</div>
+          <p class="service-time">Professional time included: Up to 9 hours of professional time</p>
           <a href="https://buy.stripe.com/3cI8wRbob062cQX5uYaVa0I" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;450 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;550</div>
           <div class="service-name">EHCP Review &amp; Strengthening</div>
           <div class="service-desc">A section-by-section review with a written plan for making the EHCP specific and enforceable.</div>
+          <p class="service-time">Professional time included: Up to 11 hours of professional time</p>
           <a href="https://buy.stripe.com/8x25kF4ZN1a6g390aEaVa0J" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;550 &rarr;</a>
         </div>
 
@@ -816,36 +826,42 @@
           <div class="service-price">&pound;250</div>
           <div class="service-name">Working Document</div>
           <div class="service-desc">A tracked-changes EHCP Working Document for tribunal, with legally reasoned amendments.</div>
+          <p class="service-time">Professional time included: Up to 5 hours of professional time</p>
           <a href="https://buy.stripe.com/cNidRbak78CycQX6z2aVa0K" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;250 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;295</div>
           <div class="service-name">DLA / PIP Form Support</div>
           <div class="service-desc">Preparation, drafting and review support for DLA or PIP applications for your child.</div>
+          <p class="service-time">Professional time included: Up to 5.5 hours of professional time</p>
           <a href="https://buy.stripe.com/cNi00lak72eabMT8HaaVa0L" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;295 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;650</div>
           <div class="service-name">Mediation Support</div>
           <div class="service-desc">Strategy, position statement drafting, coaching and advice before SEND mediation.</div>
+          <p class="service-time">Professional time included: Up to 13 hours of professional time</p>
           <a href="https://buy.stripe.com/3cIfZj9g3dWS18f7D6aVa0M" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;650 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;1,200</div>
           <div class="service-name">Disability Discrimination</div>
           <div class="service-desc">Case management for a disability discrimination claim against a school.</div>
+          <p class="service-time">Professional time included: Up to 24 hours of professional time</p>
           <a href="https://buy.stripe.com/bJeaEZ0Jx8Cy9ELbTmaVa0N" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;1,200 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;1,350</div>
           <div class="service-name">School Exclusion Support</div>
           <div class="service-desc">Specialist support with school exclusion or disability discrimination processes.</div>
+          <p class="service-time">Professional time included: Up to 27 hours of professional time</p>
           <a href="https://buy.stripe.com/6oUdRbdwjf0Wg392iMaVa0O" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;1,350 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;1,600</div>
           <div class="service-name">LA Decision Appeal Package</div>
           <div class="service-desc">Full support for appealing a refusal, inadequate EHCP, or unsuitable named placement.</div>
+          <p class="service-time">Professional time included: Up to 32 hours of professional time</p>
           <a href="https://buy.stripe.com/4gMfZj1NB9GCaIPbTmaVa0P" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;1,600 &rarr;</a>
         </div>
 
@@ -854,24 +870,28 @@
           <div class="service-price">&pound;3,000</div>
           <div class="service-name">Tribunal Preparation Pack</div>
           <div class="service-desc">Complete written tribunal preparation, evidence bundle support and a hearing-day strategy guide.</div>
+          <p class="service-time">Professional time included: Up to 60 hours of professional time</p>
           <a href="https://buy.stripe.com/7sYdRbak7aKGg391eIaVa10" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;3,000 &rarr;</a>
         </div>
         <div class="service-card service-card--featured">
           <div class="service-price">&pound;4,000</div>
           <div class="service-name">Tribunal + Representation</div>
           <div class="service-desc">Tribunal preparation plus Stephen’s attendance and representation at the hearing.</div>
+          <p class="service-time">Professional time included: Up to 80 hours of professional time</p>
           <a href="https://buy.stripe.com/fZu6oJ8bZ7yu6szf5yaVa11" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;4,000 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;6,000</div>
           <div class="service-name">Complex Tribunal</div>
           <div class="service-desc">Full support for multi-issue, extended or particularly complex SEND Tribunal cases.</div>
+          <p class="service-time">Professional time included: No maximum professional hours within the agreed case scope</p>
           <a href="https://buy.stripe.com/eVq14p0Jx9GC7wD1eIaVa12" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;6,000 &rarr;</a>
         </div>
         <div class="service-card">
           <div class="service-price">&pound;350<span style="font-size:1rem;font-weight:500;color:var(--text-muted);">/month</span></div>
           <div class="service-name">Monthly Retainer</div>
           <div class="service-desc">Ongoing support for families who need regular advice, correspondence and case strategy.</div>
+          <p class="service-time">Professional time included: Up to 7 hours of professional time per calendar month</p>
           <a href="https://buy.stripe.com/cNi9AVbob2ea4kr9LeaVa0T" target="_blank" rel="noopener" class="service-link">Subscribe securely &mdash; &pound;350/month &rarr;</a>
         </div>
       </div>
