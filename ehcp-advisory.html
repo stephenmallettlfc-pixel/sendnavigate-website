@@ -366,6 +366,11 @@
     .time-policy strong { color: var(--navy); }
     .time-allowance { margin: 0 0 1rem; padding: 0.7rem 0.8rem; background: var(--offwhite); border-left: 3px solid var(--gold); color: #374151; font-size: 0.86rem; line-height: 1.45; }
     .time-allowance strong { color: var(--navy); }
+    .agreed-payment-card { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; margin:1.5rem 0 0; padding:1.25rem 1.35rem; border:1px solid #B98A2B; border-radius:10px; background:#FFF9E8; }
+    .agreed-payment-card h3 { color:var(--navy); font-size:1.05rem; margin:0 0 0.35rem; }
+    .agreed-payment-card p { margin:0; color:#4B5563; font-size:0.9rem; line-height:1.55; max-width:720px; }
+    .agreed-payment-card .btn { flex:0 0 auto; white-space:nowrap; }
+    @media (max-width: 620px) { .agreed-payment-card { align-items:stretch; flex-direction:column; } .agreed-payment-card .btn { width:100%; text-align:center; } }
 
     /* Process */
     .process-grid {
@@ -719,6 +724,13 @@
       <h2 class="section-title">Expert support at every stage of the process</h2>
       <p class="section-subtitle">Fixed prices. Transparent scope. Built to give you control of the process again. Start with a free 30-minute legal guidance review — and receive a written report on your case at no charge.</p>
       <div class="time-policy"><strong>Professional time included in each package.</strong> Each fixed-fee package includes a clear maximum allowance of professional time for the agreed case scope. The allowance covers relevant case review, calls, meetings, drafting, correspondence, preparation and reasonable administration. We will not undertake additional work beyond the allowance, or outside the agreed scope, without your prior written agreement to a further fee.</div>
+      <div class="agreed-payment-card" id="agreed-payment">
+        <div>
+          <h3>Already agreed a different payment amount?</h3>
+          <p>Use this secure payment option only after Stephen has confirmed a custom amount with you. You choose the agreed amount at Stripe; payments start from £50.</p>
+        </div>
+        <a href="https://buy.stripe.com/6oU00l0Jx9GC18f9LeaVa0g" target="_blank" rel="noopener" class="btn btn-primary">Pay an agreed amount</a>
+      </div>
 
       <!-- CATEGORY: Advice & Correspondence -->
       <div style="margin: 3rem 0 1rem; padding: 0.5rem 1.25rem; background: var(--navy); display: inline-block; border-radius: 4px;">

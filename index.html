@@ -370,6 +370,11 @@
     .service-time { font-size:0.8rem; color:var(--sage-dark); font-weight:700; line-height:1.45; margin:-0.45rem 0 1.1rem; }
     .services-time-policy { background:#EAF2EC; border-left:4px solid var(--sage); border-radius:0 10px 10px 0; padding:1rem 1.15rem; margin:-1.5rem auto 2rem; max-width:900px; color:var(--ink); font-size:0.9rem; line-height:1.65; }
     .services-time-policy strong { color:var(--sage-dark); }
+    .agreed-payment-home { display:flex; align-items:center; justify-content:space-between; gap:1.25rem; background:var(--ink); border-radius:12px; padding:1rem 1.15rem; margin:0 auto 2rem; max-width:900px; color:#fff; }
+    .agreed-payment-home strong { display:block; font-size:0.98rem; margin-bottom:0.2rem; }
+    .agreed-payment-home span { display:block; font-size:0.84rem; line-height:1.5; color:rgba(255,255,255,0.8); }
+    .agreed-payment-home .service-link { flex:0 0 auto; margin:0; text-align:center; white-space:nowrap; background:var(--amber); color:var(--ink); }
+    @media (max-width:600px) { .agreed-payment-home { align-items:stretch; flex-direction:column; } .agreed-payment-home .service-link { width:100%; } }
     .service-link { font-size:0.84rem; font-weight:700; color:#fff; background:var(--amber); text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem; padding:0.62rem 0.85rem; border-radius:6px; }
     .service-link:hover { color:#fff; background:var(--amber-dark); }
     .service-group-heading { grid-column:1 / -1; margin:0.9rem 0 -0.15rem; font-family:'Inter',sans-serif; font-size:0.76rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage-dark); }
@@ -775,6 +780,10 @@
         <h2 class="section-title">Clear, flat-fee pricing. You always know what you are paying.</h2>
         <p class="section-subtitle">Choose a defined support package or hourly advice. Every fee is shown clearly before you commit, with no hidden costs or surprises. Each “Book securely” button opens the matching Stripe checkout.</p>
       <p class="services-time-policy"><strong>Included professional time is shown for every package.</strong> The allowance covers work within the agreed case scope, including relevant review, calls, meetings, drafting, correspondence, preparation and reasonable administration. We will agree a further fee with you before carrying out work beyond the allowance or outside that scope.</p>
+      <div class="agreed-payment-home" id="agreed-payment">
+        <div><strong>Already agreed a different payment amount?</strong><span>Use this secure Stripe link only after Stephen has confirmed the amount with you. You set the agreed amount at checkout; payments start from £50.</span></div>
+        <a href="https://buy.stripe.com/6oU00l0Jx9GC18f9LeaVa0g" target="_blank" rel="noopener" class="service-link">Pay an agreed amount &rarr;</a>
+      </div>
       </div>
       <div class="services-grid">
         <p class="service-group-heading">Advice, reviews &amp; EHCP support</p>
