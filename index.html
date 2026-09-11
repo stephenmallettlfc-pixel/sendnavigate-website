@@ -55,6 +55,7 @@
     h2 { font-size: clamp(1.7rem,3.5vw,2.4rem); }
     h3 { font-size: clamp(1.05rem,2vw,1.3rem); font-family:'Inter',sans-serif; font-weight:700; }
     p  { color: var(--text-body); }
+    .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 
     .container { max-width:1100px; margin:0 auto; padding:0 1.5rem; }
     .section    { padding:5.5rem 0; }
@@ -162,6 +163,33 @@
     .nav-cta-book:hover { background:var(--amber-dark) !important; }
     .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:0.25rem; }
     .nav-toggle span { display:block; width:24px; height:2px; background:#fff; margin:5px 0; border-radius:2px; }
+
+    /* ── Site Search ── */
+    .site-search-strip { background:var(--parchment); border-bottom:1px solid var(--border); padding:1.2rem 0; position:relative; z-index:150; }
+    .site-search-inner { max-width:1100px; margin:0 auto; padding:0 1.5rem; }
+    .site-search-heading { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin-bottom:0.55rem; }
+    .site-search-heading label { color:var(--ink); font-size:0.88rem; font-weight:800; letter-spacing:0.03em; }
+    .site-search-heading span { color:var(--text-muted); font-size:0.78rem; }
+    .site-search-form { display:flex; align-items:stretch; max-width:740px; }
+    .site-search-field { position:relative; flex:1; }
+    .site-search-icon { position:absolute; top:50%; left:1rem; width:19px; height:19px; color:var(--sage-dark); pointer-events:none; transform:translateY(-50%); }
+    .site-search-input { width:100%; min-height:48px; padding:0.7rem 1rem 0.7rem 3rem; border:1px solid var(--parchment-dark); border-radius:8px 0 0 8px; background:#fff; color:var(--ink); font:inherit; font-size:0.94rem; outline:none; }
+    .site-search-input::placeholder { color:#806d5e; opacity:1; }
+    .site-search-input:focus { border-color:var(--sage); box-shadow:0 0 0 3px rgba(74,124,89,0.2); position:relative; z-index:1; }
+    .site-search-submit { min-height:48px; padding:0.7rem 1.2rem; border:1px solid var(--sage); border-radius:0 8px 8px 0; background:var(--sage); color:#fff; font:inherit; font-size:0.88rem; font-weight:800; cursor:pointer; transition:background 0.18s ease; }
+    .site-search-submit:hover { background:var(--sage-dark); border-color:var(--sage-dark); }
+    .site-search-results { display:none; max-width:740px; margin-top:0.7rem; background:#fff; border:1px solid var(--border); border-radius:10px; box-shadow:0 10px 28px rgba(44,26,14,0.12); overflow:hidden; }
+    .site-search-results.is-visible { display:block; }
+    .site-search-status { display:block; padding:0.8rem 1rem 0.45rem; color:var(--text-muted); font-size:0.8rem; font-weight:600; }
+    .site-search-list { list-style:none; }
+    .site-search-result { border-top:1px solid var(--border); }
+    .site-search-result a { display:block; padding:0.8rem 1rem; color:var(--ink); text-decoration:none; transition:background 0.18s ease; }
+    .site-search-result a:hover, .site-search-result a:focus { background:var(--parchment); outline:none; }
+    .site-search-result-type { display:block; color:var(--sage-dark); font-size:0.7rem; font-weight:800; letter-spacing:0.09em; text-transform:uppercase; margin-bottom:0.12rem; }
+    .site-search-result-title { display:block; font-size:0.92rem; font-weight:800; }
+    .site-search-result-summary { display:block; color:var(--text-muted); font-size:0.8rem; line-height:1.5; margin-top:0.12rem; }
+    .site-search-empty { padding:1rem; color:var(--text-body); font-size:0.88rem; }
+    .site-search-empty a { color:var(--sage-dark); font-weight:800; }
 
     /* ── HERO ── */
     #hero {
@@ -495,6 +523,10 @@
     @media(max-width:640px){
       #hero{min-height:100svh}
       .hero-content{padding:4rem 1.5rem}
+      .site-search-heading { align-items:flex-start; flex-direction:column; gap:0.1rem; }
+      .site-search-form { display:block; }
+      .site-search-input { border-radius:8px; }
+      .site-search-submit { width:100%; margin-top:0.55rem; border-radius:8px; }
       .proof-bar-inner{gap:1.25rem}
       .proof-divider{display:none}
       .reviews-grid{grid-template-columns:1fr}
@@ -555,6 +587,25 @@
       </button>
     </div>
   </nav>
+
+  <!-- Site Search -->
+  <section class="site-search-strip" aria-labelledby="site-search-label">
+    <div class="site-search-inner">
+      <div class="site-search-heading">
+        <label id="site-search-label" for="siteSearchInput">Search our site here</label>
+        <span>Find parent support, EHCP guidance, school training and books.</span>
+      </div>
+      <form class="site-search-form" id="siteSearchForm" action="/resources.html" method="get" role="search">
+        <div class="site-search-field">
+          <svg class="site-search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input class="site-search-input" id="siteSearchInput" name="q" type="search" placeholder="Try ‘EHCP’, ‘tribunal’ or ‘school training’" autocomplete="off" aria-describedby="site-search-help" aria-controls="siteSearchResults" aria-expanded="false">
+        </div>
+        <button class="site-search-submit" type="submit">Search</button>
+      </form>
+      <span id="site-search-help" class="visually-hidden">Type a word or phrase to find relevant SEND Navigate pages and resources.</span>
+      <div class="site-search-results" id="siteSearchResults" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </section>
 
   <!-- HERO -->
   <section id="hero">
@@ -1117,6 +1168,103 @@
         if(typeof gtag!=='undefined') gtag('event','conversion',{'send_to':'AW-18171403554/consultation_booking'});
       });
     });
+
+    const siteSearchInput = document.getElementById('siteSearchInput');
+    const siteSearchForm = document.getElementById('siteSearchForm');
+    const siteSearchResults = document.getElementById('siteSearchResults');
+    const siteSearchPages = [
+      { title:'Free 30-minute consultation', type:'Parent support', url:'https://calendar.app.google/92kkaKHEKDPwvy8s8', summary:'Talk through your child’s situation and understand practical next steps.', keywords:'advice consultation parent carer help support talk phone online free urgent' },
+      { title:'Consultancy services and fees', type:'Parent support', url:'#services', summary:'Explore fixed-fee EHCP, appeal, tribunal, exclusion and advocacy support.', keywords:'fees prices cost service legal letter annual review mediation DLA PIP exclusion appeal tribunal advocacy' },
+      { title:'Free SEND and EHCP resources', type:'Free resources', url:'/resources.html', summary:'Browse guides, checklists and practical tools for parents and carers.', keywords:'free resources guides downloads parents carers SEND EHCP help' },
+      { title:'Free EHCP case-building checklist', type:'Free resource', url:'/free-ehcp-checklist.html', summary:'A step-by-step checklist to organise evidence for an EHCP request or review.', keywords:'EHCP checklist evidence request assessment application case building free download' },
+      { title:'EHCP Action Pack', type:'Parent resource', url:'/ehcp-action-pack.html', summary:'Letter templates and a workbook to help parents take structured action.', keywords:'EHCP action pack templates letters workbook local authority LA refusal request' },
+      { title:'EHCP and tribunal advisory', type:'Parent support', url:'/ehcp-advisory.html', summary:'Specialist support with EHCP applications, reviews, appeals and tribunal preparation.', keywords:'EHCP tribunal advisory appeal SENDIST draft plan provision placement support' },
+      { title:'How to appeal an EHCP refusal', type:'Parent guide', url:'/ehcp-appeal-refusal.html', summary:'A practical guide to challenging a refusal to assess or issue an EHCP.', keywords:'EHCP refusal appeal right to appeal assessment local authority LA mediation' },
+      { title:'SEND Tribunal: a parent’s complete guide', type:'Parent guide', url:'/send-tribunal.html', summary:'Understand the appeal process, evidence, deadlines and hearing preparation.', keywords:'SENDIST tribunal appeal hearing evidence bundle legal representation deadlines mediation' },
+      { title:'What is an EHCP?', type:'Parent guide', url:'/what-is-an-ehcp.html', summary:'A clear introduction to Education, Health and Care Plans and parental rights.', keywords:'what is EHCP education health care plan SEN SEND needs assessment provision' },
+      { title:'SEND reform 2026', type:'News and guidance', url:'/send-reform-2026.html', summary:'Read what SEND reform proposals could mean for children, families and EHCPs.', keywords:'SEND reform 2026 government policy consultation White Paper changes EHCP' },
+      { title:'SEN training for schools', type:'School training', url:'/for-schools.html', summary:'CPD-aligned SEND training, evidence mapping and practical implementation support.', keywords:'schools school training CPD teachers SENDCO INSET staff classroom EEF leadership Ofsted' },
+      { title:'Ofsted inclusion judgement', type:'School guidance', url:'/ofsted-inclusion-judgement.html', summary:'What the inclusion judgement means for schools and how to prepare evidence.', keywords:'Ofsted inclusion judgement schools inspection evidence preparation leadership SEND' },
+      { title:'SEND Navigate books', type:'Books', url:'/books.html', summary:'Browse Stephen Mallett’s practical books for parents navigating SEND.', keywords:'books Amazon Kindle paperback Parents Shield author Stephen Mallett SEN' },
+      { title:'SEND Navigate blog', type:'School training', url:'/blog/', summary:'Articles on SEND practice, teacher confidence and inclusive schools.', keywords:'blog articles research teachers training school practice inclusion CPD' }
+    ];
+
+    function searchSite(query) {
+      const terms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+      if (!terms.length) return [];
+      return siteSearchPages
+        .map(page => {
+          const searchable = `${page.title} ${page.type} ${page.summary} ${page.keywords}`.toLowerCase();
+          const matches = terms.filter(term => searchable.includes(term)).length;
+          return { ...page, matches };
+        })
+        .filter(page => page.matches)
+        .sort((a, b) => b.matches - a.matches || a.title.localeCompare(b.title))
+        .slice(0, 6);
+    }
+
+    function showSearchResults(query) {
+      const results = searchSite(query);
+      siteSearchResults.replaceChildren();
+      if (!query.trim()) {
+        siteSearchResults.classList.remove('is-visible');
+        siteSearchInput.setAttribute('aria-expanded', 'false');
+        return;
+      }
+
+      siteSearchResults.classList.add('is-visible');
+      siteSearchInput.setAttribute('aria-expanded', 'true');
+      const status = document.createElement('span');
+      status.className = 'site-search-status';
+      status.textContent = results.length ? `${results.length} relevant result${results.length === 1 ? '' : 's'} for “${query.trim()}”` : `No exact results for “${query.trim()}”`;
+      siteSearchResults.appendChild(status);
+
+      if (!results.length) {
+        const empty = document.createElement('p');
+        empty.className = 'site-search-empty';
+        empty.append('Try a broader term, or ');
+        const resourcesLink = document.createElement('a');
+        resourcesLink.href = '/resources.html';
+        resourcesLink.textContent = 'browse all free resources';
+        empty.appendChild(resourcesLink);
+        empty.append('.');
+        siteSearchResults.appendChild(empty);
+        return;
+      }
+
+      const list = document.createElement('ul');
+      list.className = 'site-search-list';
+      results.forEach(result => {
+        const item = document.createElement('li');
+        item.className = 'site-search-result';
+        const link = document.createElement('a');
+        link.href = result.url;
+        const type = document.createElement('span');
+        type.className = 'site-search-result-type';
+        type.textContent = result.type;
+        const title = document.createElement('span');
+        title.className = 'site-search-result-title';
+        title.textContent = result.title;
+        const summary = document.createElement('span');
+        summary.className = 'site-search-result-summary';
+        summary.textContent = result.summary;
+        link.append(type, title, summary);
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+      siteSearchResults.appendChild(list);
+    }
+
+    if (siteSearchInput && siteSearchForm && siteSearchResults) {
+      siteSearchInput.addEventListener('input', event => showSearchResults(event.target.value));
+      siteSearchForm.addEventListener('submit', event => {
+        event.preventDefault();
+        showSearchResults(siteSearchInput.value);
+      });
+      document.addEventListener('click', event => {
+        if (!event.target.closest('.site-search-strip')) showSearchResults('');
+      });
+    }
   </script>
 </body>
 </html>
