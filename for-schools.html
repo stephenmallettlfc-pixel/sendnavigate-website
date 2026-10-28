@@ -232,7 +232,7 @@
     .module-tagline { font-size:0.88rem; color:var(--text-muted); font-style:italic; margin-bottom:1.25rem; }
     .module-list { list-style:none; display:flex; flex-direction:column; gap:0.65rem; }
     .module-list li { font-size:0.9rem; color:var(--text-body); padding-left:1.4rem; position:relative; line-height:1.55; }
-    .module-list li::before { content:'&#10003;'; position:absolute; left:0; color:var(--sage); font-weight:700; }
+    .module-list li::before { content:'\2713'; position:absolute; left:0; color:var(--sage); font-weight:700; }
     .module-duration { display:inline-block; margin-top:1.5rem; background:var(--parchment); border:1px solid var(--border); border-radius:4px; padding:0.3rem 0.75rem; font-size:0.78rem; font-weight:700; color:var(--text-muted); letter-spacing:0.04em; }
 
     /* Teacher Photo Split */
@@ -326,7 +326,7 @@
     .pricing-divider { border:none; border-top:1px solid var(--border); margin:1.25rem 0; }
     .pricing-list { list-style:none; display:flex; flex-direction:column; gap:0.55rem; margin-bottom:1.5rem; }
     .pricing-list li { font-size:0.875rem; color:var(--text-body); padding-left:1.4rem; position:relative; line-height:1.45; }
-    .pricing-list li::before { content:'&#10003;'; position:absolute; left:0; color:var(--sage); font-weight:700; }
+    .pricing-list li::before { content:'\2713'; position:absolute; left:0; color:var(--sage); font-weight:700; }
     .pricing-card .btn { width:100%; justify-content:center; font-size:0.875rem; padding:0.7rem 1rem; }
     .pricing-note { text-align:center; margin-top:2rem; padding:1.25rem 1.5rem; background:#FDF0E4; border:1px solid #F5C896; border-radius:10px; font-size:0.9rem; color:#7a4010; }
 
@@ -479,6 +479,64 @@
 </div>
 
 <!-- THE PROBLEM -->
+<section id="ebsa-course" class="section section--parchment">
+  <div class="container">
+    <div class="section-label"><span class="eyebrow">New: EBSA Staff Training</span></div>
+    <h2 class="section-title">When a child can&rsquo;t get into school, your staff need one clear way of working.</h2>
+    <p class="section-subtitle">A scripted 90-minute staff session your own SENCO can run. Your staff leave knowing what EBSA is, what the law expects of schools, and what to do in the first 10 days.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tier">Founding trial</div>
+        <div class="pricing-name">School Trial</div>
+        <div class="pricing-price"><span>&pound;</span>149</div>
+        <div class="pricing-period">one school &middot; in return for your feedback</div>
+        <hr class="pricing-divider" />
+        <ul class="pricing-list">
+          <li>Scripted 90-minute staff session</li>
+          <li>Primary and secondary versions</li>
+          <li>Staff workbook</li>
+          <li>School self-check</li>
+          <li>30-day plan</li>
+        </ul>
+        <a href="https://buy.stripe.com/dRm5kFbob8CyaIPcXqaVa17" class="btn btn-amber" onclick="if(typeof gtag!=='undefined'){gtag('event','begin_checkout',{event_category:'EBSA Course',event_label:'Trial',value:149});}">Buy Now &mdash; &pound;149</a>
+      </div>
+
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-tier">One school</div>
+        <div class="pricing-name">School Licence</div>
+        <div class="pricing-price"><span>&pound;</span>249</div>
+        <div class="pricing-period">one school &middot; one payment</div>
+        <hr class="pricing-divider" />
+        <ul class="pricing-list">
+          <li>Scripted 90-minute staff session</li>
+          <li>Primary and secondary versions</li>
+          <li>Staff workbook</li>
+          <li>School self-check</li>
+          <li>30-day plan</li>
+        </ul>
+        <a href="https://buy.stripe.com/8x24gBfErdWS7wD3mQaVa18" class="btn btn-amber" onclick="if(typeof gtag!=='undefined'){gtag('event','begin_checkout',{event_category:'EBSA Course',event_label:'School',value:249});}">Buy Now &mdash; &pound;249</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Whole trust</div>
+        <div class="pricing-name">Trust Licence</div>
+        <div class="pricing-price"><span>&pound;</span>550</div>
+        <div class="pricing-period">whole trust &middot; one payment</div>
+        <hr class="pricing-divider" />
+        <ul class="pricing-list">
+          <li>Scripted 90-minute staff session</li>
+          <li>Primary and secondary versions</li>
+          <li>Staff workbook</li>
+          <li>School self-check</li>
+          <li>30-day plan</li>
+        </ul>
+        <a href="https://buy.stripe.com/aFa00l1NBf0Wg39cXqaVa19" class="btn btn-amber" onclick="if(typeof gtag!=='undefined'){gtag('event','begin_checkout',{event_category:'EBSA Course',event_label:'MAT',value:550});}">Buy Now &mdash; &pound;550</a>
+      </div>
+    </div>
+    <p class="pricing-note">General information for England, not legal advice. The founding trial price is offered in return for your feedback after the session.</p>
+  </div>
+</section>
+
 <section class="section section--warm">
   <div class="container">
     <div class="problem-grid">
