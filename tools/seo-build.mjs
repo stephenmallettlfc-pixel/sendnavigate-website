@@ -4,7 +4,7 @@ import { execFileSync } from 'node:child_process';
 
 const root = process.cwd();
 const origin = 'https://sendnavigate.org';
-const excluded = new Set(['Landing_Page.html', 'Parent_Shield_Landing_Page.html']);
+const excluded = new Set(['Landing_Page.html', 'Parent_Shield_Landing_Page.html', 'book-free-call.html']);
 const files = [];
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -20,7 +20,7 @@ let errors = 0;
 const warnings = [];
 const attr = (tag, key) => tag.match(new RegExp(`\\b${key}\\s*=\\s*["']([^"']*)["']`, 'i'))?.[1];
 const escapeXml = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-const strictLinkPages = new Set(['ehcp-refusal-to-assess-help.html', 'ehcp-refusal-to-issue-help.html', 'school-not-meeting-sen-needs.html', 'ehcp-appeal-refusal.html']);
+const strictLinkPages = new Set(['ehcp-refusal-to-assess-help.html', 'ehcp-refusal-to-issue-help.html', 'school-not-meeting-sen-needs.html', 'ehcp-appeal-refusal.html', 'school-distress-ebsa-help.html', 'free-consultation.html', 'index.html', 'ehcp-advisory.html', 'books.html', 'book.html', 'the-parents-shield.html', 'resources.html']);
 function checkReferences(html, rel) {
   const base = new URL('/' + rel, origin);
   const seen = new Set();

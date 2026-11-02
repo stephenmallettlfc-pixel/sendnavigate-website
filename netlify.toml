@@ -5,6 +5,19 @@
 [functions]
   directory = "netlify/functions"
 
+# One canonical free offer; keep legacy campaign booking URLs working.
+[[redirects]]
+  from = "/book-free-call"
+  to = "/free-consultation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/book-free-call.html"
+  to = "/free-consultation"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/free-consultation"
   to = "/free-consultation.html"

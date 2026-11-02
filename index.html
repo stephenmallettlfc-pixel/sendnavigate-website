@@ -1,29 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18171403554"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18171403554');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EHCP Help &amp; SEN Consultancy for Parents | SEND Navigate</title>
-  <meta name="description" content="EHCP refused or school support failing? Get practical SEN consultancy from a former Headteacher and SENCo. Free 30-minute consultation for parents in England." />
-  <meta name="google-site-verification" content="VOE3GXade43ytfl-oYxNmxytlUHGrPF_F-QrDhgXo_I" />
-  <link rel="canonical" href="https://sendnavigate.org/" />
-  <meta property="og:title" content="SEND Navigate — Expert SEN Consultancy for Parents" />
-  <meta property="og:description" content="Struggling with your child's EHCP or a tribunal? Get expert help from a former Headteacher and SENCo with 25 years inside the system." />
-  <meta property="og:url" content="https://sendnavigate.org/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://sendnavigate.org/assets/photo-hero-warmth.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SEN Consultancy, EHCP Help &amp; School Distress | SEND Navigate</title>
+<meta content="Practical SEN consultancy for parents in England facing EHCP refusals or school distress. Free 30-minute consultation + written next-step summary with Stephen." name="description"/>
+<meta content="VOE3GXade43ytfl-oYxNmxytlUHGrPF_F-QrDhgXo_I" name="google-site-verification"/>
+<link href="https://sendnavigate.org/" rel="canonical"/>
+<meta content="SEN Consultancy, EHCP Help &amp; School Distress | SEND Navigate" property="og:title"/>
+<meta content="Practical SEN consultancy for parents in England facing EHCP refusals or school distress. Free 30-minute consultation + written next-step summary with Stephen." property="og:description"/>
+<meta content="https://sendnavigate.org/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="https://sendnavigate.org/assets/photo-hero-warmth.jpg" property="og:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body { font-family: 'Inter', sans-serif; color: #2C1A0E; background: #FFFDF9; line-height: 1.6; }
@@ -450,7 +445,7 @@
     .schools-divider { position:relative; overflow:hidden; }
     .schools-divider-bg { position:absolute; inset:0; background-image:url('assets/photo-school-corridor.jpg'); background-size:cover; background-position:center; }
     .schools-divider-overlay { position:absolute; inset:0; background:rgba(53,90,64,0.88); }
-    .schools-divider-content { position:relative; z-index:2; padding:4.5rem 0; text-align:center; }
+    .schools-divider-content { position:relative; z-index:2; padding:2rem 0; text-align:center; }
     .schools-divider h2 { color:#fff; margin-bottom:0.75rem; }
     .schools-divider p { color:rgba(255,255,255,0.82); font-size:1rem; margin-bottom:1.75rem; max-width:600px; margin-left:auto; margin-right:auto; }
     .schools-divider-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
@@ -541,614 +536,624 @@
       .nav-toggle{display:block}
       .music-player{bottom:1rem;right:1rem}
     }
+    /* Small accessibility improvements without changing the established layout. */
+    .btn-amber, .service-link { background:var(--amber-dark); border-color:var(--amber-dark); }
+    .nav-cta-book { color:var(--ink) !important; }
+    .nav-cta-book:hover { color:#fff !important; }
+    .consult-banner { background:linear-gradient(135deg,var(--amber-dark) 0%,var(--ink-light) 100%); }
+    .eyebrow { color:var(--amber-dark); }
+    .eyebrow--sage { color:var(--sage-dark); }
+    .eyebrow--white { color:rgba(255,255,255,0.85); }
+    .eyebrow--gold { color:var(--gold); }
+    .about-photo-badge-label { color:var(--ink); }
+    :focus-visible { outline:3px solid var(--sage-dark); outline-offset:4px; }
+    nav :focus-visible, #hero :focus-visible, .consult-banner :focus-visible, footer :focus-visible { outline-color:var(--gold); }
+    [id] { scroll-margin-top:6rem; }
+    .skip-link { position:absolute; top:0.5rem; left:0.5rem; z-index:10000; padding:0.75rem 1rem; color:var(--ink); background:var(--cream); border:2px solid var(--sage-dark); border-radius:6px; transform:translateY(-180%); }
+    .skip-link:focus { transform:translateY(0); }
+    .hero-free-note { color:rgba(255,255,255,0.85); line-height:1.7; }
+    .hero-free-note a { color:var(--gold); text-underline-offset:3px; }
+    .summary-scope { margin-top:2rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,0.35); }
+    .summary-scope h3 { color:#fff; margin-bottom:0.75rem; }
+    .summary-scope a { color:#fff; text-underline-offset:3px; }
+    .summary-scope p { font-size:0.94rem; }
+    .nav-links { flex-wrap:wrap; justify-content:flex-end; }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after { animation:none !important; transition:none !important; }
+    }
   </style>
-</head>
+<script defer="" src="/assets/organic-analytics.js"></script></head>
 <body>
-
-  <!-- Music Player -->
-  <div class="music-player" id="musicPlayer" role="button" tabindex="0" aria-label="Toggle ambient background music">
-    <button class="music-btn" id="musicBtn" aria-label="Play ambient music">
-      <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      <svg id="iconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-    </button>
-    <div class="music-wave paused" id="musicWave">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
-    <span class="music-label" id="musicLabel">Ambient</span>
-  </div>
-  <audio id="ambientAudio" src="assets/ambient-bg.mp3" loop preload="none"></audio>
-
-  <!-- Announcement Bar -->
-  <div class="announcement-bar">
-    Free 30-minute consultation &mdash; no obligation, no sales pitch. <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8">Book your slot now &rarr;</a>
-  </div>
-
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <svg class="nav-logo-svg" viewBox="0 0 30 30" fill="none">
-          <path d="M15 2L4 7v8c0 6.5 4.7 12.6 11 14 6.3-1.4 11-7.5 11-14V7L15 2z" fill="#C97B2A"/>
-          <path d="M11 15l3 3 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- Music Player -->
+<div aria-label="Toggle ambient background music" class="music-player" id="musicPlayer" role="button" tabindex="0">
+<button aria-label="Play ambient music" class="music-btn" id="musicBtn">
+<svg id="iconPlay" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg id="iconPause" style="display:none" viewbox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+</button>
+<div class="music-wave paused" id="musicWave">
+<span></span><span></span><span></span><span></span><span></span>
+</div>
+<span class="music-label" id="musicLabel">Ambient</span>
+</div>
+<audio id="ambientAudio" loop="" preload="none" src="assets/ambient-bg.mp3"></audio>
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+    Free 30-minute consultation + written next-step summary. No obligation; paid scope and fee agreed first. <a href="/free-consultation">Book a consultation →</a>
+</div>
+<!-- Navigation -->
+<nav>
+<div class="nav-inner">
+<a class="nav-logo" href="/">
+<svg class="nav-logo-svg" fill="none" viewbox="0 0 30 30">
+<path d="M15 2L4 7v8c0 6.5 4.7 12.6 11 14 6.3-1.4 11-7.5 11-14V7L15 2z" fill="#C97B2A"></path>
+<path d="M11 15l3 3 6-6" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
         SEND<span>Navigate</span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#emotional-hook">For Parents</a></li>
-        <li><a href="#services">Services &amp; Fees</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#about">About Stephen</a></li>
-        <li><a href="/for-schools">For Schools</a></li>
-        <li><a href="/books.html">Books</a></li>
-        <li><a href="/free-ehcp-checklist">Free Resources</a></li>
-        <li><a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="nav-cta-book">Free Consultation</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Site Search -->
-  <section class="site-search-strip" aria-labelledby="site-search-label">
-    <div class="site-search-inner">
-      <div class="site-search-heading">
-        <label id="site-search-label" for="siteSearchInput">Search our site here</label>
-        <span>Find parent support, EHCP guidance, school training and books.</span>
+</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#emotional-hook">For Parents</a></li>
+<li><a href="#services">Services &amp; Fees</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#about">About Stephen</a></li>
+<li><a href="/for-schools">For Schools</a></li>
+<li><a href="#books">Books</a></li>
+<li><a href="/free-ehcp-checklist">Free Resources</a></li>
+<li><a class="nav-cta-book" href="/free-consultation">Book a free consultation</a></li>
+</ul>
+<button aria-controls="navLinks" aria-label="Toggle navigation" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- Site Search -->
+<section aria-labelledby="site-search-label" class="site-search-strip">
+<div class="site-search-inner">
+<div class="site-search-heading">
+<label for="siteSearchInput" id="site-search-label">Search our site here</label>
+<span>Find parent support, EHCP guidance, school training and books.</span>
+</div>
+<form action="/resources.html" class="site-search-form" id="siteSearchForm" method="get" role="search">
+<div class="site-search-field">
+<svg aria-hidden="true" class="site-search-icon" fill="none" viewbox="0 0 24 24"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"></circle><path d="m16 16 4 4" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+<input aria-controls="siteSearchResults" aria-describedby="site-search-help" aria-expanded="false" autocomplete="off" class="site-search-input" id="siteSearchInput" name="q" placeholder="Try ‘EHCP’, ‘tribunal’ or ‘school training’" type="search"/>
+</div>
+<button class="site-search-submit" type="submit">Search</button>
+</form>
+<span class="visually-hidden" id="site-search-help">Type a word or phrase to find relevant SEND Navigate pages and resources.</span>
+<div aria-atomic="true" aria-live="polite" class="site-search-results" id="siteSearchResults"></div>
+</div>
+</section>
+<main id="main-content" tabindex="-1">
+<!-- HERO -->
+<section id="hero">
+<div aria-hidden="true" class="hero-photo"></div>
+<div aria-hidden="true" class="hero-overlay"></div>
+<div aria-hidden="true" class="hero-overlay-bottom"></div>
+<div class="hero-content">
+<div class="hero-badge">
+<div class="hero-badge-dot"></div>
+        Independent SEN consultancy for parents in England
       </div>
-      <form class="site-search-form" id="siteSearchForm" action="/resources.html" method="get" role="search">
-        <div class="site-search-field">
-          <svg class="site-search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input class="site-search-input" id="siteSearchInput" name="q" type="search" placeholder="Try ‘EHCP’, ‘tribunal’ or ‘school training’" autocomplete="off" aria-describedby="site-search-help" aria-controls="siteSearchResults" aria-expanded="false">
-        </div>
-        <button class="site-search-submit" type="submit">Search</button>
-      </form>
-      <span id="site-search-help" class="visually-hidden">Type a word or phrase to find relevant SEND Navigate pages and resources.</span>
-      <div class="site-search-results" id="siteSearchResults" aria-live="polite" aria-atomic="true"></div>
-    </div>
-  </section>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-photo" aria-hidden="true"></div>
-    <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="hero-overlay-bottom" aria-hidden="true"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <div class="hero-badge-dot"></div>
-        Independent SEN Consultancy &bull; Families in England
-      </div>
-      <h1>
-        EHCP refused? School support failing?
-        <span class="headline-accent">You do not have to fight alone.</span>
-      </h1>
-      <p class="hero-subhead">Practical EHCP help and SEN consultancy for parents.</p>
-      <p class="hero-body">
-        When letters, meetings and unanswered emails take over family life, you need a clear next step. Stephen Mallett brings 25 years of experience as a teacher, SENCo and Headteacher, and experience as a parent of two children with SEN. We help you understand the decision, organise the evidence and challenge inadequate support &mdash; with honest guidance, agreed scope and clear fees.
+<h1>EHCP refused? School support failing?</h1>
+<p class="hero-subhead">You do not have to work through this alone.</p>
+<p class="hero-body">
+        You have explained what your child needs. You may have attended meetings, sent reports and written to the local authority, but you still do not know what will happen next.
       </p>
-      <div class="hero-actions">
-        <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-hero">Book Your Free 30-Minute Consultation &rarr;</a>
-        <a href="#services" class="btn btn-outline-white">See Services &amp; Fees</a>
-      </div>
-      <p class="hero-free-note">Free consultation &middot; No obligation &middot; No sales pitch &middot; We reply within one working day</p>
-      <div class="hero-trust-row">
-        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> 25 years inside the SEND system</span>
-        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> Former Headteacher &amp; SENCo</span>
-        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> Tribunal win</span>
-        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> Flat-fee pricing</span>
-        <span class="trust-chip"><span class="trust-chip-check">&#10003;</span> 5-star Google reviews</span>
-      </div>
-    </div>
-    <a href="#emotional-hook" class="hero-scroll" aria-label="Scroll down">
-      <div class="scroll-arrow">&#8595;</div>
-    </a>
-  </section>
-
-  <!-- PROOF BAR -->
-  <div class="proof-bar">
-    <div class="proof-bar-inner">
-      <div class="proof-item">
-        <div class="proof-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#FBBC04"/></svg>
-        </div>
-        <div>
-          <div style="color:#FBBC04;font-size:0.9rem;letter-spacing:2px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div style="font-size:0.78rem;color:var(--text-muted);font-weight:500;">5-star Google reviews</div>
-        </div>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <div class="proof-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#4A7C59"/></svg>
-        </div>
-        <span>Tribunal win against an LA legal team</span>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <div class="proof-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" fill="#C97B2A"/></svg>
-        </div>
-        <span>Free 30-minute consultation</span>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <div class="proof-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#4A7C59"/></svg>
-        </div>
-        <span>25 years as Headteacher &amp; SENCo</span>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <div class="proof-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" fill="#C97B2A"/></svg>
-        </div>
-        <span>Flat-fee pricing &mdash; no surprises</span>
-      </div>
-    </div>
-  </div>
-
-  <section class="section section--parchment" id="parent-help" aria-labelledby="parent-help-title">
-    <div class="container">
-      <h2 class="section-title" id="parent-help-title">Start with the problem you are facing</h2>
-      <p class="section-subtitle">Different decisions need different responses. Find practical guidance, then talk through your next step with Stephen.</p>
-      <div class="services-grid">
-        <div class="service-card"><h3 class="service-name">The LA refused to assess</h3><p class="service-desc">Understand the assessment test, the refusal letter and what evidence can support an appeal.</p><a class="service-link" href="/ehcp-refusal-to-assess-help">Help after an EHCP assessment refusal &rarr;</a></div>
-        <div class="service-card"><h3 class="service-name">Assessed, but refused an EHCP</h3><p class="service-desc">Compare your child's assessed needs with the provision that can actually be secured without a plan.</p><a class="service-link" href="/ehcp-refusal-to-issue-help">Help after a refusal to issue an EHCP &rarr;</a></div>
-        <div class="service-card"><h3 class="service-name">School SEN support is failing</h3><p class="service-desc">Separate missing support from inadequate support, and understand who is responsible for taking action.</p><a class="service-link" href="/school-not-meeting-sen-needs">Help when school is not meeting SEN needs &rarr;</a></div>
-      </div>
-      <p style="margin-top:1.5rem;text-align:center;color:var(--text-muted);">Independent practical SEND support for families in England. No outcome guarantees; paid work only within an agreed scope.</p>
-    </div>
-  </section>
-
-  <!-- EMOTIONAL HOOK -->
-  <section id="emotional-hook">
-    <div class="container">
-      <div class="hook-grid">
-        <div class="hook-text">
-          <span class="eyebrow">For Parents &amp; Carers</span>
-          <h2>Less time decoding the system. A clearer next step for your child.</h2>
-          <p>A refused assessment, an inadequate EHCP or support that never arrives can leave you exhausted. You may have tried emails and meetings without getting a clear answer. We help you separate the issues, understand the relevant process and put your concerns into a practical plan of action.</p>
-          <p>SEND Navigate was built to change that. Stephen Mallett spent 25 years inside the system &mdash; as a teacher, a SENCo, and a Headteacher. He has two children of his own with SEN. He knows exactly what the law requires, what the LA is obligated to do, and where they fall short. When you come to SEND Navigate, you are not alone any more.</p>
-          <div class="hook-cta-row">
-            <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-amber btn-lg">Book a Free Consultation &rarr;</a>
-            <a href="#services" class="btn btn-outline-ink">View Services &amp; Fees</a>
-          </div>
-        </div>
-        <div class="hook-scenarios">
-          <p class="hook-scenarios-title">Are you dealing with any of these?</p>
-          <div class="scenario-item">
-            <div class="scenario-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" fill="#C97B2A"/></svg></div>
-            <div class="scenario-text"><strong>The LA has refused to assess your child for an EHCP</strong> &mdash; and you do not know how to challenge it.</div>
-          </div>
-          <div class="scenario-item">
-            <div class="scenario-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" fill="#C97B2A"/></svg></div>
-            <div class="scenario-text"><strong>Your child has an EHCP but the provision is vague or inadequate</strong> &mdash; and the school is not delivering what it promises.</div>
-          </div>
-          <div class="scenario-item">
-            <div class="scenario-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="#C97B2A"/></svg></div>
-            <div class="scenario-text"><strong>You are facing a SEND tribunal</strong> &mdash; and the LA has a legal team. You need someone in your corner.</div>
-          </div>
-          <div class="scenario-item">
-            <div class="scenario-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#C97B2A"/></svg></div>
-            <div class="scenario-text"><strong>Your child has been excluded or is at risk of exclusion</strong> &mdash; and you believe their SEN needs are not being met.</div>
-          </div>
-          <div class="scenario-item">
-            <div class="scenario-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#C97B2A"/></svg></div>
-            <div class="scenario-text"><strong>You want your child in a specific school</strong> &mdash; and the LA is directing you elsewhere.</div>
-          </div>
-          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;">
-            <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-amber" style="width:100%;justify-content:center;">Talk to Stephen &mdash; Free, No Obligation &rarr;</a>
-            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.6rem;">30 minutes &middot; Online or by phone &middot; We reply within one working day</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PHOTO SPLIT / QUOTE -->
-  <div class="photo-split">
-    <div class="photo-split-img">
-      <img src="assets/photo-parent-hope.jpg" alt="Parent reading an important document by a warm window" loading="lazy" />
-    </div>
-    <div class="photo-split-content">
-      <div class="photo-split-inner">
-        <blockquote>
-          &ldquo;Every child deserves an education that meets their needs. My job is to make sure the system delivers what the law says it must.&rdquo;
-          <cite>&mdash; Stephen Mallett, Former Headteacher &amp; SENCo</cite>
-        </blockquote>
-        <p>With 25 years inside the system and two children of his own with SEN, Stephen brings both the professional expertise and the personal understanding that makes the difference.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- FREE CONSULTATION BANNER -->
-  <div class="consult-banner" id="free-consult">
-    <div class="consult-banner-inner">
-      <div class="consult-banner-text">
-        <h2>Start with a free 30-minute consultation.<br><em>No obligation. No sales pitch.</em></h2>
-        <p>In 30 minutes, Stephen will listen to your situation, tell you exactly what your rights are, and give you a clear picture of what can be done &mdash; whether you decide to work with SEND Navigate or not.</p>
-        <ul class="consult-bullets">
-          <li>Understand your legal rights</li>
-          <li>Get a clear assessment of your situation</li>
-          <li>Know exactly what your next steps should be</li>
-          <li>Ask anything &mdash; no question is too basic</li>
-          <li>Completely free, completely confidential</li>
-        </ul>
-      </div>
-      <div class="consult-cta">
-        <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-hero">Book Your Free Slot &rarr;</a>
-        <p class="free-note">Choose your own date and time.<br>Available online or by phone.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <div class="container">
-      <div class="reviews-header">
-        <div class="google-badge">
-          <span class="google-badge-g">G</span>
-          <span class="google-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span>Google Reviews &mdash; 5.0</span>
-        </div>
-        <h2 class="section-title">What parents say about working with SEND Navigate</h2>
-        <p class="section-subtitle">These are real outcomes for real families who came to us when they felt they had nowhere left to turn.</p>
-      </div>
-      <div class="reviews-grid">
-        <div class="review-card review-card--featured">
-          <div class="review-google-tag">&#9733; Google</div>
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-quote">I cannot recommend Stephen Mallett highly enough. From the very beginning of our SENDIST tribunal appeal, Stephen provided exceptional support, expert knowledge, and clear guidance throughout the entire process. Thanks to Stephen&rsquo;s expertise and dedication, we achieved the outcome we had hoped for &mdash; securing a specialist educational setting that meets our son&rsquo;s special educational needs. This result will make a life-changing difference to our son&rsquo;s future.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#4A7C59,#355A40);">R</div>
-            <div>
-              <div class="review-name">Ryan O&rsquo;Kane</div>
-              <div class="review-meta">Tribunal outcome: Specialist placement secured &mdash; June 2026</div>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-quote">This would not have been possible without Stephen&rsquo;s help. He took over our case when we thought we had nowhere to turn. He represented us at the tribunal and stood firm against the legal representation of the LA &mdash; and now our son has a place at the school we wanted him to have.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#C97B2A,#A5621E);">P</div>
-            <div>
-              <div class="review-name">Parent of a child with complex SEN needs</div>
-              <div class="review-meta">LA directed to name specialist school &mdash; June 2026</div>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-quote">After months of getting nowhere with the LA, I reached out to SEND Navigate. Stephen responded the same day, spent time understanding our situation, and produced a detailed report that gave us a clear roadmap for the first time. The free consultation alone was worth more than I expected.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#5C3D22,#3D2512);">S</div>
-            <div>
-              <div class="review-name">Parent, South East England</div>
-              <div class="review-meta">EHCP Application Support &mdash; 2026</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reviews-cta">
-        <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-amber btn-lg">Get the Same Expert Help &rarr;</a>
-        <p style="margin-top:0.85rem;font-size:0.85rem;color:var(--text-muted);">Start with a free 30-minute consultation &mdash; no obligation, no commitment required.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <div class="services-intro">
-        <span class="eyebrow eyebrow--sage">Services &amp; Fees</span>
-        <h2 class="section-title">Clear, flat-fee pricing. You always know what you are paying.</h2>
-        <p class="section-subtitle">Choose a defined support package or hourly advice. Every fee is shown clearly before you commit, with no hidden costs or surprises. Each “Book securely” button opens the matching Stripe checkout.</p>
-      <p class="services-time-policy"><strong>Included professional time is shown for every package.</strong> The allowance covers work within the agreed case scope, including relevant review, calls, meetings, drafting, correspondence, preparation and reasonable administration. We will agree a further fee with you before carrying out work beyond the allowance or outside that scope.</p>
-      <div class="agreed-payment-home" id="agreed-payment">
-        <div><strong>Already agreed a different payment amount?</strong><span>Use this secure Stripe link only after Stephen has confirmed the amount with you. You set the agreed amount at checkout; payments start from £50.</span></div>
-        <a href="https://buy.stripe.com/6oU00l0Jx9GC18f9LeaVa0g" target="_blank" rel="noopener" class="service-link">Pay an agreed amount &rarr;</a>
-      </div>
-      </div>
-      <div class="services-grid">
-        <p class="service-group-heading">Advice, reviews &amp; EHCP support</p>
-        <div class="service-card">
-          <div class="service-price">&pound;95<span style="font-size:1rem;font-weight:500;color:var(--text-muted);">/hr</span></div>
-          <div class="service-name">Hourly Consultation</div>
-          <div class="service-desc">Focused expert advice for a question, document review, correspondence or strategy session.</div>
-          <p class="service-time">Professional time included: Up to 1 hour of professional time per £95 booking</p>
-          <a href="https://buy.stripe.com/4gM28tdwj7yu6sz5uYaVa0E" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;95/hr &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;175</div>
-          <div class="service-name">Initial Consultation</div>
-          <div class="service-desc">A focused case review with clear written next steps and practical guidance on your options.</div>
-          <p class="service-time">Professional time included: Up to 3.5 hours of professional time</p>
-          <a href="https://buy.stripe.com/28E4gB77V3ieg39aPiaVa0F" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;175 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;275</div>
-          <div class="service-name">Formal Legal Letter</div>
-          <div class="service-desc">Professionally drafted, legally framed correspondence to your local authority or school.</div>
-          <p class="service-time">Professional time included: Up to 5.5 hours of professional time</p>
-          <a href="https://buy.stripe.com/9B66oJ0Jx6uq3gng9CaVa0G" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;275 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;350</div>
-          <div class="service-name">Annual Review Support</div>
-          <div class="service-desc">Preparation, proposed amendments and coaching for your child’s EHCP annual review.</div>
-          <p class="service-time">Professional time included: Up to 7 hours of professional time</p>
-          <a href="https://buy.stripe.com/28EaEZ63R1a64kr8HaaVa0H" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;350 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;450</div>
-          <div class="service-name">EHCP Application Support</div>
-          <div class="service-desc">Evidence-led support from the initial request through to draft EHCP review and response.</div>
-          <p class="service-time">Professional time included: Up to 9 hours of professional time</p>
-          <a href="https://buy.stripe.com/3cI8wRbob062cQX5uYaVa0I" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;450 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;550</div>
-          <div class="service-name">EHCP Review &amp; Strengthening</div>
-          <div class="service-desc">A section-by-section review with a written plan for making the EHCP specific and enforceable.</div>
-          <p class="service-time">Professional time included: Up to 11 hours of professional time</p>
-          <a href="https://buy.stripe.com/8x25kF4ZN1a6g390aEaVa0J" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;550 &rarr;</a>
-        </div>
-
-        <p class="service-group-heading">Documents, benefits &amp; advocacy</p>
-        <div class="service-card">
-          <div class="service-price">&pound;250</div>
-          <div class="service-name">Working Document</div>
-          <div class="service-desc">A tracked-changes EHCP Working Document for tribunal, with legally reasoned amendments.</div>
-          <p class="service-time">Professional time included: Up to 5 hours of professional time</p>
-          <a href="https://buy.stripe.com/cNidRbak78CycQX6z2aVa0K" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;250 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;295</div>
-          <div class="service-name">DLA / PIP Form Support</div>
-          <div class="service-desc">Preparation, drafting and review support for DLA or PIP applications for your child.</div>
-          <p class="service-time">Professional time included: Up to 5.5 hours of professional time</p>
-          <a href="https://buy.stripe.com/cNi00lak72eabMT8HaaVa0L" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;295 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;650</div>
-          <div class="service-name">Mediation Support</div>
-          <div class="service-desc">Strategy, position statement drafting, coaching and advice before SEND mediation.</div>
-          <p class="service-time">Professional time included: Up to 13 hours of professional time</p>
-          <a href="https://buy.stripe.com/3cIfZj9g3dWS18f7D6aVa0M" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;650 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;1,200</div>
-          <div class="service-name">Disability Discrimination</div>
-          <div class="service-desc">Case management for a disability discrimination claim against a school.</div>
-          <p class="service-time">Professional time included: Up to 24 hours of professional time</p>
-          <a href="https://buy.stripe.com/bJeaEZ0Jx8Cy9ELbTmaVa0N" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;1,200 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;1,350</div>
-          <div class="service-name">School Exclusion Support</div>
-          <div class="service-desc">Specialist support with school exclusion or disability discrimination processes.</div>
-          <p class="service-time">Professional time included: Up to 27 hours of professional time</p>
-          <a href="https://buy.stripe.com/6oUdRbdwjf0Wg392iMaVa0O" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;1,350 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;1,600</div>
-          <div class="service-name">LA Decision Appeal Package</div>
-          <div class="service-desc">Full support for appealing a refusal, inadequate EHCP, or unsuitable named placement.</div>
-          <p class="service-time">Professional time included: Up to 32 hours of professional time</p>
-          <a href="https://buy.stripe.com/4gMfZj1NB9GCaIPbTmaVa0P" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;1,600 &rarr;</a>
-        </div>
-
-        <p class="service-group-heading">Tribunal &amp; ongoing support</p>
-        <div class="service-card">
-          <div class="service-price">&pound;3,000</div>
-          <div class="service-name">Tribunal Preparation Pack</div>
-          <div class="service-desc">Complete written tribunal preparation, evidence bundle support and a hearing-day strategy guide.</div>
-          <p class="service-time">Professional time included: Up to 60 hours of professional time</p>
-          <a href="https://buy.stripe.com/7sYdRbak7aKGg391eIaVa10" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;3,000 &rarr;</a>
-        </div>
-        <div class="service-card service-card--featured">
-          <div class="service-price">&pound;4,000</div>
-          <div class="service-name">Tribunal + Representation</div>
-          <div class="service-desc">Tribunal preparation plus Stephen’s attendance and representation at the hearing.</div>
-          <p class="service-time">Professional time included: Up to 80 hours of professional time</p>
-          <a href="https://buy.stripe.com/fZu6oJ8bZ7yu6szf5yaVa11" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;4,000 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;6,000</div>
-          <div class="service-name">Complex Tribunal</div>
-          <div class="service-desc">Full support for multi-issue, extended or particularly complex SEND Tribunal cases.</div>
-          <p class="service-time">Professional time included: No maximum professional hours within the agreed case scope</p>
-          <a href="https://buy.stripe.com/eVq14p0Jx9GC7wD1eIaVa12" target="_blank" rel="noopener" class="service-link">Book securely &mdash; &pound;6,000 &rarr;</a>
-        </div>
-        <div class="service-card">
-          <div class="service-price">&pound;350<span style="font-size:1rem;font-weight:500;color:var(--text-muted);">/month</span></div>
-          <div class="service-name">Monthly Retainer</div>
-          <div class="service-desc">Ongoing support for families who need regular advice, correspondence and case strategy.</div>
-          <p class="service-time">Professional time included: Up to 7 hours of professional time per calendar month</p>
-          <a href="https://buy.stripe.com/cNi9AVbob2ea4kr9LeaVa0T" target="_blank" rel="noopener" class="service-link">Subscribe securely &mdash; &pound;350/month &rarr;</a>
-        </div>
-      </div>
-      <div class="services-cta-card">
-        <div>
-          <h3>Not sure which service you need?</h3>
-          <p>Start with a free 30-minute consultation. Stephen will listen to your situation and tell you exactly what you need &mdash; with no obligation to proceed.</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:0.75rem;align-items:center;text-align:center;">
-          <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-hero" style="white-space:nowrap;">Book Free Consultation &rarr;</a>
-          <span style="font-size:0.8rem;color:rgba(255,255,255,0.55);">Free &middot; No obligation &middot; 30 minutes</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT STEPHEN -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-photo-wrap">
-          <div class="about-photo">
-            <img src="assets/photo-consultation.jpg" alt="Expert SEN consultant reviewing documents" loading="lazy" />
-          </div>
-          <div class="about-photo-badge">
-            <div class="about-photo-badge-num">25</div>
-            <div class="about-photo-badge-label">Years Inside<br>the System</div>
-          </div>
-        </div>
-        <div class="about-text">
-          <span class="eyebrow">About Stephen Mallett</span>
-          <h2>25 years inside the SEND system. Two children with SEN of his own.</h2>
-          <p>Stephen Mallett spent 25 years working in UK schools &mdash; as a classroom teacher, a SENCo, and a Headteacher. He has seen the SEND system from every angle: the school that is under-resourced, the LA that delays and deflects, and the parent who is exhausted and alone.</p>
-          <p>He also knows that experience from the other side. Stephen has two children of his own with SEN. He has sat in the meetings, read the letters, and felt the frustration of a system that is supposed to help but often does not. That dual perspective &mdash; professional expertise and personal experience &mdash; is what makes SEND Navigate different.</p>
-          <p>Stephen is also the author of two books on SEN rights for parents, published on Amazon, and the creator of a CPD-aligned SEN training programme for schools and MATs.</p>
-          <div class="credentials-grid">
-            <div class="credential-chip">
-              <div class="credential-chip-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#4A7C59"/></svg></div>
+<p class="hero-body">I’m Stephen Mallett, a former Headteacher and SENCo, and the parent of two children with SEN. Through SEND Navigate, I help parents understand decisions, organise evidence and challenge support that is not meeting their child’s needs. I work remotely with families across England.</p>
+<div class="hero-actions">
+<a class="btn btn-hero" href="/free-consultation">Book your free 30-minute consultation →</a>
+<a class="btn btn-outline-white" href="#services">See Services &amp; Fees</a>
+</div>
+<p class="hero-free-note"><strong>Free 30-minute consultation + written next-step summary.</strong><br/>A short follow-up based on our discussion and your brief account, not document pre-reading, a full review or a legal merits opinion. <a href="/free-consultation#summary-scope">Read the free summary scope</a>.<br/>No obligation. Paid work starts only after we agree the scope and fee. Booking does not pause deadlines or appoint me as your consultant.</p>
+<div class="hero-trust-row">
+<span class="trust-chip"><span class="trust-chip-check">✓</span> 25 years as a teacher, SENCo and Headteacher</span>
+<span class="trust-chip"><span class="trust-chip-check">✓</span> Parent of two children with SEN</span>
+<span class="trust-chip"><span class="trust-chip-check">✓</span> Author of two SEN books</span>
+</div>
+</div>
+<a aria-label="Scroll down" class="hero-scroll" href="#emotional-hook">
+<div class="scroll-arrow">↓</div>
+</a>
+</section>
+<!-- PROOF BAR -->
+<div class="proof-bar">
+<div class="proof-bar-inner">
+<div class="proof-item"><span>Independent consultancy</span></div>
+<div class="proof-divider"></div>
+<div class="proof-item">
+<div class="proof-icon">
+<svg fill="none" viewbox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" fill="#C97B2A"></path></svg>
+</div>
+<span>Remote support across England</span>
+</div>
+<div class="proof-divider"></div>
+<div class="proof-item">
+<div class="proof-icon">
+<svg fill="none" viewbox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#4A7C59"></path></svg>
+</div>
+<span>School and parent experience</span>
+</div>
+<div class="proof-divider"></div>
+<div class="proof-item">
+<div class="proof-icon">
+<svg fill="none" viewbox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" fill="#C97B2A"></path></svg>
+</div>
+<span>Scope and fee agreed before paid work</span>
+</div>
+</div>
+</div>
+<section aria-labelledby="parent-help-title" class="section section--parchment" id="parent-help">
+<div class="container">
+<h2 class="section-title" id="parent-help-title">Start with the problem you are facing</h2>
+<p class="section-subtitle">Different decisions need different responses. Find practical guidance, then talk through your next step with Stephen.</p>
+<div class="services-grid">
+<div class="service-card"><h3 class="service-name">The LA refused to assess</h3><p class="service-desc">Understand the assessment test, the refusal letter and what evidence can support an appeal.</p><a class="service-link" href="/ehcp-refusal-to-assess-help">Help after an EHCP assessment refusal →</a></div>
+<div class="service-card"><h3 class="service-name">Assessed, but refused an EHCP</h3><p class="service-desc">Compare your child's assessed needs with the provision that can actually be secured without a plan.</p><a class="service-link" href="/ehcp-refusal-to-issue-help">Help after a refusal to issue an EHCP →</a></div>
+<div class="service-card"><h3 class="service-name">School has become a source of distress</h3><p class="service-desc">Mornings may be difficult, attendance may be falling and conversations with school may feel stuck. Get help preparing for meetings and describing the barriers your child faces.</p><a class="service-link" href="/school-distress-ebsa-help">School distress and EBSA help →</a></div>
+<div class="service-card"><h3 class="service-name">School SEN support is failing</h3><p class="service-desc">Separate missing support from inadequate support, and understand who is responsible for taking action.</p><a class="service-link" href="/school-not-meeting-sen-needs">Help when school is not meeting SEN needs →</a></div>
+</div>
+<p style="margin-top:1.5rem;text-align:center;color:var(--text-muted);">Independent practical SEND support for families in England. No outcome guarantees; paid work only within an agreed scope.</p>
+</div>
+</section>
+<!-- EMOTIONAL HOOK -->
+<section id="emotional-hook">
+<div class="container">
+<div class="hook-grid">
+<div class="hook-text">
+<span class="eyebrow">For Parents &amp; Carers</span>
+<h2>Less time decoding the system. A clearer next step for your child.</h2>
+<p>A refused assessment, an inadequate EHCP or support that never arrives can leave you exhausted. You may have tried emails and meetings without getting a clear answer. We help you separate the issues, understand the relevant process and put your concerns into a practical plan of action.</p>
+<p>My role is to help you work through your situation, explain the options and agree practical support. I will tell you where my consultancy can help and where another professional would be more appropriate.</p>
+<div class="hook-cta-row">
+<a class="btn btn-amber btn-lg" href="/free-consultation">Book a free consultation →</a>
+<a class="btn btn-outline-ink" href="#services">View Services &amp; Fees</a>
+</div>
+</div>
+<div class="hook-scenarios">
+<p class="hook-scenarios-title">Are you dealing with any of these?</p>
+<div class="scenario-item">
+<div class="scenario-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" fill="#C97B2A"></path></svg></div>
+<div class="scenario-text"><strong>The LA has refused to assess your child for an EHCP</strong> — and you do not know how to challenge it.</div>
+</div>
+<div class="scenario-item">
+<div class="scenario-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" fill="#C97B2A"></path></svg></div>
+<div class="scenario-text"><strong>Your child has an EHCP but the provision is vague or inadequate</strong> — and the school is not delivering what it promises.</div>
+</div>
+<div class="scenario-item">
+<div class="scenario-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="#C97B2A"></path></svg></div>
+<div class="scenario-text"><strong>You are facing a SEND tribunal</strong> — and the LA has a legal team. You need someone in your corner.</div>
+</div>
+<div class="scenario-item">
+<div class="scenario-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#C97B2A"></path></svg></div>
+<div class="scenario-text"><strong>Your child has been excluded or is at risk of exclusion</strong> — and you believe their SEN needs are not being met.</div>
+</div>
+<div class="scenario-item">
+<div class="scenario-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#C97B2A"></path></svg></div>
+<div class="scenario-text"><strong>You want your child in a specific school</strong> — and the LA is directing you elsewhere.</div>
+</div>
+<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;">
+<a class="btn btn-amber" href="/free-consultation" style="width:100%;justify-content:center;">Talk to Stephen — no obligation →</a>
+<p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.6rem;">30 minutes · Online or by phone · Written next-step summary</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PHOTO SPLIT / QUOTE -->
+<div class="photo-split">
+<div class="photo-split-img">
+<img alt="Parent reading an important document by a warm window" loading="lazy" src="assets/photo-parent-hope.jpg"/>
+</div>
+<div class="photo-split-content">
+<div class="photo-split-inner">
+<h2 style="color:#fff;margin-bottom:1.5rem;">Start with the decision or difficulty you are facing.</h2>
+<p>You do not need to arrive with a finished case or a perfectly ordered folder. Explain what has happened in your own words. We can then discuss the next questions and whether scoped support would help.</p>
+</div>
+</div>
+</div>
+<!-- FREE CONSULTATION BANNER -->
+<div class="consult-banner" id="free-consult">
+<div class="consult-banner-inner">
+<div class="consult-banner-text">
+<h2>Free 30-minute consultation + written next-step summary</h2>
+<p>Tell me the main issue, what school or the LA has said, and any approaching decision, meeting or deadline. The written next-step summary is a short follow-up, normally 1–2 pages, based only on our discussion and your brief account. There is no document pre-reading.</p>
+<ul class="consult-bullets">
+<li>The issue as you described it</li>
+<li>Up to three practical next steps or questions</li>
+<li>Relevant general resources</li>
+<li>Whether further scoped paid support could help</li>
+</ul>
+<div class="summary-scope" id="summary-scope">
+<h3>What the free summary does not include</h3>
+<p>It does not include a full EHCP or report review, a legal merits opinion, an evidence audit, personalised drafted LA or school letters, appeal grounds, representation, ongoing casework or deadline management. We will discuss delivery timing on the call; there is no fixed turnaround promise.</p>
+<p>Booking does not pause deadlines or appoint me as your consultant. Please give only a brief account initially, not medical records or a full case bundle. <a href="/free-consultation#summary-scope">Read the booking-page scope</a>.</p>
+<p>For document-based help, the separate £175 Initial Consultation includes pre-reading of one recent document, a 60-minute call and written next steps, with up to 3.5 hours of professional time. The £550 EHCP Review &amp; Strengthening provides the section-by-section review and written recommendations within its agreed scope, with up to 11 hours.</p>
+<p>No obligation. Paid work starts only after we agree the scope, professional-time allowance and fee.</p>
+</div>
+</div>
+<div class="consult-cta">
+<a class="btn btn-hero" href="/free-consultation">Book a free consultation →</a>
+<p class="free-note">Choose your own date and time.<br/>Available online or by phone.</p>
+</div>
+</div>
+</div>
+<!-- ABOUT STEPHEN -->
+<section id="about">
+<div class="container">
+<div class="about-grid">
+<div class="about-photo-wrap">
+<div class="about-photo">
+<img alt="Documents being reviewed at a desk" loading="lazy" src="assets/photo-consultation.jpg"/>
+</div>
+<div class="about-photo-badge">
+<div class="about-photo-badge-num">25</div>
+<div class="about-photo-badge-label">Years working<br/>in schools</div>
+</div>
+</div>
+<div class="about-text">
+<span class="eyebrow">About Stephen Mallett</span>
+<h2>Know who you are asking to help</h2>
+<p>I spent 25 years working in schools as a teacher, SENCo and Headteacher. I know the paperwork and meetings from the school’s side. As a parent of two children with SEN, I also understand how much those decisions can affect life at home.</p>
+<p>My role is to help you work through your situation, explain the options and agree practical support. I will tell you where my consultancy can help and where another professional would be more appropriate.</p>
+<p>I am the author of <a href="/the-parents-shield">The Parent’s Shield</a> and <a href="/book">Not Refusing. Unable.</a> These books offer another way to get to know my approach; you do not need to buy or read either before speaking to me.</p>
+<div class="credentials-grid">
+<div class="credential-chip">
+<div class="credential-chip-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="#4A7C59"></path></svg></div>
               Former Headteacher
             </div>
-            <div class="credential-chip">
-              <div class="credential-chip-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z" fill="#C97B2A"/></svg></div>
+<div class="credential-chip">
+<div class="credential-chip-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z" fill="#C97B2A"></path></svg></div>
               Former SENCo
             </div>
-            <div class="credential-chip">
-              <div class="credential-chip-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-10 0H2v20h20V2h-4zm-6-1a3 3 0 0 1 3 3H9a3 3 0 0 1 3-3z" fill="#C97B2A"/></svg></div>
+<div class="credential-chip">
+<div class="credential-chip-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-10 0H2v20h20V2h-4zm-6-1a3 3 0 0 1 3 3H9a3 3 0 0 1 3-3z" fill="#C97B2A"></path></svg></div>
               Published SEN Author
             </div>
-            <div class="credential-chip">
-              <div class="credential-chip-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#4A7C59"/></svg></div>
-              SEN Parent
+<div class="credential-chip">
+<div class="credential-chip-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#4A7C59"></path></svg></div>
+              Parent of two children with SEN
             </div>
-            <div class="credential-chip">
-              <div class="credential-chip-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#C97B2A"/></svg></div>
+<div class="credential-chip">
+<div class="credential-chip-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#C97B2A"></path></svg></div>
               Tribunal Representative
             </div>
-            <div class="credential-chip">
-              <div class="credential-chip-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="#4A7C59"/></svg></div>
-              CPD Programme Creator
+<div class="credential-chip">
+<div class="credential-chip-icon"><svg fill="none" viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="#4A7C59"></path></svg></div>
+              Independent SEND consultant
             </div>
-          </div>
-          <a href="https://calendar.app.google/92kkaKHEKDPwvy8s8" class="btn btn-amber">Book a Free Consultation with Stephen &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SCHOOLS DIVIDER -->
-  <div class="schools-divider">
-    <div class="schools-divider-bg" aria-hidden="true"></div>
-    <div class="schools-divider-overlay" aria-hidden="true"></div>
-    <div class="schools-divider-content">
-      <div class="container">
-        <span class="eyebrow eyebrow--white">Also from SEND Navigate</span>
-        <h2>CPD-Aligned SEN Training for Schools &amp; MATs</h2>
-        <p>See It. Support It. Teach It. &mdash; a practical, INSET-ready programme built on the EEF Five-a-Day framework. Delivered by your SENCo. No external trainers required.</p>
-        <div class="schools-divider-actions">
-          <a href="/for-schools" class="btn btn-hero">Explore the Programme &rarr;</a>
-          <a href="mailto:stephen@sendnavigate.com?subject=School Training Enquiry" class="btn btn-outline-white">Request a Free Sample</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BOOKS -->
-  <section id="books">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:3rem;">
-        <span class="eyebrow">Books by Stephen Mallett</span>
-        <h2 class="section-title">Practical guides for parents navigating the SEND system</h2>
-        <p class="section-subtitle">Written from 25 years of professional experience and personal lived experience as a SEN parent &mdash; in plain English, not legal jargon.</p>
-      </div>
-      <div class="books-grid">
-        <div class="book-card">
-          <div class="book-cover">
-            <img src="Parent Shield - Kindle Cover.jpg" alt="The Parent's Shield book cover" onerror="this.style.display='none';" />
-          </div>
-          <div class="book-info">
-            <span class="book-tag book-tag--amber">SEN Rights for Parents</span>
-            <h3>The Parent&rsquo;s Shield</h3>
-            <p>A complete guide to navigating the SEND system &mdash; from EHCP applications and annual reviews to appeals and tribunal. Written for parents who want to understand their rights and use them.</p>
-            <div class="book-actions">
-              <a href="https://www.amazon.co.uk/dp/B0H26YM5JL" target="_blank" rel="noopener" class="book-btn book-btn--kindle">Kindle Edition</a>
-              <a href="https://www.amazon.co.uk/dp/B0H2GMWKCQ" target="_blank" rel="noopener" class="book-btn book-btn--paper">Paperback</a>
-              <a href="/the-parents-shield" class="book-btn book-btn--more">Find out more</a>
-            </div>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <img src="cover-kindle.jpg" alt="Not Refusing. Unable. book cover" onerror="this.style.display='none';" />
-          </div>
-          <div class="book-info">
-            <span class="book-tag book-tag--sage">School Attendance &amp; EBSA</span>
-            <h3>Not Refusing. Unable.</h3>
-            <p>A guide to Emotionally Based School Avoidance (EBSA) &mdash; helping parents understand why their child cannot attend school, what the law says, and how to get the right support in place.</p>
-            <div class="book-actions">
-              <a href="https://www.amazon.co.uk/dp/B0H3FXVQZS" target="_blank" rel="noopener" class="book-btn book-btn--kindle">View on Amazon</a>
-              <a href="/book" class="book-btn book-btn--more">Find out more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESOURCES STRIP -->
-  <div class="resources-strip">
-    <div class="resources-strip-inner">
-      <div>
-        <h3>Free 40-page EHCP Case-Building Guide</h3>
-        <p>Download the free guide used by hundreds of parents to understand and challenge their child&rsquo;s EHCP &mdash; no email required.</p>
-      </div>
-      <a href="/free-ehcp-checklist" class="btn btn-hero" style="white-space:nowrap;">Download Free &rarr;</a>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="nav-logo" style="margin-bottom:0.85rem;">
-            <svg class="nav-logo-svg" viewBox="0 0 30 30" fill="none">
-              <path d="M15 2L4 7v8c0 6.5 4.7 12.6 11 14 6.3-1.4 11-7.5 11-14V7L15 2z" fill="#C97B2A"/>
-              <path d="M11 15l3 3 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+</div>
+<a class="btn btn-amber" href="/free-consultation">Talk through your situation with Stephen →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- REVIEWS -->
+<section id="reviews">
+<div class="container">
+<div class="reviews-header">
+<h2 class="section-title">What parents say about working with SEND Navigate</h2>
+<p class="section-subtitle">These quoted experiences concern the support described below, not a promise of an assessment-refusal or school-distress outcome. Individual outcomes vary.</p>
+</div>
+<div class="reviews-grid">
+<div class="review-card review-card--featured">
+<div class="review-google-tag">★ Google</div>
+<div class="review-stars">★★★★★</div>
+<p class="review-quote">I cannot recommend Stephen Mallett highly enough. From the very beginning of our SENDIST tribunal appeal, Stephen provided exceptional support, expert knowledge, and clear guidance throughout the entire process. Thanks to Stephen’s expertise and dedication, we achieved the outcome we had hoped for — securing a specialist educational setting that meets our son’s special educational needs. This result will make a life-changing difference to our son’s future.</p>
+<div class="review-author">
+<div class="review-avatar" style="background:linear-gradient(135deg,#4A7C59,#355A40);">R</div>
+<div>
+<div class="review-name">Ryan O’Kane</div>
+<div class="review-meta">Placement appeal / tribunal: specialist placement secured — June 2026. Individual outcomes vary.</div>
+</div>
+</div>
+</div>
+<div class="review-card">
+<div class="review-stars">★★★★★</div>
+<p class="review-quote">This would not have been possible without Stephen’s help. He took over our case when we thought we had nowhere to turn. He represented us at the tribunal and stood firm against the legal representation of the LA — and now our son has a place at the school we wanted him to have.</p>
+<div class="review-author">
+<div class="review-avatar" style="background:linear-gradient(135deg,#C97B2A,#A5621E);">P</div>
+<div>
+<div class="review-name">Parent of a child with complex SEN needs</div>
+<div class="review-meta">Placement appeal / tribunal: LA directed to name specialist school — June 2026. Individual outcomes vary.</div>
+</div>
+</div>
+</div>
+<div class="review-card">
+<div class="review-stars">★★★★★</div>
+<p class="review-quote">After months of getting nowhere with the LA, I reached out to SEND Navigate. Stephen responded the same day, spent time understanding our situation, and produced a detailed report that gave us a clear roadmap for the first time. The free consultation alone was worth more than I expected.</p>
+<div class="review-author">
+<div class="review-avatar" style="background:linear-gradient(135deg,#5C3D22,#3D2512);">S</div>
+<div>
+<div class="review-name">Parent, South East England</div>
+<div class="review-meta">EHCP Application Support — 2026. Individual outcomes vary. The quoted report describes this parent’s experience, not the scope of today’s free summary.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="reviews-cta">
+<a class="btn btn-amber btn-lg" href="/free-consultation">Talk through your situation →</a>
+<p style="margin-top:0.85rem;font-size:0.85rem;color:var(--text-muted);">Free 30-minute consultation + written next-step summary. No obligation.</p>
+</div>
+</div>
+</section>
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<div class="services-intro">
+<span class="eyebrow eyebrow--sage">Services &amp; Fees</span>
+<h2 class="section-title">SEN consultancy services with agreed scope and clear fees</h2>
+<p class="section-subtitle">A short question, a detailed document review and a full appeal do not require the same engagement. Start with the level of help you need. <a href="/ehcp-advisory#services">Compare the full service details</a>, or discuss the scope before paying. Each “Book securely” button opens the matching Stripe checkout.</p>
+<p class="services-time-policy"><strong>Included professional time is shown for every package.</strong> The allowance covers work within the agreed case scope, including relevant review, calls, meetings, drafting, correspondence, preparation and reasonable administration. Any work beyond the allowance or outside that scope requires your prior written agreement to a further fee.</p>
+<div class="agreed-payment-home" id="agreed-payment">
+<div><strong>Already agreed a different payment amount?</strong><span>Use this secure Stripe link only after Stephen has confirmed the amount with you. You set the agreed amount at checkout; payments start from £50.</span></div>
+<a class="service-link" href="https://buy.stripe.com/6oU00l0Jx9GC18f9LeaVa0g" rel="noopener" target="_blank">Pay an agreed amount →</a>
+</div>
+</div>
+<div class="services-grid">
+<p class="service-group-heading">Advice, reviews &amp; EHCP support</p>
+<div class="service-card">
+<div class="service-price">£95<span style="font-size:1rem;font-weight:500;color:var(--text-muted);">/hr</span></div>
+<div class="service-name">Hourly Consultation</div>
+<div class="service-desc">Focused expert advice for a question, document review, correspondence or strategy session.</div>
+<p class="service-time">Professional time included: Up to 1 hour of professional time per £95 booking</p>
+<a class="service-link" href="https://buy.stripe.com/4gM28tdwj7yu6sz5uYaVa0E" rel="noopener" target="_blank">Book securely — £95/hr →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£175</div>
+<div class="service-name">Initial Consultation</div>
+<div class="service-desc">Pre-reading of one recent document, a 60-minute video or telephone call, and written next steps and practical guidance on your options. This is separate from the free discussion-based summary.</div>
+<p class="service-time">Professional time included: Up to 3.5 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/28E4gB77V3ieg39aPiaVa0F" rel="noopener" target="_blank">Book securely — £175 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£275</div>
+<div class="service-name">Formal Legal Letter</div>
+<div class="service-desc">Professionally drafted, legally framed correspondence to your local authority or school.</div>
+<p class="service-time">Professional time included: Up to 5.5 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/9B66oJ0Jx6uq3gng9CaVa0G" rel="noopener" target="_blank">Book securely — £275 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£350</div>
+<div class="service-name">Annual Review Support</div>
+<div class="service-desc">Preparation, proposed amendments and coaching for your child’s EHCP annual review.</div>
+<p class="service-time">Professional time included: Up to 7 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/28EaEZ63R1a64kr8HaaVa0H" rel="noopener" target="_blank">Book securely — £350 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£450</div>
+<div class="service-name">EHCP Application Support</div>
+<div class="service-desc">Evidence-led support from the initial request through to draft EHCP review and response.</div>
+<p class="service-time">Professional time included: Up to 9 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/3cI8wRbob062cQX5uYaVa0I" rel="noopener" target="_blank">Book securely — £450 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£550</div>
+<div class="service-name">EHCP Review &amp; Strengthening</div>
+<div class="service-desc">A section-by-section review with a written plan for making the EHCP specific and enforceable.</div>
+<p class="service-time">Professional time included: Up to 11 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/8x25kF4ZN1a6g390aEaVa0J" rel="noopener" target="_blank">Book securely — £550 →</a>
+</div>
+<p class="service-group-heading">Documents, benefits &amp; advocacy</p>
+<div class="service-card">
+<div class="service-price">£250</div>
+<div class="service-name">Working Document</div>
+<div class="service-desc">A tracked-changes EHCP Working Document for tribunal, with legally reasoned amendments.</div>
+<p class="service-time">Professional time included: Up to 5 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/cNidRbak78CycQX6z2aVa0K" rel="noopener" target="_blank">Book securely — £250 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£295</div>
+<div class="service-name">DLA / PIP Form Support</div>
+<div class="service-desc">Preparation, drafting and review support for DLA or PIP applications for your child.</div>
+<p class="service-time">Professional time included: Up to 5.5 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/cNi00lak72eabMT8HaaVa0L" rel="noopener" target="_blank">Book securely — £295 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£650</div>
+<div class="service-name">Mediation Support</div>
+<div class="service-desc">Strategy, position statement drafting, coaching and advice before SEND mediation.</div>
+<p class="service-time">Professional time included: Up to 13 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/3cIfZj9g3dWS18f7D6aVa0M" rel="noopener" target="_blank">Book securely — £650 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£1,200</div>
+<div class="service-name">Disability Discrimination</div>
+<div class="service-desc">Case management for a disability discrimination claim against a school.</div>
+<p class="service-time">Professional time included: Up to 24 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/bJeaEZ0Jx8Cy9ELbTmaVa0N" rel="noopener" target="_blank">Book securely — £1,200 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£1,350</div>
+<div class="service-name">School Exclusion Support</div>
+<div class="service-desc">Specialist support with school exclusion or disability discrimination processes.</div>
+<p class="service-time">Professional time included: Up to 27 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/6oUdRbdwjf0Wg392iMaVa0O" rel="noopener" target="_blank">Book securely — £1,350 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£1,600</div>
+<div class="service-name">LA Decision Appeal Package</div>
+<div class="service-desc">Full support for appealing a refusal, inadequate EHCP, or unsuitable named placement.</div>
+<p class="service-time">Professional time included: Up to 32 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/4gMfZj1NB9GCaIPbTmaVa0P" rel="noopener" target="_blank">Book securely — £1,600 →</a>
+</div>
+<p class="service-group-heading">Tribunal &amp; ongoing support</p>
+<div class="service-card">
+<div class="service-price">£3,000</div>
+<div class="service-name">Tribunal Preparation Pack</div>
+<div class="service-desc">Complete written tribunal preparation, evidence bundle support and a hearing-day strategy guide.</div>
+<p class="service-time">Professional time included: Up to 60 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/7sYdRbak7aKGg391eIaVa10" rel="noopener" target="_blank">Book securely — £3,000 →</a>
+</div>
+<div class="service-card service-card--featured">
+<div class="service-price">£4,000</div>
+<div class="service-name">Tribunal + Representation</div>
+<div class="service-desc">Tribunal preparation plus Stephen’s attendance and representation at the hearing.</div>
+<p class="service-time">Professional time included: Up to 80 hours of professional time</p>
+<a class="service-link" href="https://buy.stripe.com/fZu6oJ8bZ7yu6szf5yaVa11" rel="noopener" target="_blank">Book securely — £4,000 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£6,000</div>
+<div class="service-name">Complex Tribunal</div>
+<div class="service-desc">Full support for multi-issue, extended or particularly complex SEND Tribunal cases.</div>
+<p class="service-time">Professional time included: No maximum professional hours within the agreed case scope</p>
+<a class="service-link" href="https://buy.stripe.com/eVq14p0Jx9GC7wD1eIaVa12" rel="noopener" target="_blank">Book securely — £6,000 →</a>
+</div>
+<div class="service-card">
+<div class="service-price">£350<span style="font-size:1rem;font-weight:500;color:var(--text-muted);">/month</span></div>
+<div class="service-name">Monthly Retainer</div>
+<div class="service-desc">Ongoing support for families who need regular advice, correspondence and case strategy.</div>
+<p class="service-time">Professional time included: Up to 7 hours of professional time per calendar month</p>
+<a class="service-link" href="https://buy.stripe.com/cNi9AVbob2ea4kr9LeaVa0T" rel="noopener" target="_blank">Subscribe securely — £350/month →</a>
+</div>
+</div>
+<div class="services-cta-card">
+<div>
+<h3>Not sure which service you need?</h3>
+<p>Use the free 30-minute consultation to explain the main issue. We can discuss whether a focused consultation, document review or wider package fits your circumstances. You can choose not to proceed.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.75rem;align-items:center;text-align:center;">
+<a class="btn btn-hero" href="/free-consultation">Discuss the right level of help →</a>
+<span style="font-size:0.8rem;color:rgba(255,255,255,0.85);">Free 30-minute consultation + written next-step summary</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="starting-point-title" class="section section--cream" id="how-it-works">
+<div class="container">
+<h2 class="section-title" id="starting-point-title">A clear starting point</h2>
+<div class="services-grid">
+<div class="service-card"><h3>First, tell me what is happening</h3><p>Use the free call to explain the main issue and any approaching decision, meeting or deadline. The short written summary reflects our discussion, not a document review.</p></div>
+<div class="service-card"><h3>Then, decide whether further help would be useful</h3><p>I will explain whether a focused consultation, review or wider package could help. You do not have to choose a package on the call.</p></div>
+<div class="service-card"><h3>Know the scope before paying</h3><p>We agree the work, professional-time allowance and fee before paid support starts. Documents for that work are shared through the agreed transfer route.</p></div>
+</div>
+<p style="text-align:center;"><a href="/ehcp-advisory#services">View consultancy services and fees</a></p>
+</div>
+</section>
+<!-- SCHOOLS DIVIDER -->
+<div class="schools-divider">
+<div aria-hidden="true" class="schools-divider-bg"></div>
+<div aria-hidden="true" class="schools-divider-overlay"></div>
+<div class="schools-divider-content">
+<div class="container">
+<span class="eyebrow eyebrow--white">Also from SEND Navigate</span>
+<h2>Looking for staff training rather than parent support?</h2>
+<p>The schools journey is separate from one-to-one parent consultancy.</p>
+<div class="schools-divider-actions">
+<a class="btn btn-outline-white" href="/for-schools">Visit SEND Navigate for schools →</a>
+</div>
+</div>
+</div>
+</div>
+<!-- BOOKS -->
+<section id="books">
+<div class="container">
+<div style="text-align:center;margin-bottom:3rem;">
+<span class="eyebrow">Books by Stephen Mallett</span>
+<h2 class="section-title">Read my approach, or talk it through</h2>
+<p class="section-subtitle">My books are optional self-help resources and another way to get to know how I explain SEND issues. They provide general guidance, not an assessment of your child’s individual circumstances.</p>
+</div>
+<div class="books-grid">
+<div class="book-card">
+<div class="book-cover">
+<img alt="The Parent's Shield book cover" onerror="this.style.display='none';" src="Parent Shield - Kindle Cover.jpg"/>
+</div>
+<div class="book-info">
+<span class="book-tag book-tag--amber">SEN Rights for Parents</span>
+<h3>The Parent’s Shield</h3>
+<p>A guide to the SEN and EHCP process, including applications, annual reviews, appeals and tribunal.</p>
+<div class="book-actions">
+<a class="book-btn book-btn--more" href="/the-parents-shield">Explore The Parent’s Shield →</a>
+</div>
+</div>
+</div>
+<div class="book-card">
+<div class="book-cover">
+<img alt="Not Refusing. Unable. book cover" onerror="this.style.display='none';" src="cover-kindle.jpg"/>
+</div>
+<div class="book-info">
+<span class="book-tag book-tag--sage">School Attendance &amp; EBSA</span>
+<h3>Not Refusing. Unable.</h3>
+<p>A book about school distress and emotionally based school avoidance, often called EBSA, for parents trying to understand attendance barriers and support.</p>
+<div class="book-actions">
+<a class="book-btn book-btn--more" href="/book">Explore Not Refusing. Unable. →</a>
+</div>
+</div>
+</div>
+</div>
+<p style="max-width:700px;margin:2rem auto 1.5rem;text-align:center;">Consultancy gives us time to look at your child’s circumstances and agree the help you need. You do not need to buy or read a book before speaking to me.</p>
+<p style="text-align:center;"><a class="btn btn-amber" href="/free-consultation">Talk through your situation with Stephen →</a></p>
+</div>
+</section>
+<!-- RESOURCES STRIP -->
+<div class="resources-strip">
+<div class="resources-strip-inner">
+<div>
+<h3>Not ready for a call?</h3>
+<p>The free EHCP case-building checklist can help you organise the information you already have.</p>
+</div>
+<a class="btn btn-outline-white" href="/free-ehcp-checklist">Read about the free checklist →</a>
+</div>
+</div>
+<section class="section section--cream" id="contact">
+<div class="container" style="max-width:760px;text-align:center;">
+<h2 class="section-title">Take the next step with someone who will listen</h2>
+<p style="margin-bottom:1.5rem;">You can explain what has happened in your own words. We will discuss whether I can help and what an agreed engagement would involve.</p>
+<a class="btn btn-amber btn-lg" href="/free-consultation">Book your free 30-minute consultation →</a>
+<p style="margin:1rem 0;">Free 30-minute consultation + written next-step summary. <a href="/free-consultation#summary-scope">See what is included</a>. No obligation; paid scope and fee agreed first.</p>
+<p style="font-size:0.9rem;">For families in England. Independent SEND consultancy, not a regulated legal service or clinical treatment. No guarantee of a particular outcome. Booking does not pause deadlines or appoint me as your consultant.</p>
+<p style="margin-top:1rem;">Prefer email? <a href="mailto:stephen@sendnavigate.com">Contact Stephen</a> with a brief description, not sensitive documents.</p>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="nav-logo" href="/" style="margin-bottom:0.85rem;">
+<svg class="nav-logo-svg" fill="none" viewbox="0 0 30 30">
+<path d="M15 2L4 7v8c0 6.5 4.7 12.6 11 14 6.3-1.4 11-7.5 11-14V7L15 2z" fill="#C97B2A"></path>
+<path d="M11 15l3 3 6-6" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
             SEND<span>Navigate</span>
-          </a>
-          <p>Expert SEN consultancy for parents navigating the SEND system &mdash; EHCP, tribunal, exclusion, and appeals. Founded by a former Headteacher and SENCo with 25 years of experience.</p>
-        </div>
-        <div class="footer-col">
-          <h4>For Parents</h4>
-          <ul>
-            <li><a href="/ehcp-advisory">Advisory Services</a></li>
-            <li><a href="https://calendar.app.google/92kkaKHEKDPwvy8s8">Free Consultation</a></li>
-            <li><a href="/what-is-an-ehcp">What is an EHCP?</a></li>
-            <li><a href="/send-tribunal">SEND Tribunal Guide</a></li>
-            <li><a href="/ehcp-appeal-refusal">Appealing a Refusal</a></li>
-            <li><a href="/send-reform-2026">SEND Reform 2026</a></li>
-            <li><a href="/free-ehcp-checklist">Free EHCP Checklist</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>More</h4>
-          <ul>
-            <li><a href="/for-schools">For Schools &amp; MATs</a></li>
-            <li><a href="/books.html">Books</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/resources">Resources</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="mailto:stephen@sendnavigate.com">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 SEND Navigate. All rights reserved.</span>
-        <span><a href="/privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+</a>
+<p>Independent SEN consultancy for parents in England, delivered remotely. Stephen Mallett is a former Headteacher and SENCo and a parent of two children with SEN.</p>
+</div>
+<div class="footer-col">
+<h4>For Parents</h4>
+<ul>
+<li><a href="/ehcp-advisory">Advisory Services</a></li>
+<li><a href="/free-consultation">Free consultation + written next-step summary</a></li>
+<li><a href="/school-distress-ebsa-help">School distress and EBSA help</a></li>
+<li><a href="/what-is-an-ehcp">What is an EHCP?</a></li>
+<li><a href="/send-tribunal">SEND Tribunal Guide</a></li>
+<li><a href="/ehcp-appeal-refusal">Appealing a Refusal</a></li>
+<li><a href="/send-reform-2026">SEND Reform 2026</a></li>
+<li><a href="/free-ehcp-checklist">Free EHCP Checklist</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>More</h4>
+<ul>
+<li><a href="/for-schools">For Schools &amp; MATs</a></li>
+<li><a href="/books">Books</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/resources">Resources</a></li>
+<li><a href="/privacy-policy">Privacy Policy</a></li>
+<li><a href="mailto:stephen@sendnavigate.com">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 SEND Navigate. All rights reserved.</span>
+<span><a href="/privacy-policy">Privacy Policy</a>  ·  <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></span>
+</div>
+<p style="margin-top:1rem;color:rgba(255,255,255,0.75);font-size:0.8rem;">Stephen Mallett is not a solicitor. Website information is general, not advice on your individual legal position. Consultancy does not diagnose or treat health conditions. No particular outcome is guaranteed.</p>
+</div>
+</footer>
+<script>
     const navToggle = document.getElementById('navToggle');
     const navLinks  = document.getElementById('navLinks');
     if(navToggle&&navLinks) navToggle.addEventListener('click',()=>navLinks.classList.toggle('open'));
@@ -1187,9 +1192,10 @@
     const siteSearchForm = document.getElementById('siteSearchForm');
     const siteSearchResults = document.getElementById('siteSearchResults');
     const siteSearchPages = [
-      { title:'Free 30-minute consultation', type:'Parent support', url:'https://calendar.app.google/92kkaKHEKDPwvy8s8', summary:'Talk through your child’s situation and understand practical next steps.', keywords:'advice consultation parent carer help support talk phone online free urgent' },
+      { title:'Free 30-minute consultation + written next-step summary', type:'Parent support', url:'/free-consultation', summary:'A starting discussion and short written follow-up; no document pre-reading or full case review.', keywords:'advice consultation parent carer help support talk phone online free urgent' },
       { title:'EHCP assessment refused: practical appeal help', type:'Parent support', url:'/ehcp-refusal-to-assess-help', summary:'Understand a refusal to assess, the assessment test and evidence questions.', keywords:'EHCP refusal assess assessment refused LA appeal SEND35A evidence' },
       { title:'Refused an EHCP after assessment', type:'Parent support', url:'/ehcp-refusal-to-issue-help', summary:'Compare assessed needs, recommended provision and the refusal to issue.', keywords:'EHCP refused refusal issue assessed plan council LA appeal SEND35' },
+      { title:'School distress and EBSA help', type:'Parent support', url:'/school-distress-ebsa-help', summary:'Educational consultancy and meeting preparation for attendance barriers, within agreed scope.', keywords:'school distress EBSA anxiety unable attend attendance barriers refusal' },
       { title:'School not meeting SEN needs', type:'Parent support', url:'/school-not-meeting-sen-needs', summary:'Help with school SEN Support and missing EHCP provision.', keywords:'school SEN support not helping SENCO failing provision Section F EHCP complaint' },
       { title:'Consultancy services and fees', type:'Parent support', url:'#services', summary:'Explore fixed-fee EHCP, appeal, tribunal, exclusion and advocacy support.', keywords:'fees prices cost service legal letter annual review mediation DLA PIP exclusion appeal tribunal advocacy' },
       { title:'Free SEND and EHCP resources', type:'Free resources', url:'/resources.html', summary:'Browse guides, checklists and practical tools for parents and carers.', keywords:'free resources guides downloads parents carers SEND EHCP help' },
