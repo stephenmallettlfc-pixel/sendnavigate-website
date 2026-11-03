@@ -1,313 +1,95 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="en-GB">
 <head>
-<!-- Google Ads Global Site Tag (gtag.js) -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Privacy Policy | SEND Navigate</title>
+  <meta name="description" content="How Stephen Mallett, trading as SEND Navigate, uses and protects personal information, including private general enquiries, bookings and optional analytics."/>
+  <meta name="robots" content="noindex, follow"/>
+  <link rel="canonical" href="https://sendnavigate.org/privacy-policy"/>
+  <link rel="stylesheet" href="/assets/parent-help.css"/>
+  <link rel="stylesheet" href="/assets/ask-expert.css"/>
+  <script defer src="/assets/organic-analytics.js"></script>
 
-
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- Google tag (gtag.js) -->
-
-
-<title>Privacy Policy | SEND Navigate</title>
-<meta content="Privacy Policy for SEND Navigate. How we collect, use, and protect your personal data in accordance with UK GDPR." name="description"/>
-<meta content="noindex, follow" name="robots"/>
-<link href="https://sendnavigate.org/privacy-policy" rel="canonical"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<style>
-    :root {
-      --navy:     #1E3A5F;
-      --teal:     #2D8A7A;
-      --teal-l:   #3DBDAE;
-      --amber:    #D4781A;
-      --white:    #FFFFFF;
-      --offwhite: #F7F9FC;
-      --grey:     #6B7280;
-      --light:    #EEF2F7;
-      --text:     #1F2937;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      line-height: 1.7;
-      background: var(--offwhite);
-    }
-
-    /* NAV */
-    nav {
-      background: var(--navy);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .logo-mark {
-      width: 34px;
-      height: 34px;
-      background: var(--teal);
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      color: #fff;
-      font-size: .9rem;
-    }
-    .logo-name {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-    .logo-name span { color: var(--teal-l); }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,.8);
-      font-size: .9rem;
-      padding: 8px 12px;
-      border-radius: 6px;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: background .15s, color .15s;
-    }
-    .nav-links a:hover { background: rgba(255,255,255,.12); color: #fff; }
-    .nav-cta {
-      background: var(--teal) !important;
-      color: #fff !important;
-      font-weight: 700 !important;
-    }
-    .nav-cta:hover { background: var(--teal-l) !important; }
-
-    /* PAGE HERO */
-    .page-hero {
-      background: linear-gradient(150deg, var(--navy) 0%, #1e4d6b 60%, #1b5f6d 100%);
-      padding: 56px 24px 48px;
-      text-align: center;
-      color: #fff;
-    }
-    .page-tag {
-      display: inline-block;
-      background: rgba(42,157,143,.25);
-      border: 1px solid rgba(61,189,174,.5);
-      color: var(--teal-l);
-      padding: 4px 14px;
-      border-radius: 20px;
-      font-size: .75rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-    .page-hero h1 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      font-weight: 800;
-      line-height: 1.2;
-      max-width: 700px;
-      margin: 0 auto 14px;
-    }
-    .page-hero p {
-      opacity: .8;
-      max-width: 560px;
-      margin: 0 auto;
-      font-size: 1rem;
-    }
-
-    /* CONTENT */
-    .content-wrap {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 56px 24px 80px;
-    }
-    .content-wrap h2 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin: 40px 0 12px;
-    }
-    .content-wrap h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin: 28px 0 8px;
-    }
-    .content-wrap p {
-      margin-bottom: 16px;
-      font-size: .98rem;
-      color: var(--text);
-    }
-    .content-wrap ul {
-      margin: 0 0 18px 22px;
-    }
-    .content-wrap ul li {
-      margin-bottom: 8px;
-      font-size: .98rem;
-    }
-    .content-wrap a {
-      color: var(--teal);
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .content-wrap a:hover { text-decoration: underline; }
-    .last-updated {
-      display: inline-block;
-      background: var(--light);
-      color: var(--grey);
-      font-size: .8rem;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 32px;
-    }
-    .highlight-box {
-      background: var(--light);
-      border-left: 4px solid var(--teal);
-      border-radius: 0 8px 8px 0;
-      padding: 20px 24px;
-      margin: 28px 0;
-    }
-    .highlight-box p { margin: 0; font-size: .95rem; }
-
-    /* FOOTER */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,.6);
-      padding: 36px 24px;
-      text-align: center;
-    }
-    footer a { color: var(--teal-l); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    footer p { font-size: .88rem; margin-bottom: 8px; }
-
-    @media (max-width: 640px) {
-      .nav-links { gap: 2px; }
-      .nav-links a { padding: 6px 8px; font-size: .82rem; }
-    }
-  </style>
-<script defer="" src="/assets/organic-analytics.js"></script></head>
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/>
+<link rel="manifest" href="/site.webmanifest"/>
+</head>
 <body>
-<nav>
-<div class="nav-inner">
-<a class="logo" href="/">
-<div class="logo-mark">SN</div>
-<span class="logo-name">SEND <span>Navigate</span></span>
-</a>
-<div class="nav-links">
-<a href="/">For Schools</a>
-<a href="/ehcp-advisory">For Families</a>
-<a href="/resources">Resources</a>
-<a class="nav-cta" href="/free-consultation">Free Call</a>
-</div>
-</div>
-</nav>
-<div class="page-hero">
-<div class="page-tag">Legal</div>
-<h1>Privacy Policy</h1>
-<p>How SEND Navigate collects, uses, and protects your personal data.</p>
-</div>
-<div class="content-wrap">
-<span class="last-updated">Last updated: 2 November 2026</span>
-<div class="highlight-box">
-<p>SEND Navigate is committed to protecting your privacy. This policy explains what personal data we collect, why we collect it, how we use it, and your rights under UK GDPR and the Data Protection Act 2018.</p>
-</div>
-<h2>1. Who We Are</h2>
-<p>SEND Navigate is operated by Stephen Mallett, trading as SEND Navigate. Our website is <a href="https://sendnavigate.org">sendnavigate.org</a> and our contact email is <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a>.</p>
-<p>For the purposes of UK data protection law, Stephen Mallett (SEND Navigate) is the data controller responsible for your personal data.</p>
-<h2>2. What Data We Collect</h2>
-<p>We collect personal data in the following ways:</p>
-<h3>2.1 Data You Provide Directly</h3>
-<ul>
-<li><strong>Email address and name</strong> — when you sign up to receive our free parent guide, workbook, or email newsletter via our MailerLite signup forms.</li>
-<li><strong>Name, email address, and details about your child's SEND situation</strong> — when you submit an enquiry form on our advisory services page or contact us directly by email.</li>
-<li><strong>Booking information</strong> — when you book a free 30-minute call via our Google Calendar booking link, Google collects your name and email address in accordance with <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's Privacy Policy</a>.</li>
-</ul>
-<h3>2.2 Data Collected Automatically</h3>
-<ul>
-<li><strong>Optional analytics data</strong> — with your permission, Google Analytics (GA4) measures pages visited and selected resource, retailer and consultation-link clicks. Google may process technical information such as device information and cookie identifiers. Analytics is not the same as anonymous data.</li>
-<li><strong>Cookies and preference storage</strong> — analytics loads only after you select Accept analytics. We store your choice in your browser's local storage. You can reject analytics or change your choice using Analytics preferences in the footer.</li>
-</ul>
-<h2>3. How We Use Your Data</h2>
-<p>We use the personal data we collect for the following purposes:</p>
-<ul>
-<li>To send you the free parent guide, workbook, or resources you requested.</li>
-<li>To send you a short follow-up email series related to SEND Navigate resources and services (where you have opted in).</li>
-<li>To respond to enquiries about our advisory services.</li>
-<li>To arrange and conduct consultations and advisory sessions.</li>
-<li>To improve our website and understand which content is most useful to our visitors.</li>
-</ul>
-<p>We will never sell your personal data to third parties. We will never share your data with third parties for their own marketing purposes.</p>
-<h2>4. Legal Basis for Processing</h2>
-<p>Under UK GDPR, we rely on the following legal bases for processing your personal data:</p>
-<ul>
-<li><strong>Consent</strong> — when you sign up for our email list, you are giving us your consent to contact you. You can withdraw this consent at any time by clicking the unsubscribe link in any email we send you.</li>
-<li><strong>Analytics consent</strong> — optional Google Analytics is loaded only after you accept it. Rejecting it does not prevent access to resources, payments or appointment booking.</li>
-<li><strong>Contract performance</strong> — when you engage us for advisory services, we process your data as necessary to deliver those services.</li>
-</ul>
-<h2>5. Data Retention</h2>
-<ul>
-<li><strong>Email subscribers</strong> — your data is retained in our MailerLite account for as long as you remain subscribed. You may unsubscribe at any time.</li>
-<li><strong>Advisory clients</strong> — documents and correspondence relating to your case are retained for the duration of the engagement and deleted at the end of the engagement, unless you request otherwise or we are required by law to retain them.</li>
-<li><strong>Analytics data</strong> — retention depends on the analytics account configuration. Contact Stephen for the current setting or for a data-protection enquiry.</li>
-</ul>
-<h2>6. Third-Party Services</h2>
-<p>We use the following third-party services to operate SEND Navigate:</p>
-<ul>
-<li><strong>MailerLite</strong> — email marketing and list management. Your email address and name are stored on MailerLite's servers. See <a href="https://www.mailerlite.com/legal/privacy-policy" rel="noopener" target="_blank">MailerLite's Privacy Policy</a>.</li>
-<li><strong>Google Analytics (GA4)</strong> — website analytics. See <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's Privacy Policy</a>.</li>
-<li><strong>Netlify</strong> — website hosting. Netlify may process server logs including IP addresses. See <a href="https://www.netlify.com/privacy/" rel="noopener" target="_blank">Netlify's Privacy Policy</a>.</li>
-<li><strong>Google Calendar</strong> — appointment booking. See <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's Privacy Policy</a>.</li>
-<li><strong>Stripe</strong> — payment processing for school licences. Stripe processes payment data in accordance with PCI DSS standards. See <a href="https://stripe.com/gb/privacy" rel="noopener" target="_blank">Stripe's Privacy Policy</a>.</li>
-</ul>
-<h2>7. Your Rights Under UK GDPR</h2>
-<p>You have the following rights regarding your personal data:</p>
-<ul>
-<li><strong>Right of access</strong> — you can request a copy of the personal data we hold about you.</li>
-<li><strong>Right to rectification</strong> — you can ask us to correct inaccurate data.</li>
-<li><strong>Right to erasure</strong> — you can ask us to delete your personal data, subject to certain legal exceptions.</li>
-<li><strong>Right to restrict processing</strong> — you can ask us to limit how we use your data.</li>
-<li><strong>Right to data portability</strong> — you can ask for your data in a portable format.</li>
-<li><strong>Right to object</strong> — you can object to processing based on legitimate interests.</li>
-<li><strong>Right to withdraw consent</strong> — where processing is based on consent, you can withdraw it at any time.</li>
-</ul>
-<p>To exercise any of these rights, please contact us at <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a>. We will respond within 30 days.</p>
-<h2>8. Complaints</h2>
-<p>If you are unhappy with how we have handled your personal data, you have the right to lodge a complaint with the Information Commissioner's Office (ICO), the UK's data protection regulator. You can contact the ICO at <a href="https://ico.org.uk" rel="noopener" target="_blank">ico.org.uk</a> or by calling 0303 123 1113.</p>
-<h2 id="analytics-choice">9. Cookies and your analytics choice</h2>
-<p>We do not load the website's Google Analytics tag until you accept analytics. Reject analytics and Accept analytics are available together. You can revisit Analytics preferences in the footer to withdraw your choice; future measurement stops and the site attempts to remove its accessible analytics cookies. Withdrawing consent does not erase data already collected.</p>
-<p>Our custom measurement does not send enquiry text, children's records, names, email addresses or URL query strings. A click on a calendar link is counted as a link click, not a completed booking; an Amazon click is not counted as a book sale. We do not load Google Ads tags on the website.</p>
-<p>External services such as Google Calendar, Amazon, Stripe and embedded signup forms apply their own privacy and cookie controls. Choosing not to accept this site's analytics does not prevent you using the website. You can also control or delete cookies and local storage in your browser settings.</p>
-<h2>10. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this page periodically.</p>
-<h2>11. Contact Us</h2>
-<p>If you have any questions about this Privacy Policy or how we handle your data, please contact:</p>
-<p><strong>Stephen Mallett</strong><br/>
-  SEND Navigate<br/>
-  Email: <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a><br/>
-  Website: <a href="https://sendnavigate.org">sendnavigate.org</a></p>
-</div>
-<footer>
-<p><a href="/">SEND Navigate</a>  ·  <a href="/ehcp-advisory">For Families</a>  ·  <a href="/resources">Resources</a>  ·  <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></p>
-<p style="margin-top:12px;">© 2026 SEND Navigate. All rights reserved.</p>
-</footer>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><div class="nav"><a class="brand" href="/">SEND Navigate</a><nav aria-label="Main navigation"><a href="/ehcp-advisory">For families</a><a href="/for-schools">For schools</a><a href="/resources">Free resources</a><a href="/ask-an-expert">Ask an Expert</a></nav></div></header>
+  <main id="main">
+    <section class="hero"><div class="container expert-intro"><p class="eyebrow">Privacy and personal information</p><h1>Privacy Policy</h1><p class="lede">How SEND Navigate collects, uses and protects your personal data.</p><p class="note">Last updated: 3 November 2026</p></div></section>
+    <div class="article">
+      <p>This policy explains what we collect, why we use it and your rights under UK GDPR and the Data Protection Act 2018.</p>
+      <nav class="privacy-contents" aria-label="Privacy policy sections"><strong>Find the information you need</strong><ul><li><a href="#controller">Who is responsible</a></li><li><a href="#general-enquiries">Ask an Expert and general enquiries</a></li><li><a href="#other-purposes">Other services and lawful bases</a></li><li><a href="#retention">How long information is kept</a></li><li><a href="#providers">Providers and email privacy</a></li><li><a href="#rights">Your rights</a></li><li><a href="#analytics-choice">Cookies and analytics</a></li></ul></nav>
+      <section id="controller" aria-labelledby="controller-title">
+        <h2 id="controller-title">1. Who we are</h2>
+        <p>SEND Navigate is operated by <strong>Stephen Mallett, trading as SEND Navigate</strong>. Stephen is the data controller responsible for your personal data. Our website is <a href="https://sendnavigate.org">sendnavigate.org</a> and our contact email is <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a>.</p>
+      </section>
+      <section id="general-enquiries" aria-labelledby="enquiry-title">
+        <h2 id="enquiry-title">2. Ask an Expert and ordinary general enquiries</h2>
+        <p>The <a href="/ask-an-expert">Ask an Expert pilot</a> is for one general SEN question about education support in England. We collect your own name, email address and question, plus an optional local authority name and question category. We also receive the required privacy acknowledgement and confirmation that the question meets the general-enquiry boundary. Form handling may involve technical records needed for delivery, security and spam prevention.</p>
+        <p>We use this information to assess the question’s scope, manage available capacity and contact you privately about the enquiry, including a general reply if Stephen can take it on. We rely on <strong>legitimate interests (Article 6(1)(f))</strong> for this ordinary adult enquiry: our interest is in receiving, managing and responding to the enquiry you chose to make. We limit the information to what that purpose needs and have assessed the balance with your privacy interests. You can object by contacting Stephen.</p>
+        <p>The required privacy checkbox acknowledges this information; it is <strong>not</strong> marketing consent or explicit consent to process health records. Submitting a question does not add you to a newsletter or marketing list. Questions and replies are not automatically published, including as an “anonymised” public Q&amp;A.</p>
+        <div class="callout"><h3>Please do not send child or health records</h3><p>Keep questions general. Do not include a child’s or another person’s identifiers, school, date of birth, address, reference numbers, names of professionals, medical or diagnostic details, health information, confidential case facts, documents or links to case folders. Ask an Expert has no attachment facility.</p></div>
+        <p>If sensitive information is volunteered despite these instructions, we restrict access, avoid requesting or copying more, and assess whether the question can be handled without using it. This enquiry route is not permission to process special-category information. Where individual casework or documents are necessary, we pause the general-enquiry route and agree a separate handling process. Before asking for that information, we must establish the relevant Article 6 lawful basis and an additional Article 9 condition where required, together with appropriate privacy, access and retention arrangements.</p>
+        <p>A form-service receipt does not confirm human review, an expert answer or an appointment. There is no fixed response time. Administrative acknowledgements are separate from expert replies and do not contain a marketing invitation.</p>
+      </section>
+      <section id="other-purposes" aria-labelledby="purposes-title">
+        <h2 id="purposes-title">3. Other information we collect and use</h2>
+        <ul>
+          <li><strong>Requested guides, workbooks and resources:</strong> name and email address supplied through existing MailerLite signup forms are used to provide the resources requested.</li>
+          <li><strong>Optional email updates:</strong> where you separately opt in, we use your details for the follow-up email series or updates described by the signup. This relies on consent, which you can withdraw using the unsubscribe link. Ask an Expert is not such a signup.</li>
+          <li><strong>School sample requests:</strong> contact and school details supplied through the school sample form are used to provide the requested sample and handle the related enquiry. Ordinary request handling relies on legitimate interests; any marketing must have its own applicable permission.</li>
+          <li><strong>Consultation bookings:</strong> Google Calendar collects booking information such as your name and email address to arrange the appointment, under <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google’s Privacy Policy</a>. We use necessary booking details to arrange and conduct the requested discussion.</li>
+          <li><strong>Advisory enquiries and engagements:</strong> we use necessary contact details and agreed service information to respond, arrange consultations and deliver separately agreed advisory work. Contract performance, including necessary steps you request before an agreement, is the Article 6 basis where applicable. This does not by itself provide an Article 9 condition for health or disability information. Do not send medical records or a case bundle with an initial enquiry; any necessary sensitive-data handling must be confirmed separately before collection.</li>
+          <li><strong>School licence payments:</strong> Stripe processes the payment information needed for the purchase. We use necessary transaction information to administer the licence agreement; legal obligations may require some transaction records to be retained.</li>
+          <li><strong>Optional analytics:</strong> only with your consent, Google Analytics (GA4) measures page visits and selected resource, retailer and consultation-link clicks to help us understand website use. Technical information may include device details and cookie identifiers; analytics is not the same as anonymous data.</li>
+        </ul>
+        <p>We do not sell your personal data or share it for other organisations’ own marketing purposes. An enquiry does not commit you to paid work. Scope and fees for any paid service are agreed separately.</p>
+      </section>
+      <section id="retention" aria-labelledby="retention-title">
+        <h2 id="retention-title">4. How long we keep information</h2>
+        <ul>
+          <li><strong>Unconverted ordinary general enquiries, including Ask an Expert:</strong> our policy is to review them after 90 days and delete information when the enquiry purpose has ended. A live enquiry can be retained while it is still needed; necessary complaint or legal records may be retained for that separate purpose. This is a staff-managed review and deletion policy, not a promise that the website automatically deletes every record on day 90. Review must cover form storage, email copies and any working records.</li>
+          <li><strong>Email subscribers:</strong> details are retained in our MailerLite account while subscribed. You may unsubscribe at any time; limited suppression information may be needed to respect an opt-out.</li>
+          <li><strong>Advisory engagements:</strong> the retention decision is separate from the general-enquiry pilot and depends on the agreed service, ongoing purpose and any necessary complaint or legal retention. We review documents and correspondence when the engagement ends and delete information that is no longer needed. This is not an automatic erasure promise or an instruction to delete existing case records indiscriminately.</li>
+          <li><strong>Payment and other required records:</strong> necessary records may be retained to fulfil applicable legal obligations or address a complaint or legal claim.</li>
+          <li><strong>Analytics:</strong> retention depends on the analytics account configuration. Contact Stephen for the current setting.</li>
+        </ul>
+        <p>Stephen is responsible for carrying out these reviews and coordinating deletion across the services used. Contact him if you would like information about a record or its retention.</p>
+      </section>
+      <section id="providers" aria-labelledby="providers-title">
+        <h2 id="providers-title">5. Providers and private email</h2>
+        <p>We use service providers to run the website and deliver the services you request. They may process information on their systems, and some processing may take place outside the UK. Appropriate provider terms and transfer safeguards must be in place where required; contact Stephen for information about the arrangements relevant to your enquiry.</p>
+        <ul>
+          <li><strong>Netlify:</strong> website hosting and Netlify Forms submission storage. Netlify may process technical logs, including IP addresses, and stores information submitted through its forms. See <a href="https://www.netlify.com/privacy/" rel="noopener" target="_blank">Netlify’s Privacy Policy</a>.</li>
+          <li><strong>Resend:</strong> transactional email delivery for administrative form acknowledgements where enabled. A successful form response is separate from a successful mail send, and neither proves delivery to your inbox. See <a href="https://resend.com/legal/privacy-policy" rel="noopener" target="_blank">Resend’s Privacy Policy</a>.</li>
+          <li><strong>Email providers:</strong> the providers used for SEND Navigate’s correspondence and for your email address process messages in transmission and storage. Replies are sent privately to the address you supplied; email is not anonymous or end-to-end encrypted. Please do not email health records or detailed child information through the general-enquiry route.</li>
+          <li><strong>MailerLite:</strong> requested-resource delivery, email marketing and list management through existing signup forms. See <a href="https://www.mailerlite.com/legal/privacy-policy" rel="noopener" target="_blank">MailerLite’s Privacy Policy</a>.</li>
+          <li><strong>Google Calendar and Google Analytics:</strong> appointment booking and consent-based website analytics. See <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google’s Privacy Policy</a>.</li>
+          <li><strong>Stripe:</strong> school licence payment processing under its own payment-security arrangements. See <a href="https://stripe.com/gb/privacy" rel="noopener" target="_blank">Stripe’s Privacy Policy</a>.</li>
+        </ul>
+        <p>Access to enquiries should be limited to those who need it for the requested purpose. We do not automatically send Ask an Expert questions to an AI service to generate answers or copy their contents into website analytics.</p>
+      </section>
+      <section id="rights" aria-labelledby="rights-title">
+        <h2 id="rights-title">6. Your rights</h2>
+        <p>Depending on the circumstances and lawful basis, you can request access to your data, correction, erasure, restriction or portability. You can object to processing based on legitimate interests, including ordinary general-enquiry handling. Where we rely on consent, you can withdraw it; this does not affect earlier lawful processing.</p>
+        <p>Contact <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a> to exercise your rights. We normally respond within one month, subject to the identification checks and extensions permitted by data protection law. Some rights have exceptions; we will explain any that apply.</p>
+        <h2>7. Complaints</h2>
+        <p>Please contact Stephen if you are concerned about how we handle your information. You also have the right to complain to the Information Commissioner’s Office (ICO) at <a href="https://ico.org.uk" rel="noopener" target="_blank">ico.org.uk</a> or on 0303 123 1113.</p>
+      </section>
+      <section id="analytics-choice" aria-labelledby="analytics-title">
+        <h2 id="analytics-title">8. Cookies and your analytics choice</h2>
+        <p>We do not load the website’s Google Analytics tag until you accept analytics. Reject analytics and Accept analytics are available together. Your choice is stored in your browser’s local storage. You can revisit Analytics preferences in the footer to withdraw your choice; future measurement stops and the site attempts to remove accessible analytics cookies. Withdrawing consent does not erase information already collected.</p>
+        <p>Our custom measurement does not send enquiry text, children’s records, names, email addresses or URL query strings. A calendar-link click is not a completed booking; an Amazon click is not a book sale. Visiting a confirmation page is not proof of validated intake, human review, email delivery or payment. We do not load Google Ads tags on the website.</p>
+        <p>External services such as Google Calendar, Amazon, Stripe and embedded signup forms apply their own privacy and cookie controls. Rejecting this site’s optional analytics does not prevent access to resources, form submission, payments or booking. You can also control or delete cookies and local storage in your browser settings.</p>
+      </section>
+      <section aria-labelledby="changes-title"><h2 id="changes-title">9. Changes to this policy</h2><p>We may update this policy as our services or processing arrangements change. We update the date above when we do so.</p></section>
+      <section aria-labelledby="contact-title"><h2 id="contact-title">10. Contact us</h2><p><strong>Stephen Mallett</strong><br/>Trading as SEND Navigate<br/>Email: <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a><br/>Website: <a href="https://sendnavigate.org">sendnavigate.org</a></p></section>
+    </div>
+  </main>
+  <footer><div class="container"><p>© 2026 SEND Navigate · <a href="/">Home</a> · <a href="/ehcp-advisory">For families</a> · <a href="/for-schools">For schools</a> · <a href="/resources">Resources</a> · <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></p></div></footer>
 </body>
 </html>

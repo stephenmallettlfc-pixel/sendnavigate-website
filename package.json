@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "SEND Navigate website",
   "type": "module",
+  "engines": {
+    "node": ">=22.12.0 <23"
+  },
+  "scripts": {
+    "test:backend": "node --test netlify/functions/_tests/*.test.mjs"
+  },
   "dependencies": {
-    "@netlify/functions": "*"
+    "@netlify/functions": "6.0.3"
   }
 }

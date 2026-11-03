@@ -92,7 +92,12 @@
       if (['calendar.app.google', 'calendar.google.com'].includes(url.hostname)) event('consultation_link_click', { link_destination: 'calendar' });
       else if (url.hostname.includes('amazon.') || url.hostname === 'amzn.to') event('book_retailer_click', { link_destination: 'amazon' });
       else if (url.origin === location.origin && url.pathname === '/free-consultation') event('consultation_page_link_click');
+      else if (url.origin === location.origin && url.pathname === '/ask-an-expert') event('expert_page_link_click');
       else if (url.origin === location.origin && url.pathname.endsWith('.pdf')) event('resource_link_click', { resource_path: url.pathname });
+    });
+    window.addEventListener('sn:submission-response', response => {
+      if (response.detail?.formType !== 'ask-expert') return;
+      event('expert_question_submit_response', { form_type: 'ask-expert', result_stage: 'http_response_only' });
     });
   });
 })();

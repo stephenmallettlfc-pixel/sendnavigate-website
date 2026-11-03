@@ -1,6 +1,6 @@
 [build]
-  command = "node tools/seo-build.mjs"
-  publish = "."
+  command = "node tools/seo-build.mjs && node tools/build-static.mjs"
+  publish = "dist"
 
 [functions]
   directory = "netlify/functions"

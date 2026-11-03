@@ -1,0 +1,51 @@
+/* Ask an Expert: extends the existing parent-help.css without changing it. */
+[hidden] { display: none !important; }
+html { scroll-padding-top: 1rem; }
+.expert-intro { max-width: 790px; }
+.expert-intro .lede { font-size: clamp(1.1rem, 2vw, 1.3rem); }
+.pilot-note { margin-top: 1.2rem; max-width: 720px; font-size: .95rem; }
+.question-examples { padding-left: 1.3rem; }
+.question-examples li { margin-bottom: 1rem; }
+.form-panel { padding: 1.6rem; border: 1px solid var(--border); border-top: 4px solid var(--sage); border-radius: 8px; background: #fff; margin: 2rem 0; }
+.form-panel h2 { margin-top: 0; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.field { min-width: 0; margin-bottom: 1.3rem; }
+.field > label, .field legend { display: block; font-weight: 750; margin-bottom: .35rem; }
+.field input:not([type="checkbox"]), .field select, .field textarea { width: 100%; min-width: 0; min-height: 48px; padding: .75rem .85rem; font: inherit; line-height: 1.5; color: var(--ink); background: var(--cream); border: 1px solid #8c8176; border-radius: 5px; }
+.field textarea { resize: vertical; min-height: 185px; }
+.field input:focus-visible, .field textarea:focus-visible, .field select:focus-visible, button:focus-visible, [tabindex="-1"]:focus-visible { outline: 3px solid #a5621e; outline-offset: 3px; }
+.field [aria-invalid="true"] { border-color: #9b3027; border-width: 2px; }
+.field-hint { display: block; font-size: .9rem; color: #5c493b; margin: .35rem 0 0; }
+.field-error { display: block; color: #9b3027; font-size: .92rem; font-weight: 650; margin-top: .35rem; }
+.field-counter { display: block; text-align: right; font-size: .88rem; color: #5c493b; margin-top: .35rem; }
+.checkbox-label { display: flex !important; gap: .7rem; align-items: flex-start; font-weight: 500 !important; cursor: pointer; }
+.checkbox-label input { flex: 0 0 auto; width: 1.25rem; height: 1.25rem; margin: .3rem 0 0; accent-color: var(--sage); }
+.form-panel .btn { border: 0; font: inherit; font-weight: 750; cursor: pointer; }
+.form-panel .btn:disabled { cursor: wait; opacity: .75; }
+.form-status { margin: 1rem 0 0; font-weight: 650; }
+.form-status:empty { display: none; }
+.form-status[data-state="error"] { color: #9b3027; }
+.error-summary { border: 2px solid #9b3027; border-radius: 5px; padding: 1rem 1.2rem; margin: 1rem 0 1.5rem; }
+.error-summary h3 { margin: 0 0 .5rem; }
+.error-summary ul { margin: 0; padding-left: 1.3rem; }
+.error-summary a { color: #9b3027; }
+.service-list { margin: 1.2rem 0; }
+.service-list dt { font-weight: 750; margin-top: 1.2rem; }
+.service-list dd { margin: .3rem 0 1rem; }
+.receipt-page { min-height: 100vh; display: flex; flex-direction: column; }
+.receipt-page main { flex: 1; }
+.receipt-card { background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--sage); border-radius: 8px; padding: 2rem; margin: .5rem 0 1.5rem; }
+.receipt-card h1 { font-size: clamp(1.9rem, 4vw, 2.7rem); }
+.receipt-card h2 { font-size: 1.5rem; }
+.receipt-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.4rem; }
+.download-list { padding-left: 1.3rem; }
+.download-list a { font-weight: 650; }
+.privacy-contents { padding: 1.3rem 1.5rem; background: var(--paper); border-radius: 8px; }
+.privacy-contents ul { margin: .6rem 0 0; padding-left: 1.3rem; }
+.article a, footer a { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .form-panel, .receipt-card { padding: 1.2rem; }
+  .form-panel .btn { width: 100%; }
+  .receipt-actions { align-items: stretch; flex-direction: column; }
+}

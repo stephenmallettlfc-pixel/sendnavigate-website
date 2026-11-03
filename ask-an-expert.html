@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ask an Expert: SEN Questions | SEND Navigate</title>
+  <meta name="description" content="Ask Stephen one general SEN question about support in England. A free private expert reply, subject to scope and capacity. Paid support is separate."/>
+  <link rel="canonical" href="https://sendnavigate.org/ask-an-expert"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Ask an Expert: SEN Questions | SEND Navigate"/>
+  <meta property="og:description" content="One general SEN question. A private answer from Stephen if scope and capacity allow. No fixed response time or obligation to buy."/>
+  <meta property="og:url" content="https://sendnavigate.org/ask-an-expert"/>
+  <link rel="stylesheet" href="/assets/parent-help.css"/>
+  <link rel="stylesheet" href="/assets/ask-expert.css"/>
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<script defer src="/assets/organic-analytics.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><div class="nav"><a class="brand" href="/">SEND Navigate</a><nav aria-label="Main navigation"><a href="/ehcp-advisory#services">Services and fees</a><a href="/books">Books</a><a href="/resources">Free resources</a><a href="/free-consultation">Free consultation</a><a href="/ask-an-expert">Ask an Expert</a></nav></div></header>
+  <main id="main">
+    <section class="hero"><div class="container expert-intro">
+      <p class="eyebrow">Private general enquiries · Families in England</p>
+      <h1>Ask an Expert</h1>
+      <p class="lede"><strong>One general SEN question. A clearer next step.</strong></p>
+      <p>Not sure how a part of SEN support or the EHCP process works in England? Ask Stephen a general question using the private form below.</p>
+      <p>If the question is within scope and he has capacity, Stephen will write a personal reply: a plain-English explanation, practical next steps and links to relevant guidance. There are no automatic chatbot answers.</p>
+      <a class="btn" href="#question-form">Ask your general question</a>
+      <p class="pilot-note"><strong>A free, limited pilot.</strong> Not every question will receive an expert answer, and there is no fixed response time. Intake may be paused when capacity is reached. This is not a full case audit or an ongoing advice service.</p>
+    </div></section>
+    <div class="article">
+      <section aria-labelledby="examples-title">
+        <h2 id="examples-title">What can I ask?</h2>
+        <p>Ask about understanding a process, preparing for a conversation or finding useful guidance. For example:</p>
+        <ul class="question-examples">
+          <li><strong>The EHCP process:</strong> “Where can parents find guidance about a refusal to carry out an EHC needs assessment?”</li>
+          <li><strong>A school meeting:</strong> “What general questions could a parent prepare for a SEN support review meeting?”</li>
+          <li><strong>School distress:</strong> “What can parents ask school about understanding distress around attendance and discussing support?”</li>
+        </ul>
+        <p>These are illustrative questions, not enquiries already answered. Ask about the process, rather than whether a child’s evidence proves a case or what a particular school must do in your circumstances.</p>
+        <p>You can also read our <a href="/resources">free resources</a>, <a href="/school-distress-ebsa-help">school distress and EBSA guidance</a> and <a href="/school-not-meeting-sen-needs">school-support guidance</a> now.</p>
+      </section>
+      <section aria-labelledby="scope-title">
+        <h2 id="scope-title">What a free answer covers</h2>
+        <p>A general answer can help you understand an issue, identify questions to ask and find relevant guidance. It cannot replace advice based on a review of your individual circumstances.</p>
+        <p>This pilot does <strong>not</strong> include EHCP, report or evidence reviews; a full case audit; drafted letters or appeal grounds; legal merits assessments; diagnosis or treatment; deadline management; or unlimited follow-up. It does not promise a detailed report or any particular outcome.</p>
+        <p>If individual work is needed, that is a separate engagement. Free independent help is available through <a href="https://www.ipsea.org.uk/">IPSEA</a> and your local SENDIASS service. You do not need to buy a service or a book to ask a question.</p>
+      </section>
+      <aside class="callout" aria-labelledby="urgent-title">
+        <h2 id="urgent-title">Do not wait here for urgent help</h2>
+        <p>This form is not an emergency or safeguarding channel. If someone is in immediate danger, contact the emergency services.</p>
+        <p>If a decision, meeting or appeal deadline is approaching, seek timely individual advice. Sending a question does not pause a deadline or appoint Stephen to manage your case. Check the <a href="https://www.gov.uk/appeal-ehc-plan-decision/appeal-as-a-parent">official appeal instructions</a> rather than waiting for a reply.</p>
+      </aside>
+      <section class="form-panel" id="question-form" aria-labelledby="form-title">
+        <h2 id="form-title">Your general question</h2>
+        <p id="form-boundary"><strong>Keep the question general.</strong> Do not include a child’s name, school, date of birth, address, reference numbers, names of professionals, medical or diagnostic details, health information or confidential case facts. Do not paste reports, an EHCP or correspondence, or link to a shared case folder. No attachments are accepted.</p>
+        <p class="note" id="form-required">Required fields are marked “required”. Your first name is enough; please use your own details, not a child’s.</p>
+        <form name="ask-expert" id="ask-expert-form" data-netlify="true" method="POST" action="/expert-question-received" netlify-honeypot="bot-field" data-netlify-honeypot="bot-field" aria-describedby="form-boundary form-required enquiry-privacy">
+          <input type="hidden" name="form-name" value="ask-expert"/>
+          <p hidden><label>Leave this field empty: <input name="bot-field" type="text" tabindex="-1" autocomplete="off"/></label></p>
+          <div class="error-summary" id="form-errors" tabindex="-1" role="alert" hidden><h3>Please check your question</h3><ul id="form-error-list"></ul></div>
+          <div class="form-row">
+            <div class="field">
+              <label for="expert-name">Your name (required)</label>
+              <input id="expert-name" name="name" type="text" autocomplete="given-name" required maxlength="80" aria-describedby="name-hint name-error"/>
+              <span id="name-hint" class="field-hint">Your first name is enough. Do not use a child’s name.</span>
+              <span id="name-error" class="field-error" hidden></span>
+            </div>
+            <div class="field">
+              <label for="expert-email">Email address (required)</label>
+              <input id="expert-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" aria-describedby="email-hint email-error"/>
+              <span id="email-hint" class="field-hint">We use this address to contact you privately about this enquiry.</span>
+              <span id="email-error" class="field-error" hidden></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="expert-la">Local authority (optional)</label>
+              <input id="expert-la" name="local-authority" type="text" maxlength="100" aria-describedby="la-hint la-error"/>
+              <span id="la-hint" class="field-hint">Authority name only, if useful for general context. No school or address.</span>
+              <span id="la-error" class="field-error" hidden></span>
+            </div>
+            <div class="field">
+              <label for="expert-category">Question category (optional)</label>
+              <select id="expert-category" name="subject-category" aria-describedby="category-error">
+                <option value="">Choose a category, if helpful</option>
+                <option value="sen-support">Understanding SEN support</option>
+                <option value="ehcp-process">Understanding the EHCP process</option>
+                <option value="school-la-conversations">Talking with school or the local authority</option>
+                <option value="free-help">Finding free help</option>
+                <option value="other">Other general question</option>
+              </select>
+              <span id="category-error" class="field-error" hidden></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="expert-question">One general question (required)</label>
+            <textarea id="expert-question" name="question" required maxlength="1500" rows="7" aria-describedby="question-hint question-count question-error"></textarea>
+            <span id="question-hint" class="field-hint">Maximum 1,500 characters. Ask one question about a process, without child identifiers, health information or documents.</span>
+            <span id="question-count" class="field-counter" aria-live="polite" aria-atomic="true">0 of 1,500 characters</span>
+            <span id="question-error" class="field-error" hidden></span>
+          </div>
+          <div class="field">
+            <label class="checkbox-label" for="expert-general"><input id="expert-general" name="general-question-confirmation" type="checkbox" value="confirmed" required aria-describedby="general-error"/><span>I confirm that this is one general question, without child identifiers, health information, documents or links to case files. I understand the service’s scope and capacity limits. (Required)</span></label>
+            <span id="general-error" class="field-error" hidden></span>
+          </div>
+          <div class="field">
+            <label class="checkbox-label" for="expert-privacy"><input id="expert-privacy" name="privacy-acknowledgement" type="checkbox" value="yes" required aria-describedby="enquiry-privacy privacy-error"/><span>I have read the <a href="/privacy-policy#general-enquiries">privacy information</a> and understand how my enquiry will be used to assess and respond to my question. (Required)</span></label>
+            <span id="privacy-error" class="field-error" hidden></span>
+          </div>
+          <p class="note" id="enquiry-privacy">Stephen Mallett, trading as SEND Navigate, uses your contact details and general question for this enquiry under legitimate interests. This acknowledgement is not consent to marketing or permission to process health records. You will not be added to a marketing list, and your question will not be published. Submissions are stored through Netlify Forms; correspondence uses email providers. Email is not end-to-end encrypted. <a href="/privacy-policy#general-enquiries">Read the handling and retention information</a>.</p>
+          <button class="btn" id="expert-submit" type="submit">Send my general question</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+          <noscript><p class="note">This form works without JavaScript. After submitting, read the next page carefully: a receipt does not promise an expert answer or confirm an appointment.</p></noscript>
+        </form>
+      </section>
+      <section aria-labelledby="individual-title">
+        <h2 id="individual-title">Need individual support instead?</h2>
+        <p>The consultation and paid services below are separate from Ask an Expert. Asking a question does not book a call or commit you to paid work.</p>
+        <dl class="service-list">
+          <dt><a href="/free-consultation">Free 30-minute consultation</a></dt>
+          <dd>A conversation with a short written next-step summary, normally one to two pages, based on the discussion. Not a document review or full case audit; delivery timing is agreed during the call.</dd>
+          <dt>Initial Consultation · £175</dt>
+          <dd>Pre-reading of one recent document, a 60-minute call and written next steps, within up to 3.5 hours of total professional time.</dd>
+          <dt>EHCP Review &amp; Strengthening · £550</dt>
+          <dd>A separately scoped, section-by-section EHCP review, within up to 11 hours of professional time.</dd>
+        </dl>
+        <p><a href="/ehcp-advisory#services">See services and fees</a>. Paid work begins only after the scope, deliverables, time allowance and fee are agreed. There is no obligation to proceed.</p>
+      </section>
+      <section aria-labelledby="about-title">
+        <h2 id="about-title">About Stephen</h2>
+        <p>Stephen Mallett has 25 years’ experience in education, including work as a teacher, SENCo and Headteacher. He is also the parent of two children with SEN. <a href="/#about">Read more about Stephen’s background</a>.</p>
+        <p>His books, <em>The Parent’s Shield</em> and <em>Not Refusing. Unable.</em>, offer another way to explore his approach. <a href="/books">Browse the books</a> if useful; buying one is not required to ask a question or access support.</p>
+      </section>
+    </div>
+  </main>
+  <footer><div class="container"><p>© 2026 SEND Navigate · Independent SEN consultancy for parents in England.</p><p>Stephen Mallett is not a solicitor. Consultancy is not clinical treatment or a regulated legal service. No particular outcome is guaranteed.</p><p><a href="/">Home</a> · <a href="/ehcp-advisory">Services</a> · <a href="/privacy-policy">Privacy</a> · <a href="mailto:stephen@sendnavigate.com">stephen@sendnavigate.com</a></p></div></footer>
+  <script>
+    (() => {
+      'use strict';
+      const form = document.getElementById('ask-expert-form');
+      // Leave native POST and native validation available if enhancement is unsupported.
+      if (!form || !window.fetch || !window.FormData || !window.URLSearchParams) return;
+      const question = document.getElementById('expert-question');
+      const counter = document.getElementById('question-count');
+      const status = document.getElementById('form-status');
+      const summary = document.getElementById('form-errors');
+      const errorList = document.getElementById('form-error-list');
+      const button = document.getElementById('expert-submit');
+      const allowedCategories = new Set(['', 'sen-support', 'ehcp-process', 'school-la-conversations', 'free-help', 'other']);
+      const fields = [
+        ['expert-name', 'name-error', 'Enter your name, using no more than 80 characters.'],
+        ['expert-email', 'email-error', 'Enter a valid email address, using no more than 254 characters.'],
+        ['expert-la', 'la-error', 'Use no more than 100 characters for the local authority name.'],
+        ['expert-category', 'category-error', 'Choose one of the listed categories or leave it blank.'],
+        ['expert-question', 'question-error', 'Enter one general question, using no more than 1,500 characters.'],
+        ['expert-general', 'general-error', 'Confirm that your question is general and excludes identifying details, health information and documents.'],
+        ['expert-privacy', 'privacy-error', 'Read and acknowledge the privacy information before sending.']
+      ];
+      let sending = false;
+      let counterTimer;
+      form.noValidate = true;
+      function clearErrors() {
+        summary.hidden = true;
+        errorList.replaceChildren();
+        fields.forEach(([id, errorId]) => {
+          document.getElementById(id).removeAttribute('aria-invalid');
+          document.getElementById(errorId).hidden = true;
+        });
+      }
+      function validate() {
+        clearErrors();
+        fields.forEach(([id]) => {
+          const field = document.getElementById(id);
+          field.setCustomValidity('');
+          if ((id === 'expert-name' || id === 'expert-question') && !field.value.trim()) field.setCustomValidity('Please complete this required field.');
+          if (field.maxLength > 0 && field.value.length > field.maxLength) field.setCustomValidity('The character limit has been exceeded.');
+          if (id === 'expert-category' && !allowedCategories.has(field.value)) field.setCustomValidity('Choose a listed category.');
+        });
+        const invalid = fields.filter(([id]) => !document.getElementById(id).validity.valid);
+        invalid.forEach(([id, errorId, message]) => {
+          const field = document.getElementById(id);
+          const error = document.getElementById(errorId);
+          field.setAttribute('aria-invalid', 'true');
+          error.textContent = message;
+          error.hidden = false;
+          const item = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = '#' + id;
+          link.textContent = message;
+          link.addEventListener('click', (event) => { event.preventDefault(); field.focus(); });
+          item.appendChild(link);
+          errorList.appendChild(item);
+        });
+        if (invalid.length) { summary.hidden = false; summary.focus(); return false; }
+        return true;
+      }
+      form.addEventListener('input', (event) => {
+        const field = event.target;
+        if (typeof field.setCustomValidity === 'function') field.setCustomValidity('');
+        field.removeAttribute('aria-invalid');
+        const item = fields.find(([id]) => id === field.id);
+        if (item) document.getElementById(item[1]).hidden = true;
+      });
+      question.addEventListener('input', () => {
+        clearTimeout(counterTimer);
+        counterTimer = setTimeout(() => { counter.textContent = question.value.length.toLocaleString('en-GB') + ' of 1,500 characters'; }, 200);
+      });
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (sending) return;
+        status.textContent = '';
+        status.removeAttribute('data-state');
+        if (!validate()) return;
+        sending = true;
+        button.disabled = true;
+        button.textContent = 'Sending…';
+        form.setAttribute('aria-busy', 'true');
+        status.textContent = 'Sending your question. Please wait for the submission result.';
+        const controller = typeof AbortController === 'function' ? new AbortController() : null;
+        const timeout = controller ? setTimeout(() => controller.abort(), 30000) : null;
+        try {
+          const body = new URLSearchParams(new FormData(form)).toString();
+          // This is a transport result, not an analytics event or proof of validated intake.
+          const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            credentials: 'same-origin',
+            body,
+            ...(controller ? { signal: controller.signal } : {})
+          });
+          if (!response.ok) throw new Error('Submission was not confirmed.');
+          // Optional parent-owned consented response metric: never a verified-intake event.
+          window.dispatchEvent(new CustomEvent('sn:submission-response', { detail: { formType: 'ask-expert' } }));
+          window.location.assign('/expert-question-received');
+        } catch (_) {
+          status.dataset.state = 'error';
+          status.textContent = 'We could not confirm acceptance. Your question may not have reached us. The text remains in this form so you can try again later; retrying may create a duplicate if the first attempt arrived. Do not wait here for urgent help or a deadline.';
+          status.focus();
+        } finally {
+          if (timeout) clearTimeout(timeout);
+          sending = false;
+          button.disabled = false;
+          button.textContent = 'Send my general question';
+          form.removeAttribute('aria-busy');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

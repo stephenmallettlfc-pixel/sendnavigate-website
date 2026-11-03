@@ -8,7 +8,7 @@ const excluded = new Set(['Landing_Page.html', 'Parent_Shield_Landing_Page.html'
 const files = [];
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name.startsWith('.') || ['node_modules', 'tools', 'netlify'].includes(entry.name)) continue;
+    if (entry.name.startsWith('.') || ['node_modules', 'tools', 'netlify', 'dist', 'tests'].includes(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (entry.name.endsWith('.html')) files.push(full);
@@ -20,7 +20,7 @@ let errors = 0;
 const warnings = [];
 const attr = (tag, key) => tag.match(new RegExp(`\\b${key}\\s*=\\s*["']([^"']*)["']`, 'i'))?.[1];
 const escapeXml = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-const strictLinkPages = new Set(['ehcp-refusal-to-assess-help.html', 'ehcp-refusal-to-issue-help.html', 'school-not-meeting-sen-needs.html', 'ehcp-appeal-refusal.html', 'school-distress-ebsa-help.html', 'free-consultation.html', 'index.html', 'ehcp-advisory.html', 'books.html', 'book.html', 'the-parents-shield.html', 'resources.html']);
+const strictLinkPages = new Set(['ehcp-refusal-to-assess-help.html', 'ehcp-refusal-to-issue-help.html', 'school-not-meeting-sen-needs.html', 'ehcp-appeal-refusal.html', 'school-distress-ebsa-help.html', 'free-consultation.html', 'index.html', 'ehcp-advisory.html', 'books.html', 'book.html', 'the-parents-shield.html', 'resources.html', 'ask-an-expert.html']);
 function checkReferences(html, rel) {
   const base = new URL('/' + rel, origin);
   const seen = new Set();
