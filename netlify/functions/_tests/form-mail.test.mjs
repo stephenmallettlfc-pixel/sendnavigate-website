@@ -47,10 +47,10 @@ function fixture(formName = "ask-expert") {
 const req = (value, method = "POST") => new Request("https://unit.invalid/.netlify/functions/submission-created", {
   method, ...(method === "POST" ? { body: typeof value === "string" ? value : JSON.stringify(value) } : {}),
 });
-function harness({ responder, env = getEnv } = {}) {
+function harness({ responder, env = getEnv, now = NOW_FN } = {}) {
   const calls = []; const logs = []; const sleeps = [];
   const dependencies = {
-    getEnv: env, now: NOW_FN,
+    getEnv: env, now,
     logger: { info: (entry) => logs.push(entry) },
     sleep: async (delay) => { sleeps.push(delay); },
     fetchImpl: async (url, options) => {
@@ -77,6 +77,202 @@ const expectedSubjects = {
     ack: "SEND Navigate | Your Ask an Expert question",
   },
 };
+
+// Self-contained copies of ONLY the labelled owner SYSTEM TEST records stored in
+// routing-fix-2026-11-04/labelled-owner-test-fixtures.json. Preserve stored shape,
+// submitted content and fixed dates; replace transport metadata with sentinels.
+// The stored records omit ip; add a documentation IP to model the signed event.
+// No original network IP, external fixture dependency or live delivery is used.
+const STORED_NOW_FN = () => Date.parse("2026-11-04T14:46:00.000Z");
+const STORED_EXPERT_ID = "6aea0e344898f5fc96632f07";
+const storedEnv = (key) => key === "ASK_EXPERT_FORM_ID" ? STORED_EXPERT_ID : getEnv(key);
+const METADATA_LIMITS = { ip: 64, user_agent: 1024, referrer: 2048 };
+const storedFixtures = [
+  {
+    number: 3, title: null, email: OWNER, name: "SYSTEM TEST 20261104-ROUTING",
+    first_name: "SYSTEM TEST", last_name: "20261104-ROUTING", company: null,
+    summary: "SYSTEM TEST", body: null,
+    data: {
+      "first-name": "SYSTEM TEST", "last-name": "20261104-ROUTING", email: OWNER,
+      "school-name": "SYSTEM TEST — no real school", role: "sendco",
+      user_agent: "synthetic-netlify-metadata-agent/1.0",
+      referrer: "https://example.invalid/netlify-metadata-fixture/sample-request", ip: "192.0.2.10",
+    },
+    created_at: "2026-11-04T14:44:38.304Z",
+    human_fields: {
+      "First Name": "SYSTEM TEST", "Last Name": "20261104-ROUTING", Email: OWNER,
+      "School Name": "SYSTEM TEST — no real school", Role: "sendco",
+    },
+    ordered_human_fields: [
+      { title: "First Name", name: "first-name", value: "SYSTEM TEST" },
+      { title: "Last Name", name: "last-name", value: "20261104-ROUTING" },
+      { title: "Email", name: "email", value: OWNER },
+      { title: "School Name", name: "school-name", value: "SYSTEM TEST — no real school" },
+      { title: "Role", name: "role", value: "sendco" },
+    ],
+    id: "6aeb44d60636baee762e537c", form_id: FORM_IDS["sample-request"],
+    site_url: "https://sendnavigate.org", site_name: "sendnavigate", form_name: "sample-request",
+  },
+  {
+    number: 21, title: null, email: OWNER,
+    name: "SYSTEM TEST 20261104-ROUTING — not a customer enquiry",
+    first_name: "SYSTEM", last_name: "enquiry", company: null,
+    summary: "SYSTEM TEST 20261104-ROUTING-PARENT. No child or case information. Checking receipt and email routing only; no...",
+    body: "SYSTEM TEST 20261104-ROUTING-PARENT. No child or case information. Checking receipt and email routing only; no consultation or advice requested. Do not count as a lead.",
+    data: {
+      name: "SYSTEM TEST 20261104-ROUTING — not a customer enquiry", email: OWNER,
+      phone: "", topic: "Not sure", "discovery-source": "Other",
+      message: "SYSTEM TEST 20261104-ROUTING-PARENT. No child or case information. Checking receipt and email routing only; no consultation or advice requested. Do not count as a lead.",
+      user_agent: "synthetic-netlify-metadata-agent/1.0",
+      referrer: "https://example.invalid/netlify-metadata-fixture/advisory-enquiry", ip: "192.0.2.10",
+    },
+    created_at: "2026-11-04T14:45:09.463Z",
+    human_fields: {
+      "Your name": "SYSTEM TEST 20261104-ROUTING — not a customer enquiry",
+      "Email address": OWNER, "Phone (optional)": "", "What can I help with?": "Not sure",
+      "How did you hear about SEND Navigate? (optional)": "Other",
+      "Briefly — where are you in the process?": "SYSTEM TEST 20261104-ROUTING-PARENT. No child or case information. Checking receipt and email routing only; no consultation or advice requested. Do not count as a lead.",
+    },
+    ordered_human_fields: [
+      { title: "Your name", name: "name", value: "SYSTEM TEST 20261104-ROUTING — not a customer enquiry" },
+      { title: "Email address", name: "email", value: OWNER },
+      { title: "Phone (optional)", name: "phone", value: "" },
+      { title: "What can I help with?", name: "topic", value: "Not sure" },
+      { title: "How did you hear about SEND Navigate? (optional)", name: "discovery-source", value: "Other" },
+      { title: "Briefly — where are you in the process?", name: "message", value: "SYSTEM TEST 20261104-ROUTING-PARENT. No child or case information. Checking receipt and email routing only; no consultation or advice requested. Do not count as a lead." },
+    ],
+    id: "6aeb44f50abcc82e332f8663", form_id: FORM_IDS["advisory-enquiry"],
+    site_url: "https://sendnavigate.org", site_name: "sendnavigate", form_name: "advisory-enquiry",
+  },
+  {
+    number: 2, title: null, email: OWNER,
+    name: "SYSTEM TEST 20261104-ROUTING — not a customer enquiry",
+    first_name: "SYSTEM", last_name: "enquiry", company: null,
+    summary: "SYSTEM TEST 20261104-ROUTING-EXPERT. No child or case information. Checking email routing only. No expert answer...",
+    body: "SYSTEM TEST 20261104-ROUTING-EXPERT. No child or case information. Checking email routing only. No expert answer requested; do not count as a lead.",
+    data: {
+      name: "SYSTEM TEST 20261104-ROUTING — not a customer enquiry", email: OWNER,
+      "local-authority": "", "subject-category": "other",
+      question: "SYSTEM TEST 20261104-ROUTING-EXPERT. No child or case information. Checking email routing only. No expert answer requested; do not count as a lead.",
+      "general-question-confirmation": "confirmed", "privacy-acknowledgement": "yes",
+      user_agent: "synthetic-netlify-metadata-agent/1.0",
+      referrer: "https://example.invalid/netlify-metadata-fixture/ask-expert", ip: "192.0.2.10",
+    },
+    created_at: "2026-11-04T14:45:10.285Z",
+    human_fields: {
+      "Your name (required)": "SYSTEM TEST 20261104-ROUTING — not a customer enquiry",
+      "Email address (required)": OWNER, "Local authority (optional)": "", "Question category (optional)": "other",
+      "One general question (required)": "SYSTEM TEST 20261104-ROUTING-EXPERT. No child or case information. Checking email routing only. No expert answer requested; do not count as a lead.",
+      "I confirm that this is one general question, without child identifiers, health information, documents or links to case files. I understand the service’s scope and capacity limits. (Required)": "confirmed",
+      "I have read the privacy information and understand how my enquiry will be used to assess and respond to my question. (Required)": "yes",
+    },
+    ordered_human_fields: [
+      { title: "Your name (required)", name: "name", value: "SYSTEM TEST 20261104-ROUTING — not a customer enquiry" },
+      { title: "Email address (required)", name: "email", value: OWNER },
+      { title: "Local authority (optional)", name: "local-authority", value: "" },
+      { title: "Question category (optional)", name: "subject-category", value: "other" },
+      { title: "One general question (required)", name: "question", value: "SYSTEM TEST 20261104-ROUTING-EXPERT. No child or case information. Checking email routing only. No expert answer requested; do not count as a lead." },
+      { title: "I confirm that this is one general question, without child identifiers, health information, documents or links to case files. I understand the service’s scope and capacity limits. (Required)", name: "general-question-confirmation", value: "confirmed" },
+      { title: "I have read the privacy information and understand how my enquiry will be used to assess and respond to my question. (Required)", name: "privacy-acknowledgement", value: "yes" },
+    ],
+    id: "6aeb44f6df6d4b66c82004cd", form_id: STORED_EXPERT_ID,
+    site_url: "https://sendnavigate.org", site_name: "sendnavigate", form_name: "ask-expert",
+  },
+];
+const storedEnvelope = (record) => ({ payload: structuredClone(record) });
+const verifyStored = (envelope) => validateSubmission(envelope, { getEnv: storedEnv, now: STORED_NOW_FN });
+const storedHarness = () => harness({ env: storedEnv, now: STORED_NOW_FN });
+
+for (const record of storedFixtures) {
+  test(`${record.form_name}: stored owner SYSTEM TEST wrapped event accepts Netlify metadata without leaking it`, async () => {
+    const envelope = storedEnvelope(record); const h = storedHarness();
+    const response = await h.run(envelope);
+    assert.equal(response.status, 204); assert.equal(await response.text(), "");
+    assert.equal(h.calls.length, 2);
+    // Both synthetic recipients are the owner; identify messages by purpose.
+    const owner = h.calls.find((call) => call.headers["Idempotency-Key"].includes("/owner/"));
+    const ack = h.calls.find((call) => call.headers["Idempotency-Key"].includes("/ack/"));
+    assert.deepEqual(owner.body.to, [OWNER]); assert.deepEqual(ack.body.to, [record.data.email]);
+    assert.equal(owner.body.subject, expectedSubjects[record.form_name].owner);
+    assert.equal(ack.body.subject, expectedSubjects[record.form_name].ack);
+    const submission = verifyStored(envelope);
+    const withoutMetadata = storedEnvelope(record);
+    for (const key of Object.keys(METADATA_LIMITS)) delete withoutMetadata.payload.data[key];
+    assert.deepEqual(submission, verifyStored(withoutMetadata));
+    const baseline = buildMessages(verifyStored(withoutMetadata));
+    assert.deepEqual(owner.body, baseline.owner); assert.deepEqual(ack.body, baseline.ack);
+    for (const key of Object.keys(METADATA_LIMITS)) {
+      assert.equal(Object.hasOwn(submission, key), false);
+      const outputs = JSON.stringify({ submission, calls: h.calls, logs: h.logs });
+      assert.equal(outputs.includes(record.data[key]), false);
+      assert.equal(outputs.includes(escapeHtml(record.data[key])), false);
+    }
+    const privateText = record.data.question || record.data.message;
+    if (privateText) {
+      assert.ok(owner.body.text.includes(privateText));
+      assert.ok(owner.body.html.includes(escapeHtml(privateText)));
+      for (const output of [owner.body.subject, ack.body.subject, ack.body.text, ack.body.html, ...h.logs]) {
+        assert.equal(output.includes(privateText), false);
+        assert.equal(output.includes(escapeHtml(privateText)), false);
+      }
+    }
+    assert.deepEqual(h.logs, ["form_mail:validated", "form_mail:owner_provider_accepted", "form_mail:ack_provider_accepted"]);
+  });
+}
+
+test("all stored forms accept absent, empty and exactly bounded metadata strings, then discard them", async () => {
+  for (const record of storedFixtures) {
+    for (const mode of ["absent", "empty", "limit"]) {
+      const envelope = storedEnvelope(record);
+      for (const [key, max] of Object.entries(METADATA_LIMITS)) {
+        if (mode === "absent") delete envelope.payload.data[key];
+        else envelope.payload.data[key] = mode === "empty" ? "" : `${key}-sentinel-`.padEnd(max, "x");
+      }
+      const h = storedHarness(); const response = await h.run(envelope);
+      assert.equal(response.status, 204); assert.equal(await response.text(), "");
+      assert.equal(h.calls.length, 2);
+      assert.deepEqual(verifyStored(envelope), verifyStored(storedEnvelope(record)));
+      for (const value of Object.keys(METADATA_LIMITS).map((key) => envelope.payload.data[key]).filter(Boolean))
+        assert.equal(JSON.stringify({ calls: h.calls, logs: h.logs }).includes(value), false);
+      assert.deepEqual(h.logs, ["form_mail:validated", "form_mail:owner_provider_accepted", "form_mail:ack_provider_accepted"]);
+    }
+  }
+});
+
+for (const [key, max] of Object.entries(METADATA_LIMITS)) {
+  test(`${key}: invalid metadata types, overlong raw strings and unsafe controls reject without body logging`, async () => {
+    const marker = `private-${key}-metadata-marker`;
+    const invalid = [null, false, 42, { value: marker }, [marker], marker.padEnd(max + 1, "x"),
+      " ".repeat(max + 1), ...["\u0000", "\t", "\n", "\r", "\u001f", "\u007f", "\u0085", "\u009f", "\u2028", "\u2029"].map((control) => marker + control)];
+    for (const record of storedFixtures) {
+      for (const value of invalid) {
+        const envelope = storedEnvelope(record); envelope.payload.data[key] = value;
+        const h = storedHarness(); const response = await h.run(envelope);
+        assert.equal(response.status, 204); assert.equal(await response.text(), "");
+        assert.equal(h.calls.length, 0); assert.equal(h.sleeps.length, 0);
+        assert.deepEqual(h.logs, ["form_mail:rejected_validation"]);
+        assert.equal(h.logs.join("").includes(marker), false);
+        assert.equal(h.logs.join("").includes(record.data.question || record.data.message || record.data["school-name"]), false);
+      }
+    }
+  });
+}
+
+test("valid Netlify metadata does not admit arbitrary fields or hyphenated user-agent", async () => {
+  for (const record of storedFixtures) {
+    for (const key of ["malicious-field", "user-agent", "referrer_extra", "__proto__"]) {
+      const envelope = storedEnvelope(record);
+      Object.defineProperty(envelope.payload.data, key, {
+        value: "private-malicious-field-marker", enumerable: true,
+      });
+      const h = storedHarness(); const response = await h.run(envelope);
+      assert.equal(response.status, 204); assert.equal(await response.text(), "");
+      assert.equal(h.calls.length, 0);
+      assert.deepEqual(h.logs, ["form_mail:rejected_validation"]);
+      assert.equal(h.logs.join("").includes("private-malicious-field-marker"), false);
+    }
+  }
+});
 
 for (const formName of Object.keys(validData)) {
   test(`${formName}: valid verified fixture sends private owner and its own acknowledgement`, async () => {

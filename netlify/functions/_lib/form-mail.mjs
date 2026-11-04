@@ -59,7 +59,7 @@ const FORM_FIELDS = Object.freeze({
   "advisory-enquiry": ["name", "email", "phone", "topic", "discovery-source", "message"],
   "ask-expert": ["name", "email", "local-authority", "subject-category", "question", "privacy-acknowledgement", "general-question-confirmation"],
 });
-const COMMON_FIELDS = ["form-name", "bot-field", "ip"];
+const COMMON_FIELDS = ["form-name", "bot-field", "ip", "user_agent", "referrer"];
 const isRecord = (value) => value !== null && typeof value === "object" && !Array.isArray(value);
 const hasOwn = (object, key) => Object.hasOwn(object, key);
 class Rejected extends Error {
@@ -143,7 +143,11 @@ export function validateSubmission(envelope, { getEnv = runtimeEnv, now = Date.n
   }
   field(data, "bot-field", { max: 200 });
   if (hasOwn(data, "bot-field") && data["bot-field"].length !== 0) reject("rejected_spam");
-  field(data, "ip", { max: 64 }); // Never copied to mail, URLs, logs or analytics.
+  // Known Netlify metadata: bounded single-line strings, validated then ignored.
+  // Never copied to the submission, mail, subjects, URLs, logs or analytics.
+  field(data, "ip", { max: 64 });
+  field(data, "user_agent", { max: 1024 });
+  field(data, "referrer", { max: 2048 });
   const postedName = field(data, "form-name", { max: 64 });
   if (hasOwn(data, "form-name") && postedName !== formName) reject("rejected_form_identity");
   // Validate the raw address so whitespace or CR/LF cannot be normalised away.
