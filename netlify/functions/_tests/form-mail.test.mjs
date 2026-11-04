@@ -16,7 +16,7 @@ const NOW_FN = () => NOW;
 const getEnv = (key) => ({
   RESEND_API_KEY: "synthetic-test-key-never-a-real-secret",
   ASK_EXPERT_FORM_ID: EXPERT_ID,
-  FORM_OWNER_ALERT_ENABLED: "true", // Explicit fallback for independent-delivery tests.
+  FORM_OWNER_ALERT_ENABLED: "true", // Explicit direct owner alert for independent-delivery tests.
 })[key];
 const validData = {
   "sample-request": {
@@ -63,6 +63,20 @@ function harness({ responder, env = getEnv } = {}) {
   return { calls, logs, sleeps, dependencies, run: (value) => processSubmissionRequest(req(value), dependencies) };
 }
 const verify = (envelope) => validateSubmission(envelope, { getEnv, now: NOW_FN });
+const expectedSubjects = {
+  "sample-request": {
+    owner: "SEND Navigate | School sample-pack request",
+    ack: "SEND Navigate | Your school training sample pack",
+  },
+  "advisory-enquiry": {
+    owner: "SEND Navigate | Parent consultancy enquiry",
+    ack: "SEND Navigate | Your parent consultancy enquiry",
+  },
+  "ask-expert": {
+    owner: "SEND Navigate | Ask an Expert question",
+    ack: "SEND Navigate | Your Ask an Expert question",
+  },
+};
 
 for (const formName of Object.keys(validData)) {
   test(`${formName}: valid verified fixture sends private owner and its own acknowledgement`, async () => {
@@ -70,8 +84,13 @@ for (const formName of Object.keys(validData)) {
     assert.equal(result.status, 204); assert.equal(h.calls.length, 2);
     const owner = h.calls.find((call) => call.body.to[0] === OWNER);
     const ack = h.calls.find((call) => call.body.to[0] !== OWNER);
+    assert.equal(OWNER, "stephen@sendnavigate.com");
+    assert.deepEqual(owner.body.to, ["stephen@sendnavigate.com"]);
+    assert.deepEqual(ack.body.to, [validData[formName].email]);
+    assert.equal(owner.body.subject, expectedSubjects[formName].owner);
+    assert.equal(ack.body.subject, expectedSubjects[formName].ack);
     assert.equal(owner.body.reply_to, validData[formName].email);
-    assert.equal(ack.body.reply_to, OWNER);
+    assert.equal(ack.body.reply_to, "stephen@sendnavigate.com");
     assert.equal(owner.body.from, FROM); assert.equal(ack.body.from, FROM);
     assert.equal(typeof owner.body.text, "string"); assert.equal(typeof ack.body.text, "string");
     assert.ok(owner.headers["Idempotency-Key"]); assert.ok(ack.headers["Idempotency-Key"]);
@@ -80,10 +99,16 @@ for (const formName of Object.keys(validData)) {
       assert.equal(call.options.redirect, "error");
       assert.equal(call.body.subject.includes("Synthetic"), false);
       assert.equal(call.body.subject.includes(validData[formName].email), false);
+      assert.doesNotMatch(JSON.stringify({ to: call.body.to, reply_to: call.body.reply_to }), /@gmail\.com\b/i);
+      for (const value of Object.values(validData[formName]).filter(Boolean))
+        assert.equal(call.body.subject.includes(value), false);
     }
     if (formName === "sample-request") {
-      for (const filename of ["sample_module1_slides.pdf", "sample_facilitator_guide.pdf", "sample_eef_mapping.pdf"])
-        assert.ok(ack.body.text.includes(filename));
+      for (const filename of ["sample_module1_slides.pdf", "sample_facilitator_guide.pdf", "sample_eef_mapping.pdf"]) {
+        const url = `https://sendnavigate.org/${filename}`;
+        assert.ok(ack.body.text.includes(url));
+        assert.ok(ack.body.html.includes(`href="${url}"`));
+      }
       assert.match(ack.body.text, /links, not email attachments/);
       assert.equal(ack.body.attachments, undefined);
       assert.equal(ack.body.text.includes("Licence Pricing"), false);
@@ -99,6 +124,49 @@ for (const formName of Object.keys(validData)) {
     assert.deepEqual(h.logs, ["form_mail:validated", "form_mail:owner_provider_accepted", "form_mail:ack_provider_accepted"]);
   });
 }
+
+test("all form types keep three distinct fixed owner subjects and three distinct fixed acknowledgements", () => {
+  const messages = Object.keys(validData).map((formName) => buildMessages(verify(fixture(formName))));
+  for (const purpose of ["owner", "ack"]) {
+    const subjects = messages.map((message) => message[purpose].subject);
+    assert.deepEqual(subjects, Object.values(expectedSubjects).map((subject) => subject[purpose]));
+    assert.equal(new Set(subjects).size, 3);
+  }
+});
+
+test("all form types: subjects ignore submitter data; acknowledgements never echo free text", () => {
+  const freeTextFields = {
+    "sample-request": ["first-name", "last-name", "school-name"],
+    "advisory-enquiry": ["name", "message"],
+    "ask-expert": ["name", "local-authority", "question"],
+  };
+  for (const [formName, fields] of Object.entries(freeTextFields)) {
+    const f = fixture(formName);
+    const markers = fields.map((field, index) => {
+      const marker = `Private-marker-${index} <b>do not echo</b> & 'synthetic'`;
+      f.payload.data[field] = marker;
+      return marker;
+    });
+    f.payload.data.email = "private-submitter+marker@example.invalid";
+    markers.push(f.payload.data.email);
+    if (formName === "advisory-enquiry") {
+      f.payload.data.phone = "+44 1234 567890";
+      markers.push(f.payload.data.phone);
+    }
+    const { owner, ack } = buildMessages(verify(f));
+    assert.equal(owner.subject, expectedSubjects[formName].owner);
+    assert.equal(ack.subject, expectedSubjects[formName].ack);
+    assert.deepEqual(owner.to, ["stephen@sendnavigate.com"]);
+    for (const marker of markers) {
+      assert.ok(owner.text.includes(marker));
+      assert.equal(owner.subject.includes(marker), false);
+      assert.equal(ack.subject.includes(marker), false);
+      assert.equal(ack.text.includes(marker), false);
+      assert.equal(ack.html.includes(marker), false);
+      assert.equal(ack.html.includes(escapeHtml(marker)), false);
+    }
+  }
+});
 
 test("expert optional authority and category can be omitted; all current category labels accepted", () => {
   const f = fixture(); delete f.payload.data["local-authority"]; delete f.payload.data["subject-category"];
@@ -348,7 +416,7 @@ test("mock platform gateway refuses forged HTTP before handler invocation (not a
   // no offline mock purports to implement or prove Netlify's JWS validation.
 });
 
-test("native owner path: custom owner alerts default OFF; only exact true enables fallback", async () => {
+test("custom owner alerts default OFF; only exact true enables direct SEND Navigate owner alerts", async () => {
   for (const flag of [undefined, "false", "TRUE", "1"]) {
     const h = harness({ env: (key) => key === "FORM_OWNER_ALERT_ENABLED" ? flag : getEnv(key) });
     assert.equal((await h.run(fixture())).status, 204);
@@ -356,9 +424,16 @@ test("native owner path: custom owner alerts default OFF; only exact true enable
     assert.notEqual(h.calls[0].body.to[0], OWNER);
     assert.deepEqual(h.logs, ["form_mail:validated", "form_mail:owner_custom_disabled", "form_mail:ack_provider_accepted"]);
   }
+  const h = harness({ env: (key) => key === "FORM_OWNER_ALERT_ENABLED" ? "true" : getEnv(key) });
+  assert.equal((await h.run(fixture())).status, 204);
+  assert.equal(h.calls.length, 2);
+  const owner = h.calls.find((call) => call.body.to[0] === "stephen@sendnavigate.com");
+  assert.deepEqual(owner.body.to, ["stephen@sendnavigate.com"]);
+  assert.equal(owner.body.subject, expectedSubjects["ask-expert"].owner);
+  assert.deepEqual(h.logs, ["form_mail:validated", "form_mail:owner_provider_accepted", "form_mail:ack_provider_accepted"]);
 });
 
-test("native owner path: acknowledgement failure returns fixed failure, never sends duplicate owner mail", async () => {
+test("custom owner alerts disabled: acknowledgement failure returns fixed failure without owner mail", async () => {
   const h = harness({
     env: (key) => key === "FORM_OWNER_ALERT_ENABLED" ? undefined : getEnv(key),
     responder: () => new Response("synthetic private provider error", { status: 401 }),

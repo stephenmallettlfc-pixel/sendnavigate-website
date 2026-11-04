@@ -205,14 +205,14 @@ const ACK_TEXT = Object.freeze({
   "ask-expert": "Thank you for your general question. This automated acknowledgement confirms receipt, not a promised answer or response time. Stephen will review whether the question fits the general-question service and his available capacity. Please do not send documents or identifying details. This is not a booking, payment or appointment to manage your case or deadlines. Do not wait for a reply if a deadline or urgent issue needs attention.",
 });
 const OWNER_SUBJECTS = Object.freeze({
-  "sample-request": "New school sample request — SEND Navigate",
-  "advisory-enquiry": "New advisory enquiry — SEND Navigate",
-  "ask-expert": "New Ask an Expert enquiry — SEND Navigate",
+  "sample-request": "SEND Navigate | School sample-pack request",
+  "advisory-enquiry": "SEND Navigate | Parent consultancy enquiry",
+  "ask-expert": "SEND Navigate | Ask an Expert question",
 });
 const ACK_SUBJECTS = Object.freeze({
-  "sample-request": "Your school sample pack links — SEND Navigate",
-  "advisory-enquiry": "Your enquiry has been received — SEND Navigate",
-  "ask-expert": "Your general question has been received — SEND Navigate",
+  "sample-request": "SEND Navigate | Your school training sample pack",
+  "advisory-enquiry": "SEND Navigate | Your parent consultancy enquiry",
+  "ask-expert": "SEND Navigate | Your Ask an Expert question",
 });
 
 export function buildMessages(submission) {
@@ -297,9 +297,10 @@ export async function processSubmissionRequest(request, {
     return new Response(null, { status: 503 });
   }
   const messages = buildMessages(submission);
-  // Native Netlify owner notifications are the primary, independently managed
-  // alert path. Avoid duplicate owner emails unless the fallback is explicitly
-  // enabled after inventorying native notifications. Default is FALSE.
+  // Custom owner alerts go directly to the fixed SEND Navigate owner address.
+  // FORM_OWNER_ALERT_ENABLED controls this path; default FALSE until explicitly
+  // enabled. Native Netlify notifications are a separately configured backup
+  // until direct owner delivery is verified; this function does not manage them.
   let ownerAlertEnabled = false;
   try { ownerAlertEnabled = getEnv("FORM_OWNER_ALERT_ENABLED") === "true"; } catch { /* default off */ }
   const purposes = ownerAlertEnabled ? ["owner", "ack"] : ["ack"];
