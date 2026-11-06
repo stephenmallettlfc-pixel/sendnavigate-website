@@ -5,4 +5,5 @@ export default function expertIntakeStatus() {
     headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store, max-age=0', 'x-content-type-options': 'nosniff' },
   });
 }
-export const config = { path: '/expert-intake-status', method: ['GET', 'HEAD'], onError: 'fail' };
+// The deployed Edge manifest accepts GET but not an explicit HEAD enum.
+export const config = { path: '/expert-intake-status', method: 'GET', onError: 'fail' };
