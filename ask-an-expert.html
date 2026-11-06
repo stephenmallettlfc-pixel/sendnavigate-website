@@ -104,6 +104,22 @@
             <span id="question-error" class="field-error" hidden></span>
           </div>
           <div class="field">
+            <label for="expert-discovery">How did you first hear about SEND Navigate? (optional)</label>
+            <select id="expert-discovery" name="discovery-source" aria-describedby="discovery-hint discovery-error">
+              <option value="">Leave blank, if you prefer</option>
+              <option>Instagram</option>
+              <option>Stephen’s LinkedIn</option>
+              <option>Parent forum/group</option>
+              <option>Google search</option>
+              <option>Stephen’s books</option>
+              <option>Personal recommendation</option>
+              <option>Other</option>
+              <option>Prefer not to say</option>
+            </select>
+            <span id="discovery-hint" class="field-hint">A voluntary broad source only, to understand how people find us. No group names or other details. Your choice does not affect eligibility or a reply and is not marketing consent. It stays with your private enquiry, follows the same retention policy and is not sent to analytics.</span>
+            <span id="discovery-error" class="field-error" hidden></span>
+          </div>
+          <div class="field">
             <label class="checkbox-label" for="expert-general"><input id="expert-general" name="general-question-confirmation" type="checkbox" value="confirmed" required aria-describedby="general-error"/><span>I confirm that this is one general question, without child identifiers, health information, documents or links to case files. I understand the service’s scope and capacity limits. (Required)</span></label>
             <span id="general-error" class="field-error" hidden></span>
           </div>
@@ -151,17 +167,44 @@
       const errorList = document.getElementById('form-error-list');
       const button = document.getElementById('expert-submit');
       const allowedCategories = new Set(['', 'sen-support', 'ehcp-process', 'school-la-conversations', 'free-help', 'other']);
+      const allowedSources = new Set(['', 'Instagram', 'Stephen’s LinkedIn', 'Parent forum/group', 'Google search', 'Stephen’s books', 'Personal recommendation', 'Other', 'Prefer not to say']);
       const fields = [
         ['expert-name', 'name-error', 'Enter your name, using no more than 80 characters.'],
         ['expert-email', 'email-error', 'Enter a valid email address, using no more than 254 characters.'],
         ['expert-la', 'la-error', 'Use no more than 100 characters for the local authority name.'],
         ['expert-category', 'category-error', 'Choose one of the listed categories or leave it blank.'],
         ['expert-question', 'question-error', 'Enter one general question, using no more than 1,500 characters.'],
+        ['expert-discovery', 'discovery-error', 'Choose one of the listed sources or leave it blank.'],
         ['expert-general', 'general-error', 'Confirm that your question is general and excludes identifying details, health information and documents.'],
         ['expert-privacy', 'privacy-error', 'Read and acknowledge the privacy information before sending.']
       ];
       let sending = false;
       let counterTimer;
+      let intakeOpen = false;
+      const pausedMessage = 'The free general-question pilot is paused for new questions. Nothing has been sent. Urgent matters must not wait; the separate consultation and free resources remain available below.';
+      async function refreshIntake() {
+        const guard = typeof AbortController === 'function' ? new AbortController() : null;
+        const deadline = guard ? setTimeout(() => guard.abort(), 5000) : null;
+        button.disabled = true;
+        try {
+          const response = await fetch('/expert-intake-status', { credentials: 'same-origin', cache: 'no-store', ...(guard ? { signal: guard.signal } : {}) });
+          if (!response.ok) throw new Error('Status unavailable');
+          const state = await response.json();
+          if (typeof state.open !== 'boolean') throw new Error('Status unavailable');
+          intakeOpen = state.open;
+          status.textContent = intakeOpen ? '' : pausedMessage;
+        } catch (_) {
+          intakeOpen = false;
+          status.textContent = 'We cannot check whether the pilot is accepting questions. Nothing has been sent. Please try later or use the separate consultation or free-resource routes. Urgent matters must not wait.';
+        } finally {
+          if (deadline) clearTimeout(deadline);
+          button.disabled = !intakeOpen;
+          button.textContent = intakeOpen ? 'Send my general question' : 'Not accepting new questions';
+          document.querySelectorAll('a[href="#question-form"]').forEach(link => { link.hidden = !intakeOpen; });
+        }
+        return intakeOpen;
+      }
+      refreshIntake();
       form.noValidate = true;
       function clearErrors() {
         summary.hidden = true;
@@ -179,6 +222,7 @@
           if ((id === 'expert-name' || id === 'expert-question') && !field.value.trim()) field.setCustomValidity('Please complete this required field.');
           if (field.maxLength > 0 && field.value.length > field.maxLength) field.setCustomValidity('The character limit has been exceeded.');
           if (id === 'expert-category' && !allowedCategories.has(field.value)) field.setCustomValidity('Choose a listed category.');
+          if (id === 'expert-discovery' && !allowedSources.has(field.value)) field.setCustomValidity('Choose a listed source.');
         });
         const invalid = fields.filter(([id]) => !document.getElementById(id).validity.valid);
         invalid.forEach(([id, errorId, message]) => {
@@ -212,10 +256,11 @@
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
         if (sending) return;
+        sending = true;
+        if (!(await refreshIntake())) { sending = false; status.focus(); return; }
         status.textContent = '';
         status.removeAttribute('data-state');
-        if (!validate()) return;
-        sending = true;
+        if (!validate()) { sending = false; return; }
         button.disabled = true;
         button.textContent = 'Sending…';
         form.setAttribute('aria-busy', 'true');
@@ -232,19 +277,20 @@
             body,
             ...(controller ? { signal: controller.signal } : {})
           });
+          if (response.status === 503 && response.headers.get('x-sendnavigate-intake') === 'paused-not-accepted') intakeOpen = false;
           if (!response.ok) throw new Error('Submission was not confirmed.');
           // Optional parent-owned consented response metric: never a verified-intake event.
           window.dispatchEvent(new CustomEvent('sn:submission-response', { detail: { formType: 'ask-expert' } }));
           window.location.assign('/expert-question-received');
         } catch (_) {
           status.dataset.state = 'error';
-          status.textContent = 'We could not confirm acceptance. Your question may not have reached us. The text remains in this form so you can try again later; retrying may create a duplicate if the first attempt arrived. Do not wait here for urgent help or a deadline.';
+          status.textContent = intakeOpen ? 'We could not confirm acceptance. Your question may not have reached us. The text remains in this form so you can try again later; retrying may create a duplicate if the first attempt arrived. Do not wait here for urgent help or a deadline.' : pausedMessage;
           status.focus();
         } finally {
           if (timeout) clearTimeout(timeout);
           sending = false;
-          button.disabled = false;
-          button.textContent = 'Send my general question';
+          button.disabled = !intakeOpen;
+          button.textContent = intakeOpen ? 'Send my general question' : 'Not accepting new questions';
           form.removeAttribute('aria-busy');
         }
       });

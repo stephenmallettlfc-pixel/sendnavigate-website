@@ -95,6 +95,25 @@
       else if (url.origin === location.origin && url.pathname === '/ask-an-expert') event('expert_page_link_click');
       else if (url.origin === location.origin && url.pathname.endsWith('.pdf')) event('resource_link_click', { resource_path: url.pathname });
     });
+    const expertForm = document.getElementById('ask-expert-form');
+    if (expertForm) {
+      // Per document lifecycle: form resets and bfcache restores do not restart it.
+      // Observe interaction, not focus, submit attempts or any field's value.
+      let started = false;
+      const textFields = new Set(['expert-name', 'expert-email', 'expert-la', 'expert-question']);
+      const choiceFields = new Set(['expert-category', 'expert-discovery', 'expert-general', 'expert-privacy']);
+      const start = interaction => {
+        if (started || !interaction.isTrusted) return;
+        const id = interaction.target?.id;
+        if (!(interaction.type === 'input' && textFields.has(id)) &&
+            !(interaction.type === 'change' && choiceFields.has(id))) return;
+        // Do not queue or replay interactions made before analytics consent.
+        started = true;
+        event('expert_question_form_start', { form_type: 'ask-expert', interaction_stage: 'form_start_only' });
+      };
+      expertForm.addEventListener('input', start);
+      expertForm.addEventListener('change', start);
+    }
     window.addEventListener('sn:submission-response', response => {
       if (response.detail?.formType !== 'ask-expert') return;
       event('expert_question_submit_response', { form_type: 'ask-expert', result_stage: 'http_response_only' });

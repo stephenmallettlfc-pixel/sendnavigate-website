@@ -1,11 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import { runInNewContext } from "node:vm";
 import oldEndpoint from "../form-submission.mjs";
 import eventEndpoint from "../submission-created.mjs";
 import {
   processSubmissionRequest, validateSubmission, validateEmail, buildMessages,
-  escapeHtml, mailtoHref, idempotencyKey, FORM_IDS, CATEGORY_LABELS, OWNER, FROM, SITE_ID,
+  escapeHtml, mailtoHref, idempotencyKey, FORM_IDS, CATEGORY_LABELS, DISCOVERY_LABELS, OWNER, FROM, SITE_ID,
 } from "../_lib/form-mail.mjs";
 
 // Completely synthetic fixtures. No family/child data and no outbound requests.
@@ -639,4 +640,161 @@ test("custom owner alerts disabled: acknowledgement failure returns fixed failur
   assert.equal(h.calls.length, 1); assert.notEqual(h.calls[0].body.to[0], OWNER);
   assert.deepEqual(h.logs, ["form_mail:validated", "form_mail:owner_custom_disabled", "form_mail:ack_failed"]);
   // Native platform notifications are not invoked, disabled or affected by this function.
+});
+
+const currentSources = ['Instagram', 'Stephen’s LinkedIn', 'Parent forum/group', 'Google search',
+  'Stephen’s books', 'Personal recommendation', 'Other', 'Prefer not to say'];
+const sourceRowLabel = 'First heard about SEND Navigate (optional)';
+
+test('expert and consultancy discovery sources are optional, closed-choice and backwards compatible', () => {
+  const legacySources = ['Google search', 'One of Stephen’s books', 'Parent support group or charity',
+    'Social media', 'Personal recommendation', 'Other'];
+  for (const formName of ['ask-expert', 'advisory-enquiry']) {
+    for (const source of [undefined, '', ...new Set([...currentSources, ...legacySources])]) {
+      const envelope = fixture(formName);
+      if (source === undefined) delete envelope.payload.data['discovery-source'];
+      else envelope.payload.data['discovery-source'] = source;
+      const submission = verify(envelope);
+      assert.deepEqual(submission.rows.find(([label]) => label === sourceRowLabel),
+        [sourceRowLabel, source ? DISCOVERY_LABELS[source] : 'Not specified']);
+    }
+  }
+  assert.equal(DISCOVERY_LABELS['Social media'], 'Social media');
+  assert.equal(DISCOVERY_LABELS['Parent support group or charity'], 'Parent support group or charity');
+});
+
+test('both forms reject arbitrary, injection, prototype, overlong and non-string discovery sources without leaking', async () => {
+  const marker = 'private-discovery-marker';
+  const invalid = [marker, '<a href="https://example.invalid">Instagram</a>', 'toString', '__proto__',
+    'constructor', 'x'.repeat(101), ' '.repeat(101), 'Instagram\n', 'Instagram\r', 'Instagram\u0000',
+    'Instagram\u2028', null, false, 42, ['Instagram'], { source: marker }];
+  for (const formName of ['ask-expert', 'advisory-enquiry']) {
+    for (const source of invalid) {
+      const envelope = fixture(formName); envelope.payload.data['discovery-source'] = source;
+      const h = harness(); const response = await h.run(envelope);
+      assert.equal(response.status, 204); assert.equal(await response.text(), '');
+      assert.equal(h.calls.length, 0);
+      assert.deepEqual(h.logs, ['form_mail:rejected_validation']);
+      assert.equal(h.logs.join('').includes(marker), false);
+    }
+  }
+});
+
+test('broad discovery labels appear escaped only in the private owner body, not acknowledgement, subjects or logs', async () => {
+  for (const formName of ['ask-expert', 'advisory-enquiry']) {
+    for (const source of Object.keys(DISCOVERY_LABELS)) {
+      const envelope = fixture(formName); envelope.payload.data['discovery-source'] = source;
+      const h = harness(); assert.equal((await h.run(envelope)).status, 204);
+      const owner = h.calls.find(call => call.headers['Idempotency-Key'].includes('/owner/')).body;
+      const ack = h.calls.find(call => call.headers['Idempotency-Key'].includes('/ack/')).body;
+      const label = DISCOVERY_LABELS[source];
+      assert.ok(owner.text.includes(`${sourceRowLabel}: ${label}`));
+      assert.ok(owner.html.includes(escapeHtml(label)));
+      assert.equal(owner.subject.includes(label), false);
+      assert.equal(JSON.stringify(ack).includes(label), false);
+      assert.equal(h.logs.join('').includes(label), false);
+      assert.equal((owner.html.match(/href="[^"]*"/g) || []).some(href => href.includes(label)), false);
+    }
+  }
+});
+
+test('expert and consultancy HTML expose exactly the approved optional broad source choices', async () => {
+  for (const [file, selectId] of [['ask-an-expert.html', 'expert-discovery'], ['ehcp-advisory.html', 'enquiry-discovery']]) {
+    const html = await readFile(new URL(`../../../${file}`, import.meta.url), 'utf8');
+    const select = html.match(new RegExp(`<select[^>]*id="${selectId}"[^>]*>([\\s\\S]*?)</select>`));
+    assert.ok(select, file);
+    assert.doesNotMatch(select[0].split('>')[0], /\brequired\b/);
+    assert.match(select[0], /name="discovery-source"/);
+    const choices = [...select[1].matchAll(/<option(?:\s[^>]*)?>([^<]*)<\/option>/g)].map(match => match[1]);
+    assert.deepEqual(choices.slice(1), currentSources);
+    assert.match(select[1], /<option value="">/);
+  }
+});
+
+// DOM-shaped stubs in a Node VM: no browser, network, real form or Google request.
+async function analyticsHarness(choice = null, hasExpertForm = true) {
+  const source = await readFile(new URL('../../../assets/organic-analytics.js', import.meta.url), 'utf8');
+  const target = () => ({
+    listeners: new Map(), children: [], hidden: false,
+    addEventListener(type, listener) { this.listeners.set(type, listener); },
+    emit(type, event = {}) { this.listeners.get(type)?.({ type, ...event }); },
+    append(child) { this.children.push(child); },
+    setAttribute() {}, focus() {},
+  });
+  const form = target(); const doc = target(); const window = target();
+  const head = target(); const body = target(); const footer = target();
+  const dialogs = []; let storedChoice = choice;
+  Object.assign(doc, {
+    head, body, cookie: '', title: 'Synthetic expert page', contains: () => true,
+    querySelector: selector => selector === 'footer' ? footer : null,
+    getElementById: id => id === 'ask-expert-form' && hasExpertForm ? form : null,
+    createElement(tag) {
+      const element = target();
+      if (tag === 'section') {
+        element.buttons = ['reject', 'accept'].map(value => Object.assign(target(), { dataset: { choice: value } }));
+        element.querySelectorAll = () => element.buttons;
+        element.querySelector = () => element.buttons[0];
+        dialogs.push(element);
+      }
+      return element;
+    },
+  });
+  runInNewContext(source, { window, document: doc, URL, Date,
+    location: { origin: 'https://example.invalid', pathname: '/ask-an-expert',
+      hostname: 'example.invalid', href: 'https://example.invalid/ask-an-expert?private-query=excluded' },
+    localStorage: { getItem: () => storedChoice, setItem: (_, value) => { storedChoice = value; } },
+  });
+  doc.emit('DOMContentLoaded');
+  const choose = value => dialogs[0].buttons.find(button => button.dataset.choice === value).emit('click');
+  const events = name => JSON.parse(JSON.stringify((window.dataLayer || [])
+    .filter(args => args[0] === 'event' && args[1] === name).map(args => args[2])));
+  // Throw if the tracker attempts to inspect a value, name or other form detail.
+  const interact = (id, type = 'input', isTrusted = true) => form.emit(type, {
+    isTrusted, target: new Proxy({ id }, { get(object, key) {
+      if (key !== 'id') throw new Error('Form data must not be inspected by analytics');
+      return object.id;
+    } }),
+  });
+  return { form, window, head, choose, events, interact };
+}
+
+test('expert form start is a single fixed consented event; focus, honeypot and synthetic inputs do not start it', async () => {
+  const h = await analyticsHarness('accept');
+  h.interact('expert-name', 'focusin');
+  h.interact('bot-field'); h.interact('expert-submit'); h.interact('expert-question', 'input', false);
+  assert.deepEqual(h.events('expert_question_form_start'), []);
+  h.interact('expert-name'); h.interact('expert-question'); h.interact('expert-discovery', 'change');
+  h.form.emit('reset'); h.window.emit('pageshow', { persisted: true }); h.interact('expert-email');
+  assert.deepEqual(h.events('expert_question_form_start'), [{ form_type: 'ask-expert', interaction_stage: 'form_start_only' }]);
+  assert.equal(h.head.children.filter(child => child.src?.includes('googletagmanager')).length, 1);
+});
+
+test('a closed-choice interaction can be the expert start without reading its selected value', async () => {
+  const h = await analyticsHarness('accept');
+  h.interact('expert-discovery', 'change'); h.interact('expert-general', 'change');
+  assert.equal(h.events('expert_question_form_start').length, 1);
+});
+
+test('unconsented first interaction is not replayed; response remains fixed HTTP-only and withdrawal stops future events', async () => {
+  for (const choice of [null, 'reject']) {
+    const h = await analyticsHarness(choice);
+    h.interact('expert-question');
+    assert.equal(h.head.children.some(child => child.src?.includes('googletagmanager')), false);
+    assert.deepEqual(h.events('expert_question_form_start'), []);
+    h.choose('accept'); h.interact('expert-email');
+    assert.deepEqual(h.events('expert_question_form_start'), []);
+    h.window.emit('sn:submission-response', { detail: { formType: 'advisory-enquiry', source: 'private-marker' } });
+    assert.deepEqual(h.events('expert_question_submit_response'), []);
+    h.window.emit('sn:submission-response', { detail: { formType: 'ask-expert', source: 'private-marker' } });
+    assert.deepEqual(h.events('expert_question_submit_response'), [{ form_type: 'ask-expert', result_stage: 'http_response_only' }]);
+    h.choose('reject');
+    h.window.emit('sn:submission-response', { detail: { formType: 'ask-expert' } });
+    assert.equal(h.events('expert_question_submit_response').length, 1);
+  }
+});
+
+test('pages without an expert form do not install form-start listeners', async () => {
+  const h = await analyticsHarness('accept', false);
+  assert.equal(h.form.listeners.size, 0);
+  assert.deepEqual(h.events('expert_question_form_start'), []);
 });

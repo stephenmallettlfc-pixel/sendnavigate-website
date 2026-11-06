@@ -50,14 +50,24 @@ const TOPIC_LABELS = Object.freeze({
   "Monthly Retainer (£350/month)": "Monthly Retainer",
   "Not sure": "Not sure yet",
 });
-const DISCOVERY_LABELS = new Set([
-  "Google search", "One of Stephen’s books", "Parent support group or charity",
-  "Social media", "Personal recommendation", "Other",
-]);
+export const DISCOVERY_LABELS = Object.freeze({
+  Instagram: "Instagram",
+  "Stephen’s LinkedIn": "Stephen’s LinkedIn",
+  "Parent forum/group": "Parent forum/group",
+  "Google search": "Google search",
+  "Stephen’s books": "Stephen’s books",
+  "Personal recommendation": "Personal recommendation",
+  Other: "Other",
+  "Prefer not to say": "Prefer not to say",
+  // Preserve older valid clients. Do not infer a specific channel from them.
+  "One of Stephen’s books": "Stephen’s books",
+  "Parent support group or charity": "Parent support group or charity",
+  "Social media": "Social media",
+});
 const FORM_FIELDS = Object.freeze({
   "sample-request": ["first-name", "last-name", "email", "school-name", "role"],
   "advisory-enquiry": ["name", "email", "phone", "topic", "discovery-source", "message"],
-  "ask-expert": ["name", "email", "local-authority", "subject-category", "question", "privacy-acknowledgement", "general-question-confirmation"],
+  "ask-expert": ["name", "email", "local-authority", "subject-category", "question", "discovery-source", "privacy-acknowledgement", "general-question-confirmation"],
 });
 const COMMON_FIELDS = ["form-name", "bot-field", "ip", "user_agent", "referrer"];
 const isRecord = (value) => value !== null && typeof value === "object" && !Array.isArray(value);
@@ -80,6 +90,12 @@ function field(data, key, { required = false, max = 200, multiline = false } = {
   const trimmed = value.trim();
   if (required && !trimmed) reject();
   return trimmed;
+}
+
+function discoverySource(data) {
+  const source = field(data, "discovery-source", { max: 100 });
+  if (source && !hasOwn(DISCOVERY_LABELS, source)) reject();
+  return source ? DISCOVERY_LABELS[source] : "";
 }
 
 export function validateEmail(value) {
@@ -168,12 +184,12 @@ export function validateSubmission(envelope, { getEnv = runtimeEnv, now = Date.n
     if (phone && !/^[+0-9(). \-]{3,40}$/.test(phone)) reject();
     const topic = field(data, "topic", { required: true, max: 100 });
     if (!hasOwn(TOPIC_LABELS, topic)) reject();
-    const discovery = field(data, "discovery-source", { max: 100 });
-    if (discovery && !DISCOVERY_LABELS.has(discovery)) reject();
+    const discovery = discoverySource(data);
     const message = field(data, "message", { required: true, max: 3000, multiline: true });
     add("Name", name); add("Email", submission.email); add("Phone", phone);
     add("Enquiry topic", TOPIC_LABELS[topic]); add("Brief enquiry", message);
-    // Discovery source is validated but not included in operational mail.
+    // Rows appear only in the private owner body, never subjects, acks or logs.
+    add("First heard about SEND Navigate (optional)", discovery);
   } else {
     const name = field(data, "name", { required: true, max: 100 });
     const authority = field(data, "local-authority", { max: 120 });
@@ -184,6 +200,7 @@ export function validateSubmission(envelope, { getEnv = runtimeEnv, now = Date.n
     if (field(data, "general-question-confirmation", { required: true, max: 20 }) !== "confirmed") reject();
     add("Name", name); add("Email", submission.email); add("Local authority", authority);
     add("General subject", CATEGORY_LABELS[category]); add("General question", question);
+    add("First heard about SEND Navigate (optional)", discoverySource(data));
     add("Privacy acknowledgement", "Acknowledged; not marketing permission");
   }
   return submission;
